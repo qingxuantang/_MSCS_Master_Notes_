@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 16:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/zhoub/Downloads/MSCSMaster/main.tex
-(c:/Users/zhoub/Downloads/MSCSMaster/main.tex
+**c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/main.tex
+(c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -131,20 +131,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2] [3] [4] [5] [6] [7] [8]
+ [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+[4] [5] [6] [7] [8] [9] [10] [11]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 141.
- [9] [10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 192.
+ [12] [13] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 222--230
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 273--281
 
  []
 
-[15] [16] (main.aux)
+[18] [19] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -152,16 +157,16 @@ L3 programming layer <2024-03-14>
  ) 
 Here is how much of TeX's memory you used:
  3273 strings out of 474424
- 48163 string characters out of 5751554
+ 48283 string characters out of 5751554
  1932496 words of memory out of 5000000
  25614 multiletter control sequences out of 15000+600000
  566440 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,2984b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,2999b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (16 pages, 189290 bytes).
+Output written on main.pdf (19 pages, 196108 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
