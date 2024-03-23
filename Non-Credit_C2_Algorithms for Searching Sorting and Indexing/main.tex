@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./images/} }
 
 \title{MS-CS Master Course Note}
 \author{Mark Zhou}
@@ -146,6 +147,8 @@ Therefore, the given element 8 is not located in the given list. Problem solved.
 
 \subsection{Define a Func binarySearchHelper()}
 
+\includegraphics[width=\textwidth]{binarysearchhelper}
+
 \paragraph{Here is the code implemented of the fuc binarySearchHelper().\\
 This function will work as a recursion since it will continuously call a new binarySearchHelper() inside the current one until finished.\\
 How to prove correctness?\\
@@ -171,12 +174,17 @@ Binary search is very efficient. If we have a list of 1 million values, we may o
 
 \subsection{Mergesort: Correctness and Running Time}
 
+\includegraphics[width=\textwidth]{mergesort}
+
 \paragraph{In order to do a mergesort, firstly we will divide the given array into two parts with the middle element as a separator.\\
 For example, we have an array \[1,3,-3,4,-1,2\]\\ We will divide it into \[1,3,-2\] and \[4,-1,2\]\\
 Then we will further divide these two into four parts. By now, we have some array contain one one item while others contain two. For those with two items, we will do a swap if they are in the wrong order.\\
 These kinds of very small divided array are called base cases, since they are somehow the base unit of this division process.\\
-Then we will merge back all those sorted base case arrays, all the way to the top, aka one merged array.\\
-Here is a pseudocode of mergesort. Let's get a closer look at how does it work.\\
+Then we will merge back all those sorted base case arrays, all the way to the top, aka one merged array.\\}
+
+\includegraphics[width=\textwidth]{mergesortpseudocode}
+
+\paragraph{Here is a pseudocode of mergesort. Let's get a closer look at how does it work.\\
 At the very beginning, the algo will compare left and right element and check if they are in a valid form, that is to say, whether left (index of the value) is smaller than right (index of the value). If not, the range formed by the left and right index is invalid hence algo ended.\\
 Second, we will determine whether the array formed by left and right contains only two elements. If $left + 1 = right$, that means these are adjacent indices. If this is the case, we will swap the elements if they have the wrong order.\\
 At last, we enter a position in which the range is larger than two elements array. Now we will simply find the mid element by performing a floor division and do merge sort on left side of the array which is ended by mid and right side which begins with mid+1. 
@@ -226,19 +234,28 @@ While for element 2, actually element 4 will be the left child and 5 the right c
 Therefore we have the equation of it:\\
 $\forall i,leftchild = 2i,rightchild = 2i + 1$\\
 For certain element in the array, If the left/right child element is not inside the current array, then the original one doesn't have left/right child.\\
-For example, element 6 has not such child since element 12 and 13 are not in the array of size 9.\\
-We can say i element is the parent of 2i and 2i + 1.\\
+For example, element 6 has not such child since element 12 and 13 are not in the array of size 9.\\}
+
+\includegraphics[width=\textwidth]{heapproperty}
+
+\paragraph{We can say i element is the parent of 2i and 2i + 1.\\
 for element j, j/2 is the parent. If the division gives a fraction of number then we just round it down (floor division).\\
-Element 1 has not parent, and we call it the root.\\
-If we write the heap array in a parent-child structure, it actually looks like a tree. Yes, heap is also a special binary tree (laid out as an array).\\
+Element 1 has not parent, and we call it the root.\\}
+
+\includegraphics[width=\textwidth]{heapbinarytree}
+
+\paragraph{If we write the heap array in a parent-child structure, it actually looks like a tree. Yes, heap is also a special binary tree (laid out as an array).\\
 Here are some properties:\\
 1. If a node in a heap has a right child, it must have a left child.\\
 2. Heap is an array of size n. $\forall A[i],2i \leq n,A[2i] = leftchild$\\
 3. $\forall A[i],2i+1 \leq n,A[2i+1] = rightchild$\\
 And here is the Min Heap Property:\\
 The value of the parent node must be less than or equal to the value of children nodes.\\
-Min Heap → $ParrentValue \leq ChildrenValues$\\
-If we turn to the opposite side, we get the Max Heap Property: The value of the parent node must be larger than or equal to the value of children nodes.\\
+Min Heap → $ParrentValue \leq ChildrenValues$\\}
+
+\includegraphics[width=\textwidth]{minheap}
+
+\paragraph{If we turn to the opposite side, we get the Max Heap Property: The value of the parent node must be larger than or equal to the value of children nodes.\\
 Max Heap → $ParentValue \geq ChildrenValues$\\
 So for any array, we can simply check whether they meet min heap property or max heap property or not in order to determine their identity.\\
 Why do we care about min heap or max heap? Here is a basic idea;\\
@@ -264,8 +281,11 @@ The operation that will acheive this is called bubble up.\\
 Bubble Up: the swap of a value with its parrent value if they are in the wrong relation.\\
 After we sway the misplaced value with its parent, now we have a new parrent of value 6 and its left child 7. Since the parrent is also less than or equal to its right child. The array is now a valid min heap.\\
 Here is another example. We need to bubble up 3 times in order to make it a min heap.\\
-\[2,3,7,4,5,9,11,1,8\]\\
-In the above array, every elements except the last but one are in the right position. Element 8 with value of 1, is smaller than its parrent.\\
+\[2,3,7,4,5,9,11,1,8\]\\}
+
+\includegraphics[width=\textwidth]{bubbleup}
+
+\paragraph{In the above array, every elements except the last but one are in the right position. Element 8 with value of 1, is smaller than its parrent.\\
 Then we need to bubble up value 1 three times into position 4, 2, and 1 to make it work. Now value 1 become the root.\\
 We can write a pseudocode for bubble up:\\}
 
@@ -285,5 +305,60 @@ Then how about $\theta$? Let's assume a heap has n element. If the leaf needed t
 $n,n/2,n/4, \ldots ,1$\\
 Then the steps will be $\log_2^n$, a.k.a. $\theta(\log_2^n)$.\\
 If we have a heap of $n = 10^6$, which is $2^{19}$, then the total operation required for bubble up is 19.}
+
+\subsection{Bubble Down}
+
+\includegraphics[width=\textwidth]{bubbledown}
+
+\paragraph{In opposite to bubble up, bubble down is the operation that will move the root element to the right position.
+That is to say, if the root element is not the smallest one, we will swap it with the smallest child.
+So in the example above, the element 7, which is the parrent of 4 and 3, will be swapped with 3.\\
+What if we cannot bubble down once and place the root element in the right position? Sometimes we need to do it multiple times.\\
+Here is a min heap that needs to be bubbled down twice.\\}
+
+\hfill
+\includegraphics[width=\textwidth]{bubbledownmultipletimes}
+
+\paragraph{Now let's take a look at the pseudocode of bubble down.\\}
+
+\begin{quote}
+    bubble down (A,j):\\
+    if $2j > n$: (2j is actually the left child, n is the length of A.)\\
+        return (Do nothing since A has no children.)\\
+    else if: $2j \leq n$ and $2j+1 \geq n$: (no right child)\\
+        if $A[j] > A[2j]$:\\
+            swap (A[j],A[2j])\\
+            bubble down (A,2j) (recusive)\\
+    else if: $2j \leq n$ and $2j+1 \leq n$: (has both children)\\
+        if $A[2j] \leq A[2j+1]$ and $A[j] > A[2j]$: (Left child is smaller, which will be swapped with the current parrent.)\\
+            swap (A[j],A[2j])\\
+            bubble down (A,2j) (recusive)\\
+        else if $A[2j] > A[2j+1]$ and $A[j] > A[2j+1]$: (right child is smaller and will be swapped.)\\
+            swap (A[j],A[2j+1])\\
+            bubble down (A,2j+1) (recusive)\\
+    return\\
+\end{quote}
+
+\paragraph{We will first compare 2j, which is the left child of j, with n, the length of A.
+If $2j > n $, j has no children whatsoever. \\
+Then we go into the second condition, parrent j has only one child, the left one of course.
+If the parrent is bigger than its child, in this case $A[j] > A[2j]$, we need to swap them.\\
+At this moment, we will need to run the recursive procedure, that is to call bubble down again.\\
+The third condition is that the parrent has both children. We will compare the left child with the right child. 
+If the left child is smaller, we will compare it with the parrent. If the parrent is bigger, we will swap them. 
+Of course, we will need to recursively run bubble down again.\\
+By the end, if the right child is smaller, we will compare it with the parrent. 
+If the parrent is bigger, we will swap them and call the main function recursively.\\
+Problem solved.\\}
+
+\paragraph{How do we estimate the running time of bubble down?\\
+The worst case will be the leaf node, which is the last level of the heap. That is to say, we need to bubble down the root element all the way to the bottom of the heap.\\
+The time cost will be the depth of the heap, which is $\theta(\log_2^n)$.\\
+How do we get this number? Let's do the math again.\\
+In order to get the depth of the heap, we need to find out how many levels the heap has.
+The root element which needed to be bubbled down will move through the following steps;\\
+$1,2,4,8,16, \ldots ,n$\\
+Which can be rewritten as $2^0,2^1,2^2,2^3,2^4, \ldots ,2^k$\\
+k is the depth of the heap, and $k = \log_2^n$.\\}
 
 \end{document}

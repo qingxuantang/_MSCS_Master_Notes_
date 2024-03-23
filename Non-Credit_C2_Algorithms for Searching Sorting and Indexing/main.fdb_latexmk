@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711191555.54668 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1711191556.07906 0
+["pdflatex"] 1711205888.51428 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1711205889.67342 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcbx1000.tfm" 993062478 1456 278016b1e421c8e979679e0372f68bf1 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -59,10 +59,19 @@
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711115398 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1000.pk" 1711116133 12124 3f55655e9ad998fa05fe3bd34b0502f0 ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1711116086 24226191 7d61f7906594d76c59711cb40eca4076 ""
-  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1711191550 19838 adedd2e0b0ff538f0973edf961177c26 ""
-  "main.aux" 1711191555 21426 8f7eb437fc46420f4ae877038ea733a0 "pdflatex"
-  "main.tex" 1711191550 19838 adedd2e0b0ff538f0973edf961177c26 ""
-  "main.toc" 1711191555 20014 f95b5c5ed3bad24096e3e8019a0f0814 "pdflatex"
+  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1711205885 23412 396a996960fa15ea3d1b3eb55991d458 ""
+  "images/binarysearchhelper.jpg" 1711200181 256110 b34ee827ccb19f155ddac19e75e32dcd ""
+  "images/bubbledown.jpg" 1711201032 269574 854cdb05b4f267cf1ef15ed7bb1846c9 ""
+  "images/bubbledownmultipletimes.png" 1711202767 166482 c940eba303870b31ae0929dc2ee7e00b ""
+  "images/bubbleup.jpg" 1711200971 302735 45ac84f6f7d7107d603955cd75451052 ""
+  "images/heapbinarytree.png" 1711200816 182655 fed101cd2315e146e1e2db5eb6920eb8 ""
+  "images/heapproperty.png" 1711200779 469364 c133d2053e653d3aef26fdf19754236e ""
+  "images/mergesort.png" 1711200362 115108 23011011da64ce6cc5c6bd7b2a771b83 ""
+  "images/mergesortpseudocode.png" 1711200559 82047 f95e9fc4ba4388743d6e2d79d663ec9b ""
+  "images/minheap.png" 1711200894 660745 a30d234ed67103b98f21bdd787341be1 ""
+  "main.aux" 1711205889 24326 cc9c609b5edc01f81d1eca1ec32a09a6 "pdflatex"
+  "main.tex" 1711205885 23412 396a996960fa15ea3d1b3eb55991d458 ""
+  "main.toc" 1711205889 22500 26ed6df24c0a0258a82b86de813a4067 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

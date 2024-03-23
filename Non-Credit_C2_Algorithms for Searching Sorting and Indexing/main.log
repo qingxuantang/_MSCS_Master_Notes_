@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 22:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -84,20 +84,20 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count271
@@ -118,11 +118,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count277
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -132,41 +132,128 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `main.toc'.
 
  [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[4] [5] [6] [7] [8] [9] [10] [11]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 192.
- [12] [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[4] [5] [6] [7] [8]
+<./images/binarysearchhelper.jpg, id=37, 2409.0pt x 1084.05pt>
+File: ./images/binarysearchhelper.jpg Graphic file (type jpg)
+<use ./images/binarysearchhelper.jpg>
+Package pdftex.def Info: ./images/binarysearchhelper.jpg  used on input line 150.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [9] [10 <./images/binarysearchhelper.jpg>] [11]
+<./images/mergesort.png, id=48, 690.58pt x 396.48125pt>
+File: ./images/mergesort.png Graphic file (type png)
+<use ./images/mergesort.png>
+Package pdftex.def Info: ./images/mergesort.png  used on input line 177.
+(pdftex.def)             Requested size: 345.0pt x 198.07678pt.
+<./images/mergesortpseudocode.png, id=50, 654.445pt x 376.40625pt>
+File: ./images/mergesortpseudocode.png Graphic file (type png)
+<use ./images/mergesortpseudocode.png>
+Package pdftex.def Info: ./images/mergesortpseudocode.png  used on input line 185.
+(pdftex.def)             Requested size: 345.0pt x 198.42606pt.
 
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 185--186
+[] [] 
+ []
+
+[12 <./images/mergesort.png>] [13 <./images/mergesortpseudocode.png>]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 200.
+ [14] [15] [16]
+<./images/heapproperty.png, id=70, 948.54375pt x 567.11874pt>
+File: ./images/heapproperty.png Graphic file (type png)
+<use ./images/heapproperty.png>
+Package pdftex.def Info: ./images/heapproperty.png  used on input line 239.
+(pdftex.def)             Requested size: 345.0pt x 206.2654pt.
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 239--240
+[] [] 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 273--281
+<./images/heapbinarytree.png, id=74, 1007.765pt x 303.1325pt>
+File: ./images/heapbinarytree.png Graphic file (type png)
+<use ./images/heapbinarytree.png>
+Package pdftex.def Info: ./images/heapbinarytree.png  used on input line 245.
+(pdftex.def)             Requested size: 345.0pt x 103.776pt.
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 245--246
+[] [] 
+ []
+
+<./images/minheap.png, id=75, 1468.48625pt x 688.5725pt>
+File: ./images/minheap.png Graphic file (type png)
+<use ./images/minheap.png>
+Package pdftex.def Info: ./images/minheap.png  used on input line 256.
+(pdftex.def)             Requested size: 345.0pt x 161.76202pt.
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 256--257
+[] [] 
+ []
+
+[18 <./images/heapproperty.png> <./images/heapbinarytree.png>] [19 <./images/minheap.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 
  []
 
-[18] [19] (main.aux)
+[20]
+<./images/bubbleup.jpg, id=90, 2409.0pt x 1084.05pt>
+File: ./images/bubbleup.jpg Graphic file (type jpg)
+<use ./images/bubbleup.jpg>
+Package pdftex.def Info: ./images/bubbleup.jpg  used on input line 286.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 286--287
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--301
+
+ []
+
+[21 <./images/bubbleup.jpg>]
+<./images/bubbledown.jpg, id=94, 2409.0pt x 1084.05pt>
+File: ./images/bubbledown.jpg Graphic file (type jpg)
+<use ./images/bubbledown.jpg>
+Package pdftex.def Info: ./images/bubbledown.jpg  used on input line 311.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [22]
+<./images/bubbledownmultipletimes.png, id=98, 950.55125pt x 534.99875pt>
+File: ./images/bubbledownmultipletimes.png Graphic file (type png)
+<use ./images/bubbledownmultipletimes.png>
+Package pdftex.def Info: ./images/bubbledownmultipletimes.png  used on input line 320.
+(pdftex.def)             Requested size: 345.0pt x 194.17494pt.
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 319--321
+[]  [] 
+ []
+
+[23 <./images/bubbledown.jpg> <./images/bubbledownmultipletimes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 325--340
+
+ []
+
+[24] [25] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3273 strings out of 474424
- 48769 string characters out of 5751554
+ 3387 strings out of 474424
+ 52024 string characters out of 5751554
  1932496 words of memory out of 5000000
- 25614 multiletter control sequences out of 15000+600000
+ 25728 multiletter control sequences out of 15000+600000
  566440 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,3061b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,2895b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (19 pages, 196108 bytes).
+Output written on main.pdf (25 pages, 2367794 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
