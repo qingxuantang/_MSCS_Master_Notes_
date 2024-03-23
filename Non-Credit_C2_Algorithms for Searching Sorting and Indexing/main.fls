@@ -1,7 +1,7 @@
-PWD c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_
+PWD c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing.tex
-OUTPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.log
+INPUT c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing\main.tex
+OUTPUT main.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
@@ -40,10 +40,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux
-INPUT .\Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux
-INPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux
-OUTPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
+OUTPUT main.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -78,13 +78,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-OUTPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.pdf
+OUTPUT main.pdf
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc
-INPUT .\Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc
-INPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -93,11 +93,11 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-OUTPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc
+OUTPUT main.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcbx1000.tfm
-INPUT Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux
+INPUT main.aux
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1000.pk
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1000.pk
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb

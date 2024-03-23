@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  23 MAR 2024 18:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing.tex"
-(c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing.tex
+**"c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex"
+(c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -81,8 +81,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count270
 \l__pdf_internal_box=\box53
-) (Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux)
-\openout1 = `"Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux"'.
+) (main.aux)
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -127,9 +127,9 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/zhoub/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc)
+{C:/Users/zhoub/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc)
 \tf@toc=\write3
-\openout3 = `"Non-Credit_C2_Algorithms for Searching Sorting and Indexing.toc"'.
+\openout3 = `main.toc'.
 
  [2] [3]
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
@@ -149,22 +149,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--281
 
  []
 
-[18] [19] (Non-Credit_C2_Algorithms for Searching Sorting and Indexing.aux)
+[18] [19] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3275 strings out of 474424
- 49431 string characters out of 5751554
+ 3273 strings out of 474424
+ 48769 string characters out of 5751554
  1932496 words of memory out of 5000000
- 25616 multiletter control sequences out of 15000+600000
+ 25614 multiletter control sequences out of 15000+600000
  566440 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,3056b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,3061b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Non-Credit_C2_Algorithms for Searching Sorting and Indexing.pdf" (19 pages, 196108 bytes).
+Output written on main.pdf (19 pages, 196108 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
