@@ -9,6 +9,7 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{amssymb}
+\usepackage{xcolor}
 
 \begin{document}
 \maketitle
@@ -368,6 +369,170 @@ The main idea of min heapify is to make sure that the root of the tree is the sm
 The min heapify procedure is a recursive one.\\}
 
 \subsection{Priority Queue, Heapify and Heapsort}
+
+\subsubsection{Inserting into a heap}
+
+\paragraph{First we need to understand how to insert an element into a heap.\\
+The main idea is to insert the element at the end of the array and then bubble up the element until it is in the right position.\\
+That is to say, insertion = insert to the end + bubble up.\\
+The time cost of inserting to the end of the heap is just as simple as $\theta(1)$.\\
+Then we need to bubble up the element. The time cost is $\theta(\log_2^n)$.\\
+So the total time cost is just $\theta(\log_2^n)$.\\}
+
+\includegraphics[width=\textwidth]{inserttoaheap}
+
+\subsubsection{Deleting from a heap}
+
+\paragraph{Then we come to the concept of deletion of a heap element.\\
+1. Replace the element that we want to delete with the last element of the heap.\\
+2. Adjust the lenth of the heap to n-1, assuming the original length is n. Now we can simply delete the last element.\\
+3. Bubble up or bubble down the element that we moved. The specific operation we use depends on the situation. We need only one operation for any cases.\\}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{bubbleupafterdeletion.png}
+\caption{Bubble up for a fix.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{bubbledownafterdeletion.png}
+\caption{Bubble down for a fix.}
+\end{figure}
+
+\paragraph{Here is a question regarding the fix operation after deletion of a heap.\\}
+
+\includegraphics[width=\textwidth]{questionofdeletion.png}
+
+\paragraph{The cost of time for deletion consists of two parts, 1 swap and then 2 bubble up/down.\\
+The time of cost is $\theta(1)$ for step 1 and $\theta(\log_2^n)$ for step 2.\\
+The total time cost is $\theta(\log_2^n)$.\\}
+
+\includegraphics[width=\textwidth]{deletiontimecost.png}
+
+\subsubsection{Finding the smallest element of a heap}
+
+\paragraph{The time cost of finding the smallest element of a min heap is $\theta(1)$.\\
+However, finding the largest element of a min heap is pretty hard and inefficient.\\}
+
+\paragraph{Now we are talking about priority queue.\\
+Priority queue is a data structure that will allow us to insert elements and delete the smallest one.\\
+The main idea of priority queue is to keep the smallest element at the root of the heap.\\
+Priority queue has a priority setting.\\}
+
+\paragraph{We can bubble down elements that are in the wrong position and then get a min heap.\\
+This is the main idea of heapify.\\
+The running time of heapify is $O(n\log_2^n)$.\\}
+
+\includegraphics[width=\textwidth]{array2minheap.png}
+\includegraphics[width=\textwidth]{heapify.png}
+
+\paragraph{The overall running time of heapify is linear to the size of the array. That is to say, the running time is $\theta(n)$.\\}
+
+\includegraphics[width=\textwidth]{heapifyrunningtime.png}
+
+\subsubsection{Heapsort}
+
+\includegraphics[width=\textwidth]{heapsort.png}
+\includegraphics[width=\textwidth]{questionofheapsort.png}
+
+\subsection{Quiz: Bubble-Up/Down, Insertion and Deletion}
+
+\subsubsection{Question 1}
+
+\includegraphics[width=\textwidth]{heapsortquestion1chart.png}
+
+Consider the following min-heap, in tree form:\\
+Now suppose we perform a heap-insert to add a new element 1 to the heap.Select all the correct facts about this insertion process from the list below.\\
+
+The first step is to place the new element at the beginning of the array, making it the root of the tree.\\
+
+\textcolor{red}{The first step is to place the new element at the end of the array, making it a child of the element.\\
+Correct: After taking the first step, in which the new element is placed in the array, the heap property continues to hold.\\}
+
+\textcolor{red}{In order to fix a heap property violation encountered during insertion, we perform a bubble-up operation, which swaps the new element and its parent element.\\
+Correct: In order to fix a heap property violation encountered during insertion, we perform a bubble-down operation which swaps the new element with one of its child elements.\\}
+
+When we insert 1 into the above min-heap, the first bubble-up step swaps element 1 with its parent 6.  This fixes all the min-heap property violations.\\
+
+\textcolor{red}{When we insert 1 into the above min-heap, a second bubble-up step occurs which swaps element 1 with 4.  This fixes all the min-heap property violations.\\
+Correct: This is correct.\\}
+
+\textcolor{red}{In the worst case, bubbling up will require $\theta(\log_2^n)$ swaps, moving the inserted element all the way from a leaf position in the heap to the root.\\
+Correct: This is correct: note that the length of the longest path from any leaf of a heap to the root is  at most $\log_2^n$.\\}
+
+
+\subsubsection{Question 2}
+
+\includegraphics[width=\textwidth]{heapsortquestion1chart.png}
+
+Consider again the min-heap example:\\
+Suppose we heap-delete the element 8.\\
+
+Select all correct facts about this deletion process from the list below.\\
+
+\textcolor{red}{The first step replaces the element to be deleted (8) with the very last element in the heap's array (12).\\}
+
+The first step replaces the element to be deleted (8) with the very first element in the heap's array (-5).\\
+
+\textcolor{blue}{After the first step, in which we replace the element we are deleting (8), we are guaranteed that we have created at most one min-heap property violation.\\
+This should be selected as well.\\}
+
+\textcolor{red}{To fix the heap property violation caused by the first step, we perform a bubble-up or bubble-down operation depending on whether the swapped-in element is larger than its children or smaller than its parent.\\}
+
+\textcolor{red}{Deletion of an element in a heap with n elements requires at $O(\log_2^n)$ comparison and swap operations.\\}
+
+
+\subsection{Quiz: Heapify, Priority Queue and Heapsort}
+
+
+\subsubsection{Question 1}
+
+Suppose we wished to heapify  an array into a minheap using the following algorithm (assume $a[0]$ is not used and assume that bubble up routine is implemented).\\
+
+\begin{verbatim}
+def heapify (a):
+    n = len (a)
+    for i in range (1, n):
+        bubble_up (a, i)
+    return a
+\end{verbatim}
+
+\textcolor{red}{The worst case complexity of this procedure will be $\theta(n\log_2^n)$.\\}
+
+\textcolor{red}{The procedure above is computationally less efficient than the one presented in the lecture because $n/2$ of the elements in the array may potentially need to bubble up all the way to the root.\\
+Correct: Indeed: each of these $n/2$ elements may incur a cost proportional to $\log(_2^n)$ since they may each bubble up from the leaf to the root of he heap.\\}
+
+Sorting the array using insertion sort will achieve the same complexity as the heapify procedure above. \\
+
+\textcolor{red}{Sorting the array using mergesort will achieve the same complexity as the heapify procedure above.\\}
+
+\textcolor{red}{The worst case of the procedure above is realized if we tried to heapify an array that is already sorted in descending order.\\}
+
+The  worst case of the procedure above is realized if we tried to heapify an array that is already sorted in ascending order.\\
+
+\subsubsection{Question 2}
+
+Select all the facts that are true about the heapsort procedure in comparison with the insertion and mergesort procedures we have studied thus far. 
+Assume that all heaps are minheaps unless otherwise mentioned in the option.\\
+
+Heapsort requires extra storage to store the heap unlike insertion sort that can sort an array in place.\\
+
+Heapsort is asymptotically faster than mergesort.\\
+
+\textcolor{red}{If an array is already sorted in ascending order and the heapify procedure is run on it, then it does not modify the array in any way.} \\
+
+If a min-heap is in fact already sorted in ascending order, deleting the minimum element operation runs in constant time.\\
+
+
+
+\section{Hashtable}
+
+
+
+
+
+
+
+
 
 
 
