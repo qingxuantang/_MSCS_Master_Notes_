@@ -46,6 +46,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\main.aux
@@ -228,7 +230,28 @@ INPUT .\images\heapsortquestion1chart.png
 INPUT .\images\heapsortquestion1chart.png
 INPUT .\images\heapsortquestion1chart.png
 INPUT .\images\heapsortquestion1chart.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtableloadfactor.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablerehashing.png
+INPUT .\images\hashtablequestion2.png
+INPUT .\images\hashtablequestion2.png
+INPUT .\images\hashtablequestion2.png
+INPUT .\images\hashtablequestion2.png
+INPUT .\images\hashtablequestion2.png
+INPUT .\images\hashtablequestion2.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT main.aux
+INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1000.pk
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1000.pk
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb

@@ -10,6 +10,9 @@
 \usepackage{listings}
 \usepackage{amssymb}
 \usepackage{xcolor}
+\usepackage{float}
+
+\setlength{\intextsep}{1cm}
 
 \begin{document}
 \maketitle
@@ -150,6 +153,8 @@ Therefore, the given element 8 is not located in the given list. Problem solved.
 
 \includegraphics[width=\textwidth]{binarysearchhelper}
 
+
+
 \paragraph{Here is the code implemented of the fuc binarySearchHelper().\\
 This function will work as a recursion since it will continuously call a new binarySearchHelper() inside the current one until finished.\\
 How to prove correctness?\\
@@ -177,13 +182,17 @@ Binary search is very efficient. If we have a list of 1 million values, we may o
 
 \includegraphics[width=\textwidth]{mergesort}
 
+
+
 \paragraph{In order to do a mergesort, firstly we will divide the given array into two parts with the middle element as a separator.\\
 For example, we have an array \[1,3,-3,4,-1,2\]\\ We will divide it into \[1,3,-2\] and \[4,-1,2\]\\
 Then we will further divide these two into four parts. By now, we have some array contain one one item while others contain two. For those with two items, we will do a swap if they are in the wrong order.\\
 These kinds of very small divided array are called base cases, since they are somehow the base unit of this division process.\\
 Then we will merge back all those sorted base case arrays, all the way to the top, aka one merged array.\\}
 
+
 \includegraphics[width=\textwidth]{mergesortpseudocode}
+
 
 \paragraph{Here is a pseudocode of mergesort. Let's get a closer look at how does it work.\\
 At the very beginning, the algo will compare left and right element and check if they are in a valid form, that is to say, whether left (index of the value) is smaller than right (index of the value). If not, the range formed by the left and right index is invalid hence algo ended.\\
@@ -237,13 +246,18 @@ $\forall i,leftchild = 2i,rightchild = 2i + 1$\\
 For certain element in the array, If the left/right child element is not inside the current array, then the original one doesn't have left/right child.\\
 For example, element 6 has not such child since element 12 and 13 are not in the array of size 9.\\}
 
+
 \includegraphics[width=\textwidth]{heapproperty}
+
+
 
 \paragraph{We can say i element is the parent of 2i and 2i + 1.\\
 for element j, j/2 is the parent. If the division gives a fraction of number then we just round it down (floor division).\\
 Element 1 has not parent, and we call it the root.\\}
 
 \includegraphics[width=\textwidth]{heapbinarytree}
+
+
 
 \paragraph{If we write the heap array in a parent-child structure, it actually looks like a tree. Yes, heap is also a special binary tree (laid out as an array).\\
 Here are some properties:\\
@@ -254,7 +268,10 @@ And here is the Min Heap Property:\\
 The value of the parent node must be less than or equal to the value of children nodes.\\
 Min Heap → $ParrentValue \leq ChildrenValues$\\}
 
+
 \includegraphics[width=\textwidth]{minheap}
+
+
 
 \paragraph{If we turn to the opposite side, we get the Max Heap Property: The value of the parent node must be larger than or equal to the value of children nodes.\\
 Max Heap → $ParentValue \geq ChildrenValues$\\
@@ -284,7 +301,10 @@ After we sway the misplaced value with its parent, now we have a new parrent of 
 Here is another example. We need to bubble up 3 times in order to make it a min heap.\\
 \[2,3,7,4,5,9,11,1,8\]\\}
 
+
 \includegraphics[width=\textwidth]{bubbleup}
+
+
 
 \paragraph{In the above array, every elements except the last but one are in the right position. Element 8 with value of 1, is smaller than its parrent.\\
 Then we need to bubble up value 1 three times into position 4, 2, and 1 to make it work. Now value 1 become the root.\\
@@ -309,7 +329,10 @@ If we have a heap of $n = 10^6$, which is $2^{19}$, then the total operation req
 
 \subsection{Bubble Down}
 
+
 \includegraphics[width=\textwidth]{bubbledown}
+
+
 
 \paragraph{In opposite to bubble up, bubble down is the operation that will move the root element to the right position.
 That is to say, if the root element is not the smallest one, we will swap it with the smallest child.
@@ -317,8 +340,10 @@ So in the example above, the element 7, which is the parrent of 4 and 3, will be
 What if we cannot bubble down once and place the root element in the right position? Sometimes we need to do it multiple times.\\
 Here is a min heap that needs to be bubbled down twice.\\}
 
-\hfill
+
 \includegraphics[width=\textwidth]{bubbledownmultipletimes}
+
+
 
 \paragraph{Now let's take a look at the pseudocode of bubble down.\\}
 
@@ -379,7 +404,10 @@ The time cost of inserting to the end of the heap is just as simple as $\theta(1
 Then we need to bubble up the element. The time cost is $\theta(\log_2^n)$.\\
 So the total time cost is just $\theta(\log_2^n)$.\\}
 
-\includegraphics[width=\textwidth]{inserttoaheap}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{inserttoaheap}
+\end{figure}
+
 
 \subsubsection{Deleting from a heap}
 
@@ -388,25 +416,31 @@ So the total time cost is just $\theta(\log_2^n)$.\\}
 2. Adjust the lenth of the heap to n-1, assuming the original length is n. Now we can simply delete the last element.\\
 3. Bubble up or bubble down the element that we moved. The specific operation we use depends on the situation. We need only one operation for any cases.\\}
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{bubbleupafterdeletion.png}
 \caption{Bubble up for a fix.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{bubbledownafterdeletion.png}
 \caption{Bubble down for a fix.}
 \end{figure}
 
 \paragraph{Here is a question regarding the fix operation after deletion of a heap.\\}
 
+
 \includegraphics[width=\textwidth]{questionofdeletion.png}
+
+
 
 \paragraph{The cost of time for deletion consists of two parts, 1 swap and then 2 bubble up/down.\\
 The time of cost is $\theta(1)$ for step 1 and $\theta(\log_2^n)$ for step 2.\\
 The total time cost is $\theta(\log_2^n)$.\\}
 
+
 \includegraphics[width=\textwidth]{deletiontimecost.png}
+
+
 
 \subsubsection{Finding the smallest element of a heap}
 
@@ -422,23 +456,33 @@ Priority queue has a priority setting.\\}
 This is the main idea of heapify.\\
 The running time of heapify is $O(n\log_2^n)$.\\}
 
+
 \includegraphics[width=\textwidth]{array2minheap.png}
 \includegraphics[width=\textwidth]{heapify.png}
 
+
+
 \paragraph{The overall running time of heapify is linear to the size of the array. That is to say, the running time is $\theta(n)$.\\}
 
+
 \includegraphics[width=\textwidth]{heapifyrunningtime.png}
+
+
 
 \subsubsection{Heapsort}
 
 \includegraphics[width=\textwidth]{heapsort.png}
 \includegraphics[width=\textwidth]{questionofheapsort.png}
 
+
 \subsection{Quiz: Bubble-Up/Down, Insertion and Deletion}
 
 \subsubsection{Question 1}
 
+
 \includegraphics[width=\textwidth]{heapsortquestion1chart.png}
+
+
 
 Consider the following min-heap, in tree form:\\
 Now suppose we perform a heap-insert to add a new element 1 to the heap.Select all the correct facts about this insertion process from the list below.\\
@@ -462,7 +506,10 @@ Correct: This is correct: note that the length of the longest path from any leaf
 
 \subsubsection{Question 2}
 
+
 \includegraphics[width=\textwidth]{heapsortquestion1chart.png}
+
+
 
 Consider again the min-heap example:\\
 Suppose we heap-delete the element 8.\\
@@ -524,16 +571,83 @@ If a min-heap is in fact already sorted in ascending order, deleting the minimum
 
 
 
-\section{Hashtable}
+\section{Hashtables}
+
+\paragraph{The basic idea of hashtables is to implement a mapping from keys to values.\\
+What's important of a hashtable is not key or value, but a special function called hash function.\\
+With the hash function implemented, the key will be converted to a hash value.\\
+The hash value will be used as an index to store the value. That is to say, the key will be converted to an index. However, since the hash value is based on the key itself,
+different keys may have the same hashed values, which means the same index may be mapped with several keys. How do we deal with this?\\}
+
+\subsection{Chaining for Collision Resolution}
+
+\paragraph{The chaining of a hashtable is to store all the values that have the same index in a linked list. This list is empty initially.\\
+When we insert a new key-value pair, we will first calculate the hash value of the key. Then we will check if the index is empty. 
+If it is, we will simply insert the key-value pair. If not, we will insert the new pair to the linked list.\\}
+
+\paragraph{If we want to delete, we will first calculate the hash value of the key. Then we will check if the index is empty. If it is, we will simply delete the key-value pair. 
+If not, we will delete the key-value pair from the linked list.\\}
+
+\subsection{Load Factor}
+
+\paragraph{The load factor is the ratio of the number of key-value pairs to the number of indices. Suppose we have $m$ slots(indices) and $n$ key-value pairs.
+The load factor is $n/m$.\\}
 
 
+\includegraphics[width=\textwidth]{hashtableloadfactor.png}
 
 
+\subsection{Rehashing}
+
+\paragraph{Rehashing is the process of creating a new hashtable with a larger number of slots. 
+Since we need to go through all the key-value pairs (n pairs) and all the slots/indices (m slots) in the original hashtable in order to create the new one,
+The running time of rehashing is $O(n+m)$.\\}
 
 
+\includegraphics[width=\textwidth]{hashtablerehashing.png}
 
 
+\subsection{Quiz: Hashtables}
 
+\subsubsection{Question 1}
+
+Select all true facts about Hashtables which use unordered-list chaining to resolve collisions.\\
+
+
+Given a Hashtable with m slots and containing n elements, the average number of elements chained together on a single slot is $m*\log_2^n$.\\
+
+
+\textcolor{blue}{The Find operation, which returns a value for a key if it is present in the Hashtable, has a worst-case complexity of $O(n)$ for a table containing n entries.\\}
+
+
+The cost of the hash function depends on the number of elements currently stored in the table.\\
+
+
+\textcolor{red}{Expanding the number of slots in a Hashtable requires re-applying a hash function to every element already stored.\\}
+
+Given a Hashtable with m slots and containing n elements, the average number of elements chained together on a single slot is $n/m$.\\
+
+
+\subsubsection{Question 2}
+
+\includegraphics[width=\textwidth]{hashtablequestion2.png}
+
+Consider the above Hashtable, which stores numbers for different produce items (maybe the amount in stock at a store) according to a hash function called HASH.\\
+
+For the entry Apples →51, the key is Apples and the value is 51.  
+The entry for Apples is at the front of a chained list including Plums and Avocados, which all share Slot 0.\\
+
+The HASH function picks a slot for the entry by taking the ASCII value of the first letter of the key, mod 5. So for Apples, it is 
+$65\bmod5=0$ You won't need to calculate these for this problem.\\
+
+Suppose it costs 1 time unit to run HASH, and 1 time unit to check whether an entry is already present in each place in the chained lists.  
+It also takes 1 time unit to write a new value to a particular place in a chained list.  
+Assume that newly inserted items must go at the end of the chained list in their slot.\\
+
+
+How many time units does it cost to insert a new entry Limes → 40 into the Hashtable?  When HASH is called on Limes, it gives $76 \bmod 5 = 1$.\\
+
+Answer:3\\
 
 
 \end{document}
