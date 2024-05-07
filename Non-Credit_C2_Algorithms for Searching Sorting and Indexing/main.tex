@@ -650,4 +650,95 @@ How many time units does it cost to insert a new entry Limes → 40 into the Has
 Answer:3\\
 
 
+\section{Introduction to Randomization, Average Case Complexity Analysis and Recurrences}
+
+\paragraph{The topic of this section is Randomization in Algorithm and Data Structures.\\}
+
+\includegraphics[width=\textwidth]{randomizationrunningtime.png}
+
+\subsection{Algorithm that Use Randomness}
+
+\paragraph{The main idea of randomization is to use randomness in the algorithm.\\
+The main advantage of randomization is that it can reduce the running time of the algorithm, so
+that we will focus on the average case of the running time rather than the worst case.\\
+When looking at the running time of an algorithm, we typically consider the worst case scenario.\\
+While in the case of randomization, the probability of worst case is relatively low because Of
+the nature of randomness. Therefore, it is not efficient to always consider the worst case, since
+it may not happen, and the average case of running time may be much lower and more realistic.\\}
+
+\paragraph{Let's take a look at this $geometric(p)$ function.\\
+We will introduce a new concept $T(p)$, which is the expected value of the geometric function, 
+a unknown average case running time.\\}
+
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{averagerunningtimetp.png}
+    \caption{When running into case 1, a.k.a. $flip(p) == True$, the running time will be
+    $p*(1+T(p))$, and in the other case, when $flip(p) == False$, the running time will be
+    $1*(1-p)$.}
+\end{figure}
+
+\paragraph{
+    The unknown running time $T(p) = p*(1+T(p)) + (1-p)*1$, which can be simplified to $T(p) = 1/(1-p)$.\\
+}
+
+\subsection{Analysis of Algorithms: Recurrences}
+
+\paragraph{Here is a general understanding of recurrences.\\}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{recurrencerelations.png}
+    \caption{The $T(n)$ equation is a recursive function in this Mergesort function. 
+    If $n<=1$, the function returns 1, where running time is 1. Otherwise, the function will be
+    $2*T(n/2) + n$ based on the function details.\\}
+    \includegraphics[width=\textwidth]{recurrencerelations2.png}
+    \caption{Here is a general form of a recursive function. \\
+    $T(n) = a*T(n/b) + \theta(n), if n > m$\\
+    $T(n) = Constant, if n <= m$}
+\end{figure}
+
+\paragraph{If we want to solve for the recurrence relations, we can use the expansion method.\\
+The main idea is to expand the function until we reach the base case.\\}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{expansionmethod.png}
+    \caption{We can assign $C(n) == \theta(n)$ at first.\\
+    Then, we assign $T(n)$ to the original function with an expanded form.\\
+    For example, by multiplying $2$, $T(n) = 2*T(n/2) + C(n) + D$ will be converted to $T(n) = 2(2T(n/4) + C(n/2) + D) + C(n) +D$.\\
+    This expansion the function will keep going on by 4, 8 ,16 etc., until it reaches the base case, as displayed in the firgure.\\
+    The running time of this function is $\theta(n^{\log_b^a})$.\\}
+\end{figure}
+
+\newpage
+
+\subsection{Partition and Quicksort Algorithm}
+
+\paragraph{Quicksort is an efficient in-place sorting algorithm that uses the divide and conquer strategy.\\
+Basically it divide the array into two parts, one with the elements smaller than the pivot and the other bigger.\\
+At first glance, quicksort sounds a lot like mergesort, but the main difference is that in mergesort, the major time costing part is
+ at the end of the function when merging is taking place; while in quicksort, we will conduct a lot of work by partitioning the array first.\\}
+
+ \paragraph{What is the partition function?\\
+ First we are going to choose a pivot element from within the array and it doesn't matter which one we choose.
+ Then we will compare all the rest of the elements with the pivot and divide them into smaller-than-pivot and 
+ larger-than-pivot part. At this stage, we are not necessarily sorting what is being compared.\\
+ Now we get a updated array where the pivot is rested somewhere in the middle range of the array, and it is the final position for 
+ the pivot in the fully sorted array later. All we need to do now is to sort the left part and the right part.\\}
+
+ 10:55 TBD...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
