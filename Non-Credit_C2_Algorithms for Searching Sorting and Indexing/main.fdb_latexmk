@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1715072353.58134 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1715072356.08275 0
+["pdflatex"] 1715413976.44563 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1715413980.6494 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcbx1000.tfm" 993062478 1456 278016b1e421c8e979679e0372f68bf1 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -66,7 +66,7 @@
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1000.pk" 1711116133 12124 3f55655e9ad998fa05fe3bd34b0502f0 ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1711189794 11548 6690463b37f8f6ff2a9c97a6cfc1ffae ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1711116086 24226191 7d61f7906594d76c59711cb40eca4076 ""
-  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1715072349 39709 42b9728ba9a1cbb6bebda9d885827dd5 ""
+  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1715413974 43553 6d957f73189911334f05d885a76402a8 ""
   "images/array2minheap.png" 1712558434 213058 1db47235f4cae52b6205b703ecf8500e ""
   "images/averagerunningtimetp.png" 1713852706 64699 c924b060528d1d260d4098463983f1bb ""
   "images/binarysearchhelper.jpg" 1711200181 256110 b34ee827ccb19f155ddac19e75e32dcd ""
@@ -77,6 +77,7 @@
   "images/bubbleupafterdeletion.png" 1712546130 87014 7c335129f53c686752565e1db50b64c4 ""
   "images/deletiontimecost.png" 1712554206 171350 57c2dc4be87b0b5cbac7f806a1a3567f ""
   "images/expansionmethod.png" 1714388291 105307 66b4b08f21a63c2d64ef75bb6de601af ""
+  "images/expectedaveragerunningtime.png" 1715413941 92666 1c653de90a2decb470acceec4fab1bb5 ""
   "images/hashtableloadfactor.png" 1712636699 87690 43ceb53d6568b456c3e427ed12081420 ""
   "images/hashtablequestion2.png" 1712669800 30267 42ca6f62930950d67f850cf3c4395a05 ""
   "images/hashtablerehashing.png" 1712638117 75701 3ef01022c8a38b70ed5d469597c5a710 ""
@@ -95,9 +96,13 @@
   "images/randomizationrunningtime.png" 1713845986 81994 84e6dd4fc0cfee65b4f6d670a738e0d2 ""
   "images/recurrencerelations.png" 1714386876 109841 037500b269f10fe81844207bd4876c64 ""
   "images/recurrencerelations2.png" 1714387115 102738 f7d70a0aed3f3708399515c0d62977c2 ""
-  "main.aux" 1715072355 36468 187d1267e0b9f5daec7b6dc0c2503322 "pdflatex"
-  "main.tex" 1715072349 39709 42b9728ba9a1cbb6bebda9d885827dd5 ""
-  "main.toc" 1715072355 31177 0ff08283a482eddcae1fd18ef171a9da "pdflatex"
+  "images/week3lomutoquiz1.png" 1715410617 112331 b6f4b13797dbb68b5f22ce6bd5437566 ""
+  "images/week3lomutoquiz2.png" 1715410641 112685 245c38fbff216db3facaf95379526b25 ""
+  "images/week3quicksortquiz1.png" 1715166695 175501 551a8e03f417eaa14eaa2b98a134540c ""
+  "images/week3quicksortquiz2.png" 1715166710 144186 89ae86469afe85ccb41ee372b884c5d6 ""
+  "main.aux" 1715413980 40013 ccea682fb17eb417fdd2c038f34a5e31 "pdflatex"
+  "main.tex" 1715413974 43553 6d957f73189911334f05d885a76402a8 ""
+  "main.toc" 1715413980 33819 64d5ffee2139a1dcd071adfd17a7626d "pdflatex"
   (generated)
   "main.aux"
   "main.log"

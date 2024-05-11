@@ -310,16 +310,17 @@ Here is another example. We need to bubble up 3 times in order to make it a min 
 Then we need to bubble up value 1 three times into position 4, 2, and 1 to make it work. Now value 1 become the root.\\
 We can write a pseudocode for bubble up:\\}
 
-\begin{quote}
-    bubble up (A,j):\\
-    if $j \leq 1$:\\
-        return (Do nothing)\\
-    else if:\\
-        $A[j] < A[j//2]$: (// means floor divided)\\
-        swap (A[j], A[j//2])\\
-        bubble up (A,j//2) (Yes, this line makes this function recursive.)\\
-    return\\
-    \end{quote}
+\begin{verbatim}
+    bubble up (A,j):
+        if $j \leq 1$:
+            return (Do nothing)
+        else if:
+            $A[j] < A[j//2]$: (// means floor divided)
+            swap (A[j], A[j//2])
+            bubble up (A,j//2) 
+            #Yes, this line makes this function recursive.
+        return
+    \end{verbatim}
 
 \paragraph{This is a recursive program that will bubble up the misplaced element until it is in the right place.If we try to estimate the running time of bubble up, the worse case would be O (depth of heap), since the element will be a leaf (the one without child) and it lays on the bottom level of the heap.\\
 Then how about $\theta$? Let's assume a heap has n element. If the leaf needed to be bubble up all the way to root position, the steps will be:\\
@@ -347,23 +348,25 @@ Here is a min heap that needs to be bubbled down twice.\\}
 
 \paragraph{Now let's take a look at the pseudocode of bubble down.\\}
 
-\begin{quote}
-    bubble down (A,j):\\
-    if $2j > n$: (2j is actually the left child, n is the length of A.)\\
-        return (Do nothing since A has no children.)\\
-    else if: $2j \leq n$ and $2j+1 \geq n$: (no right child)\\
-        if $A[j] > A[2j]$:\\
-            swap (A[j],A[2j])\\
-            bubble down (A,2j) (recusive)\\
-    else if: $2j \leq n$ and $2j+1 \leq n$: (has both children)\\
-        if $A[2j] \leq A[2j+1]$ and $A[j] > A[2j]$: (Left child is smaller, which will be swapped with the current parrent.)\\
-            swap (A[j],A[2j])\\
-            bubble down (A,2j) (recusive)\\
-        else if $A[2j] > A[2j+1]$ and $A[j] > A[2j+1]$: (right child is smaller and will be swapped.)\\
-            swap (A[j],A[2j+1])\\
-            bubble down (A,2j+1) (recusive)\\
-    return\\
-\end{quote}
+\begin{verbatim}
+    bubble down (A,j):
+        if $2j > n$: (2j is actually the left child, n is the length of A.)
+            return (Do nothing since A has no children.)
+        else if: $2j \leq n$ and $2j+1 \geq n$: (no right child)
+            if $A[j] > A[2j]$:
+                swap (A[j],A[2j])
+                bubble down (A,2j) (recusive)
+        else if: $2j \leq n$ and $2j+1 \leq n$: (has both children)
+            if $A[2j] \leq A[2j+1]$ and $A[j] > A[2j]$: 
+            #Left child is smaller, which will be swapped with the current parrent.
+                swap (A[j],A[2j])
+                bubble down (A,2j) (recusive)
+            else if $A[2j] > A[2j+1]$ and $A[j] > A[2j+1]$: 
+            #right child is smaller and will be swapped.
+                swap (A[j],A[2j+1])
+                bubble down (A,2j+1) (recusive)
+        return
+\end{verbatim}
 
 \paragraph{We will first compare 2j, which is the left child of j, with n, the length of A.
 If $2j > n $, j has no children whatsoever. \\
@@ -709,9 +712,9 @@ The main idea is to expand the function until we reach the base case.\\}
     The running time of this function is $\theta(n^{\log_b^a})$.\\}
 \end{figure}
 
-\newpage
+\section{Partition and Quicksort Algorithm}
 
-\subsection{Partition and Quicksort Algorithm}
+\subsection{Basic Idea and Pseudocode}
 
 \paragraph{Quicksort is an efficient in-place sorting algorithm that uses the divide and conquer strategy.\\
 Basically it divide the array into two parts, one with the elements smaller than the pivot and the other bigger.\\
@@ -725,7 +728,121 @@ At first glance, quicksort sounds a lot like mergesort, but the main difference 
  Now we get a updated array where the pivot is rested somewhere in the middle range of the array, and it is the final position for 
  the pivot in the fully sorted array later. All we need to do now is to sort the left part and the right part.\\}
 
- 10:55 TBD...
+\paragraph{Here is the pesudocode for quicksort. $left$ means the index of the first element in array $A$ and $right$ means the index of the last.\\}
+
+\begin{verbatim}
+    quicksort(A,left,right):
+        #Base case
+        if right-left <= 1:
+            swap(A[left],A[right])
+            return
+        # First just choose a element as pivot.
+        x == A[right]
+        p = partition(A,x)
+        # Then we call quicksort recursively.
+        quicksort(A,left,p-1)
+        quicksort(A,p+1,right)
+\end{verbatim}
+
+\subsection{Quiz on Quicksort}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{week3quicksortquiz1.png}
+    \caption{Quiz 1\\}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{week3quicksortquiz2.png}
+    \caption{Quiz 2\\}
+\end{figure}
+
+\section{Designing Partition Scheme and Correctness}
+
+\paragraph{First we will go through the Lomuto Partition Scheme.\\
+We will introduce two intermediate variables, $i$ and $j$, which are the index of the first element 
+and the last element of the array.\\
+Then we will choose the last element as the pivot.\\
+The original array can be divided into four parts, 
+$A[1, \ldots ,i-1], A[i, \ldots ,j-1], A[j, \ldots ,n-1], A[n]$.\\
+The end of the first region can be either $i$ or $i-1$ as noted, which is not a big deal.\\
+The main idea of the Lomuto Partition Scheme is to compare the element at index $j$ with the pivot.\\
+If the element is smaller than the pivot, we will swap it with the element at index $i$ and then increase $i$ by 1.\\
+That is to say, everything after $j$ is categorized as ``unprocessed''.}
+
+\paragraph{Here is a step-by-step analysis of the partition scheme.\\
+Let $i=0, j=1$, and the pivot is $x = A[n]$.\\
+Under this situation, everything besides the pivot is unprocessed, located in Region 3.\\
+$\forall Region1 < x$, $\forall Region2 >= x$,\\
+if $A[j] < x$, we will swap $A[i]$ and $A[j]$, and then increase $i$ as well as $j$ by 1.\\
+If $A[j] >= x$, we will do nothing but increasing $j$ by 1.\\
+Here is the pseudocode for the Lomuto Partition Scheme.\\}
+
+\begin{verbatim}
+    partition(A,x):
+        # Four regions: A[1,...,i-1], A[i,...,j-1], A[j,...,n-1], A[n]
+        i = 0
+        j = 1
+        # Perform partitioning until the end of the array.
+        while j <= n-1:
+            if A[j] < x:
+                swap(A[i],A[j])
+                i += 1
+                j += 1
+            else:
+                j += 1
+        # Swap and place the pivot to its right position.
+        swap(A[i],A[n])
+        return i
+\end{verbatim}
+
+\paragraph{The running time of Lomuto Partition Scheme is just $n$.\\}
+
+\subsection{Lomutio Partition Algorithm Quiz}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{week3lomutoquiz1.png}
+    \caption{Quiz 1\\}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{week3lomutoquiz2.png}
+    \caption{Quiz 2\\}
+\end{figure}
+
+\section{Analysis of Quicksort Alogorithm}
+
+\paragraph{The best case analysis of quicksort is that what we call a balanced partition.\\
+Although it rarely happens, the running time when occuring is $\theta(nlog^n)$.}
+
+\paragraph{Now Let's take a look at the worst case analysis of quicksort algorithm.\\
+The worst case of quicksort is when the pivot is the smallest or the largest element of 
+the array. Therefore, either side of the pivot will be empty.\\
+The running time of the worst case is $\theta(n^2)$, which equals to the running time of insertion sort.\\
+So what we should do is to avoid the worst case by choosing a pivot randomly.\\
+The expected running time of quicksort is $\theta(nlog^n)$.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{expectedaveragerunningtime.png}
+\end{figure}
+
+13:26 TBD...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
