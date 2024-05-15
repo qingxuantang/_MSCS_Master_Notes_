@@ -309,6 +309,60 @@ INPUT .\images\expectedaveragerunningtime.png
 INPUT .\images\expectedaveragerunningtime.png
 INPUT .\images\expectedaveragerunningtime.png
 INPUT .\images\expectedaveragerunningtime.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz1.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz2.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quicksortanalysisquiz3.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectlittlequiz.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectrunningtime.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz1.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz2.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz3.png
+INPUT .\images\quickselectquiz4.png
+INPUT .\images\quickselectquiz4.png
+INPUT .\images\quickselectquiz4.png
+INPUT .\images\quickselectquiz4.png
+INPUT .\images\quickselectquiz4.png
+INPUT .\images\quickselectquiz4.png
 INPUT main.aux
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
@@ -318,6 +372,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb

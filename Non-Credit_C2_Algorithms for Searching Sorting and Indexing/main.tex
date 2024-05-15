@@ -689,7 +689,7 @@ a unknown average case running time.\\}
 
 \paragraph{Here is a general understanding of recurrences.\\}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{recurrencerelations.png}
     \caption{The $T(n)$ equation is a recursive function in this Mergesort function. 
     If $n<=1$, the function returns 1, where running time is 1. Otherwise, the function will be
@@ -703,7 +703,7 @@ a unknown average case running time.\\}
 \paragraph{If we want to solve for the recurrence relations, we can use the expansion method.\\
 The main idea is to expand the function until we reach the base case.\\}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{expansionmethod.png}
     \caption{We can assign $C(n) == \theta(n)$ at first.\\
     Then, we assign $T(n)$ to the original function with an expanded form.\\
@@ -825,8 +825,113 @@ The expected running time of quicksort is $\theta(nlog^n)$.\\}
     \includegraphics[width=\textwidth]{expectedaveragerunningtime.png}
 \end{figure}
 
-13:26 TBD...
+\paragraph{Let's assume $T(n)$ is the expected (or average) running time of quicksort.\\
+Here is the equation of $T(n)$.\\
+$T(n) = 1/n [\sum_{i=1}^{n-1} T(i) + \sum_{i=1}^{n-1} T(n-i)] + n$\\
+And it equals to\\
+$T(n) = 2/n [\sum_{i=1}^{n-1} T(i)] + n$\\
+The above is the compressed form of the equation. We can expand it like the following;\\
+$T(n) = 2/n [T(1)+T(2)+ \cdots + T(n-1)] + n$.\\
+If we multiply $n$ on both sides, we get\\
+$n*T(n) = 2[T(1)+T(2)+ \cdots + T(n-1)] + n^2$.\\
+If we replace $n$ with $n-1$, we will get\\
+$(n-1)*T(n-1) = 2[T(1)+T(2)+ \cdots + T(n-2)] + (n-1)^2$.\\
+Then we can subtract $nT(n-1)$ from $nT(n)$ and get\\
+$nT(n) - (n-1)T(n-1) = 2T(n-1) + 2n - n^2 + n - 1$.\\
+$T(n) = T(n-1) + 1/nT(n-1) + 2 - 1/n$.\\
+Now once again, we will try to expand the above equation.\\
+For convenience, we will assume $2-1/n = \theta(1)$.\\
+Then we will get $T(n) = T(n-1) + \theta(1)$\\
+$T(n) = T(n-1) + \theta(1)$\\
+$T(n) = T(n-2) + 2\theta(1)$\\
+$\cdots$
+$T(n) = (n+1)/(n-j+1)T(n-j) + \sum_{i=1}^{j-1} (n+1)/(n-i)*2\theta(1) + \theta(1)$.\\
+When $j == n$, the equation will be\\
+$T(n) = \sum_{i=1}^{j-1} (n+1)/(n-i)*2\theta(1) + \theta(1)$.\\
+$T(n) = [(n+1)/n + (n+1)/(n-1) + \cdots + (n+1)/1]*2\theta(1) + \theta(1)$\\
+$T(n) = 2\theta(1)[n+1][1 + 1/2 + 1/3 + \cdots + 1/n] + \theta(1)$\\
+The above equation is the harmonic series, in which the $1 + 1/2 + 1/3 + \cdots + 1/n$ part is called the nth harmoic number, 
+and it equals to $\theta(\log^n)$.\\
+Therefore, $T(n) = 2\theta(1)\theta(\log^n)$,\\
+Then we can get the final result of $T(n) = nlog^n$, a.k.a $\theta(n\log^n)$.
+Now we can say, if we choose a pivot randomly in Quicksort, the average running time will be $\theta(n\log^n)$.\\}
 
+\subsection{Quiz on Quicksort Analysis}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quicksortanalysisquiz1.png}
+    \caption{Quiz 1\\}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quicksortanalysisquiz2.png}
+    \caption{Quiz 2\\}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quicksortanalysisquiz3.png}
+    \caption{Quiz 3\\}
+\end{figure}
+
+
+\section{Quickselect Algorithm}
+
+\paragraph{The main idea of Quickselect is to find the kth smallest element in an array.\\
+We can use Quicksort to select better than the brute force method, which is just trying to
+sort the array first and then find the target by comparing every element.\\
+The running time of the brute force method is $\theta(n\log^n)$, 
+while the running time of Quickselect is $\theta(n)$.\\
+Here is the logic of using quicksort for quckselect function.\\
+At first, we will choose a pivot and partition the array.\\
+Then we will compare the pivot with the target.
+Let's say the pivot is j in array A with n elements in total.\\
+If $j == k$, we will return the pivot.\\
+If $j > k$, we will recursively call quickselect on the left part of the pivot,
+a.k.a. $quickselect(A[1], \ldots ,A[j-1])$.\\
+If $j < k$, we will recursively call quickselect on the right part of the pivot,
+a.k.a. $quickselect(A[j+1], \ldots ,A[n])$.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quickselectlittlequiz.png}
+    \caption{The next step will be to perform a $quickselect(12-5,A>=p)$ operation,
+    in order to find the $7th$ smallest element on the right side of the pivot,
+    since the $12th$ smallest element is already larger than the 4 elements
+    in the left side of the pivot.\\}
+\end{figure}
+
+\paragraph{Now let's go through a real example of quickselect.\\
+Let's say we have an array $A = [3,2,1,5,4,6,7,8,9]$.\\
+We want to find the 4th smallest element in the array.\\
+Let's say we choose the pivot randomly and it's 5.\\
+After partitioning, the array will be $A = [3,2,1,4,5,6,7,8,9]$.\\
+The pivot is 5, which is the 5th smallest element. Since pivot > k,
+we need to focus on the left side of the pivot, which is $[3,2,1,4]$.\\
+Now we need to find the 4th smallest element in the left side of the pivot.\\
+Let's say we choose the pivot randomly and it's 2.\\
+After partitioning, the array will be $A = [1,2,3,4]$.\\
+The pivot is 2, which is the 2nd smallest element. Since pivot < k,
+we need to focus on the right side of the pivot, which is $[3,4]$.\\
+Since the 4th smallest element is already larger than the 2 elements 
+in the left side of the pivot, we can just find the $4-2=2th$ smallest elment in
+$[3,4]$, which is 4.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quickselectrunningtime.png}
+    \caption{The running time of $T(n)$ is actually $\theta(n)$.\\}
+\end{figure}
+
+\subsection{Quiz on Quickselect}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{quickselectquiz1.png}
+    \caption{Quiz 1\\}
+    \includegraphics[width=\textwidth]{quickselectquiz2.png}
+    \caption{Quiz 2\\}
+    \includegraphics[width=\textwidth]{quickselectquiz3.png}
+    \caption{Quiz 3\\}
+    \includegraphics[width=\textwidth]{quickselectquiz4.png}
+    \caption{Quiz 4\\}
+\end{figure}
 
 
 
