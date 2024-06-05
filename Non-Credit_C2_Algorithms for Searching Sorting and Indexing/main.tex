@@ -1036,11 +1036,70 @@ Assuming $x,y \in Keys$.\\
 $\sum_{y \in hashtable}Pr(x, y colliding) \leq 2/m \leq 2n/m$, which is just $2\alpha$. $(\alpha=n/m=load factor)$\\
 That is to say, if we want to have a universal hash function, the average size of the list of the functions will be $2\alpha$.\\}
 
+\section{Open Address Hashing}
+
+\paragraph{The first solution to resolve hash collisions is `Chaining' as we discussed before.\\
+Instead of storing single value, we store a list of key-value pairs, so that we can resolve collisions
+in the process.\\
+The disadvantage of chaining lies in two points. First, it requires extra space to store the 
+linked list, a.k.a there's memory concern; second, it produces inefficient use of hashtable(some lists 
+are empty while others pretty big).\\
+Now we will introduce another solution called `Open Address Hashing'.\\
+The main idea of Open Address Hashing is to store the key-value pairs in the hashtable itself.\\
+If there is a collision, that is to say the original slot is occupied, we will find another 
+empty slot to store the key-value pair.\\}
+
+\subsection{Lookup and Insertion in Open Address Hashing}
+
+\paragraph{During lookup, we will first calculate the hash value of the key.\\
+Then we will check if the slot, j for example, is empty. If not, we will need to check the 
+alternative slot such as j+1.\\
+If both j and j+1 is empty, that means the key we are looking for is not in the hashtable yet.\\
+This process is called linear probing. Next we will look at quadratic probing, such as $j, j^2+a,
+ (j^2+a)^2 +a$, etc.\\}
+
+ \subsection{Double Hashing}
+
+ \begin{figure}[H]
+    \includegraphics[width=\textwidth]{doublehashing.jpg}
+\end{figure}
+
+\paragraph{The main idea of double hashing is to use two hash functions.\\
+The first hash function is used to calculate the slot, while the second hash function is 
+used to calculate the step.\\
+The main advantage of double hashing is that it can avoid clustering.\\
+For instance, we have $h_1(key) and h_2(key)$ from two differenct hash functions.\\
+The probing sequence will then be like $h_1(key), h_1(key)+h_2(key), h_1(key)+2h_2(key), \ldots$.\\}
 
 
+\subsection{Deletion}
 
+\paragraph{The main idea of deletion is to mark the slot as deleted.\\
+When we are looking for a key, we will treat the deleted slot as empty.\\
+However since the slot is marked deleted, we will prevent from encountering a problem of early stop,
+that is to say, when looking up with linear probing, we will not stop at the deleted slot.\\}
 
+\subsection{Perfect Hashing and Cuckoo Hashing}
 
+\paragraph{In a chaining solution, even if the average time cost is small, there may be still large 
+outliers. We can expect the largest chain is as large as $O(\log(n)/\log(\log(n)))$.\\
+That is to say, we may find it reach the $\log(n) / \log(\log(n))$ size of the chain alternatives 
+since the original slot is occupied. This is actually pretty good algorithm already since the number 
+is relatively small.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{expectedworstcaseforchaining.jpg}
+    \caption{Expected worst case for Chaining.\\}
+\end{figure}
+
+\paragraph{The main idea of perfect hashing is to have no collision at all.\\
+For an array that contains $n$ keys, we randomly choose a hash function from a 
+set of hash functions $H$, hence $h \in H$.\\
+The hashtable will be of size $k*n^2$, in which $k$ is a parameter to be determined.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{perfecthashinganalysis.jpg}
+\end{figure}
 
 
 
