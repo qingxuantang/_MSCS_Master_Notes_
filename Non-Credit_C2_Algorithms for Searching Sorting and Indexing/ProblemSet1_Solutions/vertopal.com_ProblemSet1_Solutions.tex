@@ -1,0 +1,655 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{instructions}{%
+\subsection{Instructions}\label{instructions}}
+
+\begin{quote}
+This assignment is to be completed and uploaded as a python3 notebook.
+\end{quote}
+
+This problem set covers the following topics:
+
+\begin{itemize}
+\tightlist
+\item
+  Basics of algorithms: correctness and running time complexity.
+\item
+  Time Complexity: O, big-Omega and big-Theta Notations.
+\item
+  Proving Correctness of Algorithms through Inductive Invariants.
+\item
+  Merge Sort: Proving Correctness.
+\end{itemize}
+
+\textbf{Important Note}
+
+Although this is a programming assignment, we have asked you to work on
+the "design" and provided opportunities for you to analyze your solution
+and describe your design. \textbf{However, those parts will not be
+graded.} You are welcome to compare your answers against our solutions
+once you have completed the assignments. Our solutions are provided at
+the very end.
+
+\hypertarget{problem-1-find-crossover-indices}{%
+\subsection{Problem 1: Find Crossover
+Indices.}\label{problem-1-find-crossover-indices}}
+
+You are given data that consists of points
+\((x_0, y_0), \ldots, (x_n, y_n)\), wherein \$x\_0 \textless{} x\_1
+\textless{} \textbackslash ldots \textless{} x\_n \$, and
+\(y_0 < y_1 \ldots < y_n\) as well.
+
+Furthermore, it is given that \(y_0 < x_0\) and \$ y\_n \textgreater{}
+x\_n\$.
+
+Find a "cross-over" index \(i\) between \(0\) and \(n-1\) such that \$
+y\_i \textbackslash leq x\_i\$ and \(y_{i+1} > x_{i+1}\).
+
+Note that such an index must always exist (convince yourself of this
+fact before we proceed).
+
+\textbf{Example}
+
+\[\begin{array}{c| c c c c c c c c c }
+i & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+x_i & 0 & 2 & 4 & \color{red}{5} & \color{red}{6} & 7 & 8 & 10 \\
+y_i & -2 & 0 & 2 & \color{red}{4} & \color{red}{7} & 8 & 10 & 12 \\
+\end{array} \]
+
+Your algorithm must find the index \(i=3\) as the crossover point.
+
+On the other hand, consider the data
+
+\[\begin{array}{c| c c c c c c c c c }
+i & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+x_i & \color{red}{0} & \color{red}{1} & 4 & \color{red}{5} & \color{red}{6} & 7 & 8 & 10 \\
+y_i & \color{red}{-2} & \color{red}{1.5} & 2 & \color{red}{4} & \color{red}{7} & 8 & 10 & 12 \\
+\end{array} \]
+
+We have two cross over points. Your algorithm may output either \(i=0\)
+or \(i=3\).
+
+\textbf{(A)} Design an algorithm to find an index
+\(i \in \{ 0, 1, \ldots, n-1\}\) such that \(x_i \geq y_i\) but
+\(x_{i+1} < y_{i+1}\).
+
+Describe your algorithm using python code for a function
+\emph{findCrossoverIndexHelper(x, y, left, right)}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x} is a list of x values sorted in increasing order.
+\item
+  \texttt{y} is a list of y values sorted in increasing order.
+\item
+  \texttt{x} and \texttt{y} are lists of same size (\texttt{n}).
+\item
+  \texttt{left} and \texttt{right} are indices that represent the
+  current search region in the list such that 0 \textless= \texttt{left}
+  \textless{} \texttt{right} \textless= \texttt{n}
+\end{itemize}
+
+Your solution must use \emph{recursion}.
+
+\textbf{Hint:} Modify the binary search algorithm we presented in class.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#First write a "helper" function with two extra parameters}
+\CommentTok{\# left, right that ddedscribes the search region as shown below}
+\KeywordTok{def}\NormalTok{ findCrossoverIndexHelper(x, y, left, right):}
+    \CommentTok{\# Note: Output index i such that }
+    \CommentTok{\#         left \textless{}= i \textless{}= right}
+    \CommentTok{\#         x[i] \textless{}= y[i]}
+    \CommentTok{\# First, Write down our invariants as assertions here}
+    \ControlFlowTok{assert}\NormalTok{(}\BuiltInTok{len}\NormalTok{(x) }\OperatorTok{==} \BuiltInTok{len}\NormalTok{(y))}
+    \ControlFlowTok{assert}\NormalTok{(left }\OperatorTok{\textgreater{}=} \DecValTok{0}\NormalTok{)}
+    \ControlFlowTok{assert}\NormalTok{(left }\OperatorTok{\textless{}=}\NormalTok{ right}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+    \ControlFlowTok{assert}\NormalTok{(right }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(x))}
+    \CommentTok{\# Here is the key property we would like to maintain.}
+    \ControlFlowTok{assert}\NormalTok{(x[left] }\OperatorTok{\textgreater{}}\NormalTok{ y[left])}
+    \ControlFlowTok{assert}\NormalTok{(x[right] }\OperatorTok{\textless{}}\NormalTok{ y[right])}
+    
+    \CommentTok{\# your code here}
+    \ControlFlowTok{if}\NormalTok{ right }\OperatorTok{==}\NormalTok{ left }\OperatorTok{+} \DecValTok{1}\NormalTok{:}
+        \ControlFlowTok{if}\NormalTok{ x[left] }\OperatorTok{\textgreater{}=}\NormalTok{ y[left] }\KeywordTok{and}\NormalTok{ x[right] }\OperatorTok{\textless{}}\NormalTok{ y[right]:}
+            \ControlFlowTok{return}\NormalTok{ left  }\CommentTok{\# Found the crossover index}
+        \ControlFlowTok{else}\NormalTok{:}
+            \ControlFlowTok{return} \OperatorTok{{-}}\DecValTok{1}  \CommentTok{\# Should not happen based on problem constraints}
+    
+\NormalTok{    mid }\OperatorTok{=}\NormalTok{ left }\OperatorTok{+}\NormalTok{ (right }\OperatorTok{{-}}\NormalTok{ left) }\OperatorTok{//} \DecValTok{2}  \CommentTok{\# Find the mid{-}point}
+    
+    \ControlFlowTok{if}\NormalTok{ x[mid] }\OperatorTok{\textgreater{}=}\NormalTok{ y[mid]:}
+        \CommentTok{\# The crossover point could be at mid or to the right of mid}
+        \ControlFlowTok{return}\NormalTok{ findCrossoverIndexHelper(x, y, mid, right)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \CommentTok{\# The crossover point is to the left of mid}
+        \ControlFlowTok{return}\NormalTok{ findCrossoverIndexHelper(x, y, left, mid)}
+        
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Define the function findCrossoverIndex that wil }
+\CommentTok{\# call the helper function findCrossoverIndexHelper}
+\KeywordTok{def}\NormalTok{ findCrossoverIndex(x, y):}
+    \ControlFlowTok{assert}\NormalTok{(}\BuiltInTok{len}\NormalTok{(x) }\OperatorTok{==} \BuiltInTok{len}\NormalTok{(y))}
+    \ControlFlowTok{assert}\NormalTok{(x[}\DecValTok{0}\NormalTok{] }\OperatorTok{\textgreater{}}\NormalTok{ y[}\DecValTok{0}\NormalTok{])}
+\NormalTok{    n }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(x)}
+    \ControlFlowTok{assert}\NormalTok{(x[n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] }\OperatorTok{\textless{}}\NormalTok{ y[n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]) }\CommentTok{\# Note: this automatically ensures n \textgreater{}= 2 why?}
+    \CommentTok{\# your code here}
+    
+    
+    \ControlFlowTok{return}\NormalTok{ findCrossoverIndexHelper(x, y, }\DecValTok{0}\NormalTok{, n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+                
+        
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# }\RegionMarkerTok{BEGIN}\CommentTok{ }\AlertTok{TEST}\CommentTok{ CASES}
+\NormalTok{j1 }\OperatorTok{=}\NormalTok{ findCrossoverIndex([}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{], [}\OperatorTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}j1 = }\SpecialCharTok{\%d}\StringTok{\textquotesingle{}} \OperatorTok{\%}\NormalTok{ j1)}
+\ControlFlowTok{assert}\NormalTok{ j1 }\OperatorTok{==} \DecValTok{1}\NormalTok{, }\StringTok{"Test Case \# 1 Failed"}
+
+\NormalTok{j2 }\OperatorTok{=}\NormalTok{ findCrossoverIndex([}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{], [}\OperatorTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{4.2}\NormalTok{, }\FloatTok{4.3}\NormalTok{, }\FloatTok{4.5}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}j2 = }\SpecialCharTok{\%d}\StringTok{\textquotesingle{}} \OperatorTok{\%}\NormalTok{ j2)}
+\ControlFlowTok{assert}\NormalTok{ j2 }\OperatorTok{==} \DecValTok{1} \KeywordTok{or}\NormalTok{ j2 }\OperatorTok{==} \DecValTok{5}\NormalTok{, }\StringTok{"Test Case \# 2 Failed"}
+
+\NormalTok{j3 }\OperatorTok{=}\NormalTok{ findCrossoverIndex([}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{], [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}j3 = }\SpecialCharTok{\%d}\StringTok{\textquotesingle{}} \OperatorTok{\%}\NormalTok{ j3)}
+\ControlFlowTok{assert}\NormalTok{ j3 }\OperatorTok{==} \DecValTok{0}\NormalTok{, }\StringTok{"Test Case \# 3 failed"}
+
+\NormalTok{j4 }\OperatorTok{=}\NormalTok{ findCrossoverIndex([}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{], [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{8}\NormalTok{, }\DecValTok{5}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}j4 = }\SpecialCharTok{\%d}\StringTok{\textquotesingle{}} \OperatorTok{\%}\NormalTok{ j4)}
+\ControlFlowTok{assert}\NormalTok{ j4 }\OperatorTok{==} \DecValTok{2}\NormalTok{, }\StringTok{"Test Case \# 4 failed"}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Congratulations: all test cases passed {-} 10 points\textquotesingle{}}\NormalTok{)}
+\CommentTok{\#}\RegionMarkerTok{END}\CommentTok{ }\AlertTok{TEST}\CommentTok{ CASES}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+j1 = 1
+j2 = 1
+j3 = 0
+j4 = 2
+Congratulations: all test cases passed - 10 points
+\end{verbatim}
+
+\textbf{(B, 0 points)} What is the running time of your algorithm above
+as a function of the input array size \(n\)?
+
+\textbf{This portion is not graded. You are encouraged to answer it as
+part of your programming assignment however}
+
+YOUR ANSWER HERE
+
+\hypertarget{problem-2-find-integer-cube-root}{%
+\subsection{Problem 2 (Find integer cube
+root.)}\label{problem-2-find-integer-cube-root}}
+
+The integer cube root of a positive number \(n\) is the smallest number
+\(i\) such that \(i^3 \leq n\) but \((i+1)^3 > n\).
+
+For instance, the integer cube root of \(100\) is \(4\) since
+\(4^3 \leq 100\) but \(5^3 > 100\). Likewise, the integer cube root of
+\(1000\) is \(10\).
+
+Write a function \texttt{integerCubeRootHelper(n,\ left,\ right)} that
+searches for the integer cube-root of \texttt{n} between \texttt{left}
+and \texttt{right} given the following pre-conditions:
+
+\begin{itemize}
+\tightlist
+\item
+  \(n \geq 1\)
+\item
+  \(\text{left} < \text{right}\).
+\item
+  \(\text{left}^3 < n\)
+\item
+  \(\text{right}^3 > n\).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ integerCubeRootHelper(n, left, right):}
+\NormalTok{    cube }\OperatorTok{=} \KeywordTok{lambda}\NormalTok{ x: x }\OperatorTok{*}\NormalTok{ x }\OperatorTok{*}\NormalTok{ x }\CommentTok{\# anonymous function to cube a number}
+    \ControlFlowTok{assert}\NormalTok{(n }\OperatorTok{\textgreater{}=} \DecValTok{1}\NormalTok{)}
+    \ControlFlowTok{assert}\NormalTok{(left }\OperatorTok{\textless{}}\NormalTok{ right)}
+    \ControlFlowTok{assert}\NormalTok{(left }\OperatorTok{\textgreater{}=} \DecValTok{0}\NormalTok{)}
+    \ControlFlowTok{assert}\NormalTok{(right }\OperatorTok{\textless{}}\NormalTok{ n)}
+    \ControlFlowTok{assert}\NormalTok{(cube(left) }\OperatorTok{\textless{}}\NormalTok{ n), }\SpecialStringTok{f\textquotesingle{}}\SpecialCharTok{\{}\NormalTok{left}\SpecialCharTok{\}}\SpecialStringTok{, }\SpecialCharTok{\{}\NormalTok{right}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+    \ControlFlowTok{assert}\NormalTok{(cube(right) }\OperatorTok{\textgreater{}}\NormalTok{ n), }\SpecialStringTok{f\textquotesingle{}}\SpecialCharTok{\{}\NormalTok{left}\SpecialCharTok{\}}\SpecialStringTok{, }\SpecialCharTok{\{}\NormalTok{right}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+    \CommentTok{\# your code here}
+    
+    \ControlFlowTok{if}\NormalTok{ right }\OperatorTok{==}\NormalTok{ left }\OperatorTok{+} \DecValTok{1}\NormalTok{:}
+        \ControlFlowTok{if}\NormalTok{ (cube(left)}\OperatorTok{\textless{}}\NormalTok{n) }\KeywordTok{and}\NormalTok{ (cube(right)}\OperatorTok{\textgreater{}}\NormalTok{n):}
+            \ControlFlowTok{return}\NormalTok{ left  }\CommentTok{\# Found the cuberoot}
+        \ControlFlowTok{elif}\NormalTok{ cube(left)}\OperatorTok{==}\NormalTok{n:}
+            \ControlFlowTok{return}\NormalTok{ left}
+        \ControlFlowTok{elif}\NormalTok{ cube(right)}\OperatorTok{==}\NormalTok{n:}
+            \ControlFlowTok{return}\NormalTok{ right}
+        \ControlFlowTok{else}\NormalTok{:}
+            \ControlFlowTok{return} \OperatorTok{{-}}\DecValTok{1}  \CommentTok{\# Should not happen based on problem constraints}
+    
+\NormalTok{    mid }\OperatorTok{=}\NormalTok{ left }\OperatorTok{+}\NormalTok{ (right }\OperatorTok{{-}}\NormalTok{ left) }\OperatorTok{//} \DecValTok{2}  \CommentTok{\# Find the mid{-}point}
+    
+    \ControlFlowTok{if}\NormalTok{ cube(mid)}\OperatorTok{\textless{}}\NormalTok{n:}
+        \CommentTok{\# The cuberoot point could be at mid or to the right of mid}
+        \ControlFlowTok{return}\NormalTok{ integerCubeRootHelper(n, mid, right)}
+    \ControlFlowTok{elif}\NormalTok{ cube(mid)}\OperatorTok{\textgreater{}}\NormalTok{n:}
+        \CommentTok{\# The cuberoot point is to the left of mid}
+        \ControlFlowTok{return}\NormalTok{ integerCubeRootHelper(n, left, mid)}
+    \ControlFlowTok{elif}\NormalTok{ cube(mid)}\OperatorTok{==}\NormalTok{n:}
+        \ControlFlowTok{return}\NormalTok{ mid}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Write down the main function}
+\KeywordTok{def}\NormalTok{ integerCubeRoot(n):}
+    \ControlFlowTok{assert}\NormalTok{( n }\OperatorTok{\textgreater{}} \DecValTok{0}\NormalTok{)}
+    \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{==} \DecValTok{1}\NormalTok{): }
+        \ControlFlowTok{return} \DecValTok{1}
+    \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{==} \DecValTok{2}\NormalTok{):}
+        \ControlFlowTok{return} \DecValTok{1}
+    \ControlFlowTok{return}\NormalTok{ integerCubeRootHelper(n, }\DecValTok{0}\NormalTok{, n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{1}\NormalTok{) }\OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{2}\NormalTok{) }\OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{4}\NormalTok{) }\OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{7}\NormalTok{) }\OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{8}\NormalTok{) }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{20}\NormalTok{) }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(integerCubeRoot(}\DecValTok{26}\NormalTok{) }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{27}\NormalTok{, }\DecValTok{64}\NormalTok{):}
+    \ControlFlowTok{assert}\NormalTok{(integerCubeRoot(j) }\OperatorTok{==} \DecValTok{3}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{64}\NormalTok{,}\DecValTok{125}\NormalTok{):}
+    \ControlFlowTok{assert}\NormalTok{(integerCubeRoot(j) }\OperatorTok{==} \DecValTok{4}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{125}\NormalTok{, }\DecValTok{216}\NormalTok{):}
+    \ControlFlowTok{assert}\NormalTok{(integerCubeRoot(j) }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{216}\NormalTok{, }\DecValTok{343}\NormalTok{):}
+    \ControlFlowTok{assert}\NormalTok{(integerCubeRoot(j) }\OperatorTok{==} \DecValTok{6}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{343}\NormalTok{, }\DecValTok{512}\NormalTok{):}
+    \ControlFlowTok{assert}\NormalTok{(integerCubeRoot(j) }\OperatorTok{==} \DecValTok{7}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Congrats: All tests passed! (10 points)\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Congrats: All tests passed! (10 points)
+\end{verbatim}
+
+\hypertarget{b-0-points}{%
+\subsubsection{(B, 0 points)}\label{b-0-points}}
+
+The inductive invariant for the function
+\texttt{integerCubeRootHelper(n,\ left,\ right)} that ensures that the
+overall algorithm for finding the integer cube root is correct is :
+\[\text{left}^3 < n\; \text{and}\; \text{right}^3 > n\]
+
+Use the inductive invariant to establish that the integer cube root of
+\(n\) (the final answer we seek) must lie between \texttt{left} and
+\texttt{right}.
+
+In other words, let \(j\) be the integer cube root of \(n\).
+
+Prove using the inductive invariant and property of the integer cube
+root \(j\) that:
+
+\[ \text{left} \leq j  < \text{right}\]
+
+\textbf{Note that this part is not graded. You are encouraged to answer
+it for your own understanding.}
+
+YOUR ANSWER HERE
+
+\hypertarget{c-0-points}{%
+\subsubsection{(C, 0 points)}\label{c-0-points}}
+
+Prove that your solution for \texttt{integerCubeRootHelper} maintains
+the overall inductive invariant from part (B). I.e, if the function were
+called with
+
+\(0 \leq \text{left} < \text{right} < n\), and \(\text{left}^3 < n\) and
+\(\text{right}^3 > n\).
+
+Any subsequent recursive calls will have their arguments that also
+satisfy this property. Model your answer based on the lecture notes for
+binary search problem provided.
+
+\textbf{Note that this part is not graded. You are encouraged to answer
+it for your own understanding.}
+
+YOUR ANSWER HERE
+
+\hypertarget{problem-3-develop-multiway-merge-algorithm-15-points}{%
+\subsection{Problem 3 (Develop Multiway Merge Algorithm, 15
+points).}\label{problem-3-develop-multiway-merge-algorithm-15-points}}
+
+We studied the problem of merging 2 sorted lists \texttt{lst1} and
+\texttt{lst2} into a single sorted list in time \(\Theta(m + n)\) where
+\(m\) is the size of \texttt{lst1} and \(n\) is the size of
+\texttt{lst2}. Let \texttt{twoWayMerge(lst1,\ lst2)} represent the
+python function that returns the merged result using the approach
+presented in class.
+
+In this problem, we will explore algorithms for merging \texttt{k}
+different sorted lists, usually represented as a list of sorted lists
+into a single list.
+
+\hypertarget{a-0-points}{%
+\subsubsection{(A, 0 points)}\label{a-0-points}}
+
+Suppose we have \(k\) lists that we will represent as
+\texttt{lists{[}0{]}}, \texttt{lists{[}1{]}}, ...,
+\texttt{lists{[}k-1{]}} for convenience and the size of these lists are
+all assumed to be the same value \(n\).
+
+We wish to solve multiway merge by merging two lists at a time:
+
+\begin{verbatim}
+  mergedList = lists[0] # start with list 0
+  for i = 1, ... k-1 do
+      mergedList = twoWayMerge(mergedList, lists[i])
+  return mergedList
+\end{verbatim}
+
+Knowing the running time of the \texttt{twoWayMerge} algorithm as
+mentioned above, what is the overall running time of the algorithm in
+terms of \(n, k\).
+
+\textbf{Note that this part is not graded. You are encouraged to answer
+it for your own understanding.}
+
+YOUR ANSWER HERE
+
+\textbf{(B)} Implement an algorithm that will implement the \(k\) way
+merge by calling \texttt{twoWayMerge} repeatedly as follows:
+
+\begin{enumerate}
+\tightlist
+\item
+  Call \texttt{twoWayMerge} on consecutive pairs of lists
+  \texttt{twoWayMerge(lists{[}0{]},\ lists{[}1{]})}, ... ,
+  \texttt{twoWayMerge(lists{[}k-2{]},\ lists{[}k-1{]})} (assume k is
+  even).
+\item
+  Thus, we create a new list of lists of size \texttt{k/2}.
+\item
+  Repeat steps 1, 2 until we have a single list left.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ twoWayMerge(lst1, lst2):}
+    \CommentTok{\# Implement the two way merge algorithm on }
+    \CommentTok{\#          two ascending order sorted lists}
+    \CommentTok{\# return a fresh ascending order sorted list that }
+    \CommentTok{\#          merges lst1 and lst2}
+    \CommentTok{\# your code here}
+\NormalTok{    tmp\_store }\OperatorTok{=}\NormalTok{ []}
+    \CommentTok{\#for i,j in zip(range(len(lst1)),range(len(lst2))):}
+\NormalTok{    i }\OperatorTok{=} \DecValTok{0}
+\NormalTok{    j }\OperatorTok{=} \DecValTok{0}
+    \ControlFlowTok{while}\NormalTok{ (i }\OperatorTok{\textless{}=} \BuiltInTok{len}\NormalTok{(lst1)}\OperatorTok{{-}}\DecValTok{1}\NormalTok{) }\KeywordTok{and}\NormalTok{ (j}\OperatorTok{\textless{}=}\BuiltInTok{len}\NormalTok{(lst2)}\OperatorTok{{-}}\DecValTok{1}\NormalTok{):}
+        \ControlFlowTok{if}\NormalTok{ lst1[i]}\OperatorTok{\textless{}}\NormalTok{lst2[j]:}
+\NormalTok{            tmp\_store.append(lst1[i])}
+\NormalTok{            i}\OperatorTok{+=}\DecValTok{1}
+        \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{            tmp\_store.append(lst2[j])}
+\NormalTok{            j}\OperatorTok{+=}\DecValTok{1}
+    \ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textless{}=} \BuiltInTok{len}\NormalTok{(lst1)}\OperatorTok{{-}}\DecValTok{1}\NormalTok{:}
+\NormalTok{        tmp\_store.append(lst1[i])}
+\NormalTok{        i}\OperatorTok{+=}\DecValTok{1}
+    \ControlFlowTok{while}\NormalTok{ j }\OperatorTok{\textless{}=} \BuiltInTok{len}\NormalTok{(lst2)}\OperatorTok{{-}}\DecValTok{1}\NormalTok{:}
+\NormalTok{        tmp\_store.append(lst2[j])}
+\NormalTok{        j}\OperatorTok{+=}\DecValTok{1}
+    \ControlFlowTok{return}\NormalTok{ tmp\_store}
+
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# given a list\_of\_lists as input, }
+\CommentTok{\#   if list\_of\_lists has 2 or more lists, }
+\CommentTok{\#        compute 2 way merge on elements i, i+1 for i = 0, 2, ...}
+\CommentTok{\#   return new list of lists after the merge}
+\CommentTok{\#   Handle the case when the list size is odd carefully.}
+\KeywordTok{def}\NormalTok{ oneStepKWayMerge(list\_of\_lists):}
+    \ControlFlowTok{if}\NormalTok{ (}\BuiltInTok{len}\NormalTok{(list\_of\_lists) }\OperatorTok{\textless{}=} \DecValTok{1}\NormalTok{):}
+        \ControlFlowTok{return}\NormalTok{ list\_of\_lists}
+\NormalTok{    ret\_list\_of\_lists }\OperatorTok{=}\NormalTok{ []}
+\NormalTok{    k }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(list\_of\_lists)}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{0}\NormalTok{, k, }\DecValTok{2}\NormalTok{):}
+        \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{\textless{}}\NormalTok{ k}\OperatorTok{{-}}\DecValTok{1}\NormalTok{):}
+\NormalTok{            ret\_list\_of\_lists.append(twoWayMerge(list\_of\_lists[i], list\_of\_lists[i}\OperatorTok{+}\DecValTok{1}\NormalTok{]))}
+        \ControlFlowTok{else}\NormalTok{: }
+\NormalTok{            ret\_list\_of\_lists.append(list\_of\_lists[k}\OperatorTok{{-}}\DecValTok{1}\NormalTok{])}
+    \ControlFlowTok{return}\NormalTok{ ret\_list\_of\_lists}
+    
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Given a list of lists wherein each }
+\CommentTok{\#    element of list\_of\_lists is sorted in ascending order,}
+\CommentTok{\# use the oneStepKWayMerge function repeatedly to merge them.}
+\CommentTok{\# Return a single merged list that is sorted in ascending order.}
+\KeywordTok{def}\NormalTok{ kWayMerge(list\_of\_lists):}
+\NormalTok{    k }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(list\_of\_lists)}
+    \ControlFlowTok{if}\NormalTok{ k }\OperatorTok{==} \DecValTok{1}\NormalTok{:}
+        \ControlFlowTok{return}\NormalTok{ list\_of\_lists[}\DecValTok{0}\NormalTok{]}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        new\_list\_of\_lists }\OperatorTok{=}\NormalTok{ oneStepKWayMerge(list\_of\_lists)}
+        \ControlFlowTok{return}\NormalTok{ kWayMerge(new\_list\_of\_lists)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# }\RegionMarkerTok{BEGIN}\CommentTok{ TESTS}
+\NormalTok{lst1}\OperatorTok{=}\NormalTok{ kWayMerge([[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{], [}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{7}\NormalTok{],[}\OperatorTok{{-}}\DecValTok{2}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{6}\NormalTok{],[}\DecValTok{5}\NormalTok{]])}
+\ControlFlowTok{assert}\NormalTok{ lst1 }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{], }\StringTok{"Test 1 failed"}
+
+\NormalTok{lst2 }\OperatorTok{=}\NormalTok{ kWayMerge([[}\OperatorTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{ , }\DecValTok{8}\NormalTok{], [}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{], [}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{]])}
+\ControlFlowTok{assert}\NormalTok{ lst2 }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{2}\NormalTok{, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{], }\StringTok{"Test 2 failed"}
+
+\NormalTok{lst3 }\OperatorTok{=}\NormalTok{ kWayMerge([[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{]])}
+\ControlFlowTok{assert}\NormalTok{ lst3 }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{], }\StringTok{"Test 3 Failed"}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}All Tests Passed = 15 points\textquotesingle{}}\NormalTok{)}
+\CommentTok{\#}\RegionMarkerTok{END}\CommentTok{ TESTS}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+All Tests Passed = 15 points
+\end{verbatim}
+
+\hypertarget{c-0-points}{%
+\subsubsection{(C, 0 points)}\label{c-0-points}}
+
+What is the overall running time of the algorithm in (B) as a function
+of \(n\) and \(k\)?
+
+\textbf{Note that this part is not graded. You are encouraged to answer
+it for your own understanding.}
+
+YOUR ANSWER HERE
+
+\hypertarget{solutions-to-the-conceptual-non-coding-questions}{%
+\subsection{Solutions to the Conceptual (Non Coding)
+Questions}\label{solutions-to-the-conceptual-non-coding-questions}}
+
+\hypertarget{problem-1b}{%
+\subsubsection{Problem 1B}\label{problem-1b}}
+
+Note that the running time of \emph{findCrossOverIndexHelper} for inputs
+\(x,y\) of size \(n\) is \(\Theta(\log(n))\). This is because, each
+iteration of the algorithm halves the search region and the algorithm
+terminates when the search region has size \(2\). This requires at most
+\(\Theta(\log(n))\) iterations by the same argument as that presented
+for binary search in the lecture video.
+
+\hypertarget{problem-2b}{%
+\subsubsection{Problem 2B}\label{problem-2b}}
+
+\hypertarget{the-reason-we-can-conclude-textleft-leq-j--textright-is-}{%
+\paragraph{\texorpdfstring{The reason we can conclude
+\(\text{left} \leq j < \text{right}\) is
+:}{The reason we can conclude \textbackslash text\{left\} \textbackslash leq j \textless{} \textbackslash text\{right\} is :}}\label{the-reason-we-can-conclude-textleft-leq-j--textright-is-}}
+
+We note that since \(j\) is assumed to be integer cube root of \(n\), we
+have \(j^3 \leq n\) and \((j+1)^3 > n\). We have \(\text{left} < j+1\)
+and likewise \(\text{right} > j\). Therefore,
+\(\text{left} \leq j < \text{right}\).
+
+\hypertarget{problem-2c}{%
+\subsubsection{Problem 2C}\label{problem-2c}}
+
+\begin{verbatim}
+    mid = (left + right)//2
+    if (cube(mid)  <= n and cube(mid+1) > n):
+        return mid
+    elif (cube(mid) > n):
+        return integerCubeRootHelper(n, left, mid) # Call 1
+    else:
+        return integerCubeRootHelper(n, mid, right) # Call 2
+\end{verbatim}
+
+If Call 1 happens, we note that \texttt{cube(mid)\ \textgreater{}\ n}.
+However, \texttt{cube(left)\ \textless{}\ n} is already true since the
+value of \texttt{left} is unchanged. Thus Call 1 satisfies the
+invariant.
+
+Note that Call 2 will satisfy the property because
+\texttt{cube(right)\ \textgreater{}\ n} and the call will only happen if
+\texttt{cube(mid+1)\ \textless{}=\ n}. This implies that
+\texttt{cube(mid)\textless{}\ n}. Therefore, we conclude that
+\texttt{Call\ 2} will satisfy the invariant, as well.
+
+\hypertarget{problem-3a}{%
+\subsubsection{Problem 3A}\label{problem-3a}}
+
+The overall running time is
+\(\Theta( n \times ( (k-1) + \cdots + 1))= \Theta(n \times k^2)\)
+
+\hypertarget{problem-3c}{%
+\subsubsection{Problem 3C}\label{problem-3c}}
+
+At iteration \(i\), the list of lists has size \(k/2^{i-1}\) with each
+element of size \(n \times 2^{i-1}\). The number of merge operations is
+\(k/2^i\) with each merge operation taking \(n \times 2^{i}\) time. The
+overall work done at the \(i^{th}\) iteration remains \(k \times n\).
+There are \(\Theta(\log(k))\) iterations in all. Therefore, the overall
+complexity is \(\Theta(n k \log(k))\).
+
+\hypertarget{thats-all-folks}{%
+\subsection{That\textquotesingle s All Folks!}\label{thats-all-folks}}
+
+\end{document}

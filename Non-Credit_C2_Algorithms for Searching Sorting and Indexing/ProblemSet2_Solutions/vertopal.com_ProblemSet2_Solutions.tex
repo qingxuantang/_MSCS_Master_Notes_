@@ -1,0 +1,1321 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{problem-set--2-basic-datastructures-and-heaps}{%
+\section{Problem Set \# 2 (Basic Datastructures and
+Heaps)}\label{problem-set--2-basic-datastructures-and-heaps}}
+
+Topics covered:
+
+\begin{itemize}
+\tightlist
+\item
+  Basic data-structures
+\item
+  Heap data-structures
+\item
+  Using heaps and arrays to realize interesting functionality.
+\end{itemize}
+
+\hypertarget{problem-1-least-k-elements-datastructure}{%
+\subsection{Problem 1 (Least-k Elements
+Datastructure)}\label{problem-1-least-k-elements-datastructure}}
+
+We saw how min-heaps can efficiently allow us to query the least element
+in a heap (array). We would like to modify minheaps in this exercise to
+design a data structure to maintain the \textbf{least k} elements for a
+given \(k \geq 1\) with \[k = 1\] being the minheap data-structure.
+
+Our design is to hold two arrays:
+
+\begin{itemize}
+\tightlist
+\item
+  (a) a sorted array \texttt{A} of \(k\) elements that forms our least k
+  elements; and
+\item
+  (b) a minheap \texttt{H} with the remaining \(n-k\) elements.
+\end{itemize}
+
+Our data structure will itself be a pair of arrays \texttt{(A,H)} with
+the following property:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{H} must be a minheap
+\item
+  \texttt{A} must be sorted of size \(k\).
+\item
+  Every element of \texttt{A} must be smaller than every element of
+  \texttt{H}.
+\end{itemize}
+
+The key operations to implement in this assignment include:
+
+\begin{itemize}
+\tightlist
+\item
+  insert a new element into the data-structure
+\item
+  delete an existing element from the data-structure.
+\end{itemize}
+
+We will first ask you to design the data structure and them implement
+it.
+
+\hypertarget{a-design-insertion-algorithm}{%
+\subsubsection{(A) Design Insertion
+Algorithm}\label{a-design-insertion-algorithm}}
+
+Suppose we wish to insert a new element with key \(j\) into this data
+structure. Describe the pseudocode. Your pseudocode must deal with two
+cases: when the inserted element \(j\) would be one of the
+\texttt{least\ k} elements i.e, it belongs to the array \texttt{A}; or
+when the inserted element belongs to the heap \texttt{H}. How would you
+distinguish between the two cases?
+
+\begin{itemize}
+\tightlist
+\item
+  You can assume that heap operations such as \texttt{insert(H,\ key)}
+  and \texttt{delete(H,\ index)} are defined.
+\item
+  Assume that the heap is indexed as
+  \texttt{H{[}1{]}},...,\texttt{H{[}n\ -k{]}} with \texttt{H{[}0{]}}
+  being unused.
+\item
+  Assume \$ n \textgreater{} k\$, i.e, there are already more than \(k\)
+  elements in the data structure.
+\end{itemize}
+
+What is the complexity of the insertion operation in the worst case in
+terms of \(k, n\).
+
+\textbf{Unfortunately, we cannot grade your answer. We hope you will use
+this to design your datastructure on paper before attempting to code it
+up}
+
+\hypertarget{b-design-deletion-algorithm}{%
+\subsubsection{(B) Design Deletion
+Algorithm}\label{b-design-deletion-algorithm}}
+
+Suppose we wish to delete an index \(j\) from the top-k array \(A\).
+Design an algorithm to perform this deletion. Assume that the heap is
+not empty, in which case you can assume that the deletion fails.
+
+\begin{itemize}
+\tightlist
+\item
+  You can assume that heap operations such as \texttt{insert(H,\ key)}
+  and \texttt{delete(H,\ index)} are defined.
+\item
+  Assume that the heap is indexed as
+  \texttt{H{[}1{]}},...,\texttt{H{[}n\ -k{]}} with \texttt{H{[}0{]}}
+  being unused.
+\item
+  Assume \$ n \textgreater{} k\$, i.e, there are already more than \(k\)
+  elements in the data structure.
+\end{itemize}
+
+What is the complexity of the insertion operation in the worst case in
+terms of \(k, n\).
+
+\textbf{Unfortunately, we cannot grade your answer. We hope you will use
+this to design your datastructure on paper before attempting to code it
+up}
+
+YOUR ANSWER HERE
+
+YOUR ANSWER HERE
+
+\hypertarget{c-program-your-solution-by-completing-the-code-below}{%
+\subsection{(C) Program your solution by completing the code
+below}\label{c-program-your-solution-by-completing-the-code-below}}
+
+Note that although your algorithm design above assume that your are
+inserting and deleting from cases where \(n \geq k\), the data structure
+implementation below must handle \(n < k\) as well. We have provided
+implementations for that portion to help you out.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# First let us complete a minheap data structure.}
+\CommentTok{\# Please complete missing parts below.}
+
+\KeywordTok{class}\NormalTok{ MinHeap:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.H }\OperatorTok{=}\NormalTok{ [}\VariableTok{None}\NormalTok{]}
+
+    \KeywordTok{def}\NormalTok{ size(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H)}\OperatorTok{{-}}\DecValTok{1}
+
+    \KeywordTok{def} \FunctionTok{\_\_repr\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \BuiltInTok{str}\NormalTok{(}\VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{:])}
+
+    \KeywordTok{def}\NormalTok{ satisfies\_assertions(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{2}\NormalTok{, }\BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H)):}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.H[i] }\OperatorTok{\textgreater{}=} \VariableTok{self}\NormalTok{.H[i}\OperatorTok{//}\DecValTok{2}\NormalTok{],  }\SpecialStringTok{f\textquotesingle{}Min heap property fails at position }\SpecialCharTok{\{}\NormalTok{i}\OperatorTok{//}\DecValTok{2}\SpecialCharTok{\}}\SpecialStringTok{, parent elt: }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{H[i}\OperatorTok{//}\DecValTok{2}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{, child elt: }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{H[i]}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+    \KeywordTok{def}\NormalTok{ min\_element(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{]}
+
+    \CommentTok{\#\# bubble\_up function at index}
+    \CommentTok{\#\# }\AlertTok{WARNING}\CommentTok{: this function has been cut and paste for the next problem as well}
+    \KeywordTok{def}\NormalTok{ bubble\_up(}\VariableTok{self}\NormalTok{, index):}
+        \ControlFlowTok{assert}\NormalTok{ index }\OperatorTok{\textgreater{}=} \DecValTok{1}
+        \ControlFlowTok{if}\NormalTok{ index }\OperatorTok{==} \DecValTok{1}\NormalTok{:}
+            \ControlFlowTok{return}
+\NormalTok{        parent\_index }\OperatorTok{=}\NormalTok{ index }\OperatorTok{//} \DecValTok{2}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.H[parent\_index] }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.H[index]:}
+            \ControlFlowTok{return}
+        \ControlFlowTok{else}\NormalTok{:}
+            \VariableTok{self}\NormalTok{.H[parent\_index], }\VariableTok{self}\NormalTok{.H[index] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[index], }\VariableTok{self}\NormalTok{.H[parent\_index]}
+            \VariableTok{self}\NormalTok{.bubble\_up(parent\_index)}
+
+    \CommentTok{\#\# bubble\_down function at index}
+    \CommentTok{\#\# }\AlertTok{WARNING}\CommentTok{: this function has been cut and paste for the next problem as well}
+    \KeywordTok{def}\NormalTok{ bubble\_down(}\VariableTok{self}\NormalTok{, index):}
+        \ControlFlowTok{assert}\NormalTok{ index }\OperatorTok{\textgreater{}=} \DecValTok{1} \KeywordTok{and}\NormalTok{ index }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H)}
+\NormalTok{        lchild\_index }\OperatorTok{=} \DecValTok{2} \OperatorTok{*}\NormalTok{ index}
+\NormalTok{        rchild\_index }\OperatorTok{=} \DecValTok{2} \OperatorTok{*}\NormalTok{ index }\OperatorTok{+} \DecValTok{1}
+        \CommentTok{\# set up the value of left child to the element at that index if valid, or else make it +Infinity}
+\NormalTok{        lchild\_value }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[lchild\_index] }\ControlFlowTok{if}\NormalTok{ lchild\_index }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H) }\ControlFlowTok{else} \BuiltInTok{float}\NormalTok{(}\StringTok{\textquotesingle{}inf\textquotesingle{}}\NormalTok{)}
+        \CommentTok{\# set up the value of right child to the element at that index if valid, or else make it +Infinity}
+\NormalTok{        rchild\_value }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[rchild\_index] }\ControlFlowTok{if}\NormalTok{ rchild\_index }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H) }\ControlFlowTok{else} \BuiltInTok{float}\NormalTok{(}\StringTok{\textquotesingle{}inf\textquotesingle{}}\NormalTok{)}
+        \CommentTok{\# If the value at the index is lessthan or equal to the minimum of two children, then nothing else to do}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.H[index] }\OperatorTok{\textless{}=} \BuiltInTok{min}\NormalTok{(lchild\_value, rchild\_value):}
+            \ControlFlowTok{return}
+        \CommentTok{\# Otherwise, find the index and value of the smaller of the two children.}
+        \CommentTok{\# A useful python trick is to compare}
+\NormalTok{        min\_child\_value, min\_child\_index }\OperatorTok{=} \BuiltInTok{min}\NormalTok{ ((lchild\_value, lchild\_index), (rchild\_value, rchild\_index))}
+        \CommentTok{\# Swap the current index with the least of its two children}
+        \VariableTok{self}\NormalTok{.H[index], }\VariableTok{self}\NormalTok{.H[min\_child\_index] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[min\_child\_index], }\VariableTok{self}\NormalTok{.H[index]}
+        \CommentTok{\# Bubble down on the minimum child index}
+        \VariableTok{self}\NormalTok{.bubble\_down(min\_child\_index)}
+
+
+    \CommentTok{\# Function: heap\_insert}
+    \CommentTok{\# Insert elt into heap}
+    \CommentTok{\# Use bubble\_up/bubble\_down function}
+    \KeywordTok{def}\NormalTok{ insert(}\VariableTok{self}\NormalTok{, elt):}
+        \CommentTok{\# your code here}
+\NormalTok{        H }\OperatorTok{=} \VariableTok{self}\NormalTok{.H}
+\NormalTok{        H.append(elt)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}H: \textquotesingle{}}\NormalTok{,H)}
+\NormalTok{        index}\OperatorTok{=}\NormalTok{H.index(elt)}
+\NormalTok{        pindex}\OperatorTok{=}\NormalTok{index}\OperatorTok{//}\DecValTok{2}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}index: \textquotesingle{}}\NormalTok{,index)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pindex: \textquotesingle{}}\NormalTok{,pindex)}
+        \ControlFlowTok{while}\NormalTok{ H[index] }\KeywordTok{is} \KeywordTok{not} \VariableTok{None} \KeywordTok{and}\NormalTok{ H[pindex] }\KeywordTok{is} \KeywordTok{not} \VariableTok{None}\NormalTok{:}
+          \ControlFlowTok{if}\NormalTok{ H[index]}\OperatorTok{\textgreater{}=}\NormalTok{H[pindex]:}
+              \ControlFlowTok{return}
+          \ControlFlowTok{else}\NormalTok{:}
+              \VariableTok{self}\NormalTok{.bubble\_up(index)}
+
+
+
+
+
+    \CommentTok{\# Function: heap\_delete\_min}
+    \CommentTok{\# delete the smallest element in the heap. Use bubble\_up/bubble\_down}
+    \CommentTok{"""def delete\_min(self):}
+\CommentTok{        \# your code here}
+\CommentTok{        H = self.H}
+\CommentTok{        H[1],H[{-}1] = H[{-}1],H[1] \#Swap}
+\CommentTok{        print(\textquotesingle{}H before Deletion: \textquotesingle{},H)}
+\CommentTok{        H = H[:{-}1]}
+\CommentTok{        print(\textquotesingle{}H after Deletion: \textquotesingle{},H)}
+\CommentTok{        index = 1}
+\CommentTok{        lcindex = index*2}
+\CommentTok{        rcindex = index*2+1}
+\CommentTok{        if H[index] is not None:}
+\CommentTok{          if H[index] \textless{}= H[lcindex] and H[index] \textless{}= H[rcindex]:}
+\CommentTok{            print(\textquotesingle{}No need to bubble down:\textquotesingle{}, H)}
+\CommentTok{            return}
+\CommentTok{          elif H[index] \textgreater{} H[lcindex] or H[index] \textgreater{} H[rcindex]:}
+\CommentTok{            self.bubble\_down(index)}
+\CommentTok{            print(\textquotesingle{}H after bubble down: \textquotesingle{},H)}
+\CommentTok{        return"""}
+
+    \KeywordTok{def}\NormalTok{ delete\_min(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{if} \VariableTok{self}\NormalTok{.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+        \ControlFlowTok{return}
+      \VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] }\CommentTok{\#This will remove the minimum element in place!!!}
+      \VariableTok{self}\NormalTok{.H.pop()}
+      \ControlFlowTok{if} \VariableTok{self}\NormalTok{.size() }\OperatorTok{\textgreater{}=} \DecValTok{1}\NormalTok{:}
+        \VariableTok{self}\NormalTok{.bubble\_down(}\DecValTok{1}\NormalTok{)}
+      \ControlFlowTok{return}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h }\OperatorTok{=}\NormalTok{ MinHeap()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Inserting: 5, 2, 4, {-}1 and 7 in that order.\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{5}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{2}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\NormalTok{h.insert(}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{7}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Deleting minimum element\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_min()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\NormalTok{h.delete\_min()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{4}\NormalTok{)}
+\NormalTok{h.delete\_min()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.delete\_min()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.min\_element() }\OperatorTok{==} \DecValTok{7}\NormalTok{)}
+\CommentTok{\# Test delete\_max on heap of size 1, should result in empty heap.}
+\NormalTok{h.delete\_min()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}All tests passed: 10 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Inserting: 5, 2, 4, -1 and 7 in that order.
+H:  [None, 5]
+index:  1
+pindex:  0
+	 Heap = [5]
+H:  [None, 5, 2]
+index:  2
+pindex:  1
+	 Heap = [2, 5]
+H:  [None, 2, 5, 4]
+index:  3
+pindex:  1
+	 Heap = [2, 5, 4]
+H:  [None, 2, 5, 4, -1]
+index:  4
+pindex:  2
+	 Heap = [-1, 2, 4, 5]
+H:  [None, -1, 2, 4, 5, 7]
+index:  5
+pindex:  2
+	 Heap = [-1, 2, 4, 5, 7]
+Deleting minimum element
+	 Heap = [2, 5, 4, 7]
+	 Heap = [4, 5, 7]
+	 Heap = [5, 7]
+	 Heap = [7]
+	 Heap = []
+All tests passed: 10 points!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ TopKHeap:}
+
+    \CommentTok{\# The constructor of the class to initialize an empty data structure}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, k):}
+        \VariableTok{self}\NormalTok{.k }\OperatorTok{=}\NormalTok{ k}
+        \VariableTok{self}\NormalTok{.A }\OperatorTok{=}\NormalTok{ []}
+        \VariableTok{self}\NormalTok{.H }\OperatorTok{=}\NormalTok{ MinHeap()}
+
+    \KeywordTok{def}\NormalTok{ size(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.A) }\OperatorTok{+}\NormalTok{ (}\VariableTok{self}\NormalTok{.H.size())}
+
+    \KeywordTok{def}\NormalTok{ get\_jth\_element(}\VariableTok{self}\NormalTok{, j):}
+        \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ j }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.k}\OperatorTok{{-}}\DecValTok{1}
+        \ControlFlowTok{assert}\NormalTok{ j }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.size()}
+        \ControlFlowTok{return} \VariableTok{self}\NormalTok{.A[j]}
+
+    \KeywordTok{def}\NormalTok{ satisfies\_assertions(}\VariableTok{self}\NormalTok{):}
+        \CommentTok{\# is self.A sorted}
+        \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.A) }\OperatorTok{{-}}\DecValTok{1}\NormalTok{ ):}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.A[i] }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.A[i}\OperatorTok{+}\DecValTok{1}\NormalTok{], }\SpecialStringTok{f\textquotesingle{}Array A fails to be sorted at position }\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{, }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{A[i]}\SpecialCharTok{,} \VariableTok{self}\SpecialCharTok{.}\NormalTok{A[i}\OperatorTok{+}\DecValTok{1}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+        \CommentTok{\# is self.H a heap (check min{-}heap property)}
+        \VariableTok{self}\NormalTok{.H.satisfies\_assertions()}
+        \CommentTok{\# is every element of self.A less than or equal to each element of self.H}
+        \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.A)):}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.A[i] }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.H.min\_element(), }\SpecialStringTok{f\textquotesingle{}Array element A[}\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{] = }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{A[i]}\SpecialCharTok{\}}\SpecialStringTok{ is larger than min heap element }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{H}\SpecialCharTok{.}\NormalTok{min\_element()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+    \CommentTok{\# Function : insert\_into\_A}
+    \CommentTok{\# This is a helper function that inserts an element \textasciigrave{}elt\textasciigrave{} into \textasciigrave{}self.A\textasciigrave{}.}
+    \CommentTok{\# whenever size is \textless{} k,}
+    \CommentTok{\#       append elt to the end of the array A}
+    \CommentTok{\# Move the element that you just added at the very end of}
+    \CommentTok{\# array A out into its proper place so that the array A is sorted.}
+    \CommentTok{\# return the "displaced last element" jHat (None if no element was displaced)}
+    \KeywordTok{def}\NormalTok{ insert\_into\_A(}\VariableTok{self}\NormalTok{, elt):}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"k = "}\NormalTok{, }\VariableTok{self}\NormalTok{.k)}
+        \ControlFlowTok{assert}\NormalTok{(}\VariableTok{self}\NormalTok{.size() }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.k)}
+        \VariableTok{self}\NormalTok{.A.append(elt)}
+\NormalTok{        j }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.A)}\OperatorTok{{-}}\DecValTok{1}
+        \ControlFlowTok{while}\NormalTok{ (j }\OperatorTok{\textgreater{}=} \DecValTok{1} \KeywordTok{and} \VariableTok{self}\NormalTok{.A[j] }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]):}
+            \CommentTok{\# Swap A[j] and A[j{-}1]}
+\NormalTok{            (}\VariableTok{self}\NormalTok{.A[j], }\VariableTok{self}\NormalTok{.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]) }\OperatorTok{=}\NormalTok{ (}\VariableTok{self}\NormalTok{.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{], }\VariableTok{self}\NormalTok{.A[j])}
+\NormalTok{            j }\OperatorTok{=}\NormalTok{ j }\OperatorTok{{-}}\DecValTok{1}
+        \ControlFlowTok{return}
+
+
+    \CommentTok{\# Function: insert {-}{-} insert an element into the data structure.}
+    \CommentTok{\# Code to handle when self.size \textless{} self.k is already provided}
+    \KeywordTok{def}\NormalTok{ insert(}\VariableTok{self}\NormalTok{, elt):}
+\NormalTok{        size }\OperatorTok{=} \VariableTok{self}\NormalTok{.size()}
+        \CommentTok{\# If we have fewer than k elements, handle that in a special manner}
+        \ControlFlowTok{if}\NormalTok{ size }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.k:}
+            \VariableTok{self}\NormalTok{.insert\_into\_A(elt)}
+            \ControlFlowTok{return}
+        \CommentTok{\# Code up your algorithm here.}
+        \CommentTok{\# your code here}
+
+        \ControlFlowTok{if}\NormalTok{ elt }\OperatorTok{\textless{}}\NormalTok{ h.H.min\_element():}
+\NormalTok{          h.A.append(elt)}
+          \ControlFlowTok{if} \BuiltInTok{len}\NormalTok{(h.A) }\OperatorTok{\textgreater{}} \DecValTok{5}\NormalTok{:}
+\NormalTok{            h.A[}\OperatorTok{{-}}\DecValTok{2}\NormalTok{],h.A[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] }\OperatorTok{=}\NormalTok{ h.A[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{],h.A[}\OperatorTok{{-}}\DecValTok{2}\NormalTok{]}
+\NormalTok{            h.H.insert(h.A[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{])}
+\NormalTok{            h.A }\OperatorTok{=}\NormalTok{ h.A[:}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
+\NormalTok{            j }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(h.A)}\OperatorTok{{-}}\DecValTok{1}
+            \ControlFlowTok{while}\NormalTok{ (j }\OperatorTok{\textgreater{}=} \DecValTok{1} \KeywordTok{and}\NormalTok{ h.A[j] }\OperatorTok{\textless{}}\NormalTok{ h.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]):}
+                \CommentTok{\# Swap A[j] and A[j{-}1]}
+\NormalTok{                (h.A[j], h.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]) }\OperatorTok{=}\NormalTok{ (h.A[j}\OperatorTok{{-}}\DecValTok{1}\NormalTok{], h.A[j])}
+\NormalTok{                j }\OperatorTok{=}\NormalTok{ j }\OperatorTok{{-}}\DecValTok{1}
+
+        \ControlFlowTok{elif}\NormalTok{ elt }\OperatorTok{\textgreater{}=}\NormalTok{ h.H.min\_element():}
+\NormalTok{          h.H.insert(elt)}
+        \ControlFlowTok{return}
+
+
+
+    \CommentTok{\# Function: Delete top k {-}{-} delete an element from the array A}
+    \CommentTok{\# In particular delete the j\^{}\{th\} element where j = 0 means the least element.}
+    \CommentTok{\# j must be in range 0 to self.k{-}1}
+    \KeywordTok{def}\NormalTok{ delete\_top\_k(}\VariableTok{self}\NormalTok{, j):}
+\NormalTok{        k }\OperatorTok{=} \VariableTok{self}\NormalTok{.k}
+        \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.size() }\OperatorTok{\textgreater{}}\NormalTok{ k }\CommentTok{\# we need not handle the case when size is less than or equal to k}
+        \ControlFlowTok{assert}\NormalTok{ j }\OperatorTok{\textgreater{}=} \DecValTok{0}
+        \ControlFlowTok{assert}\NormalTok{ j }\OperatorTok{\textless{}} \VariableTok{self}\NormalTok{.k}
+        \CommentTok{\# your code here}
+\NormalTok{        h.A[j], h.A[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] }\OperatorTok{=}\NormalTok{ h.A[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{], h.A[j]}
+\NormalTok{        h.A }\OperatorTok{=}\NormalTok{ h.A[:}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
+
+\NormalTok{        h.A.append(h.H.min\_element())}
+\NormalTok{        i }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(h.A)}\OperatorTok{{-}}\DecValTok{1}
+        \CommentTok{\#while (i \textgreater{}= 1 and h.A[i] \textless{} h.A[i{-}1]):}
+        \ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textgreater{}=} \DecValTok{1}\NormalTok{:}
+          \ControlFlowTok{if}\NormalTok{ h.A[i] }\OperatorTok{\textless{}}\NormalTok{ h.A[i}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]:}
+            \CommentTok{\# Swap A[i] and A[i{-}1]}
+\NormalTok{            (h.A[i], h.A[i}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]) }\OperatorTok{=}\NormalTok{ (h.A[i}\OperatorTok{{-}}\DecValTok{1}\NormalTok{], h.A[i])}
+\NormalTok{            i }\OperatorTok{=}\NormalTok{ i }\OperatorTok{+}\DecValTok{1}
+          \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{            i }\OperatorTok{=}\NormalTok{ i }\OperatorTok{{-}}\DecValTok{1}
+
+\NormalTok{        h.H.delete\_min()}
+
+
+
+
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h }\OperatorTok{=}\NormalTok{ TopKHeap(}\DecValTok{5}\NormalTok{)}
+\CommentTok{\# Force the array A}
+\NormalTok{h.A }\OperatorTok{=}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{8}\NormalTok{, }\OperatorTok{{-}}\DecValTok{4}\NormalTok{, }\DecValTok{0}\NormalTok{]}
+\CommentTok{\# Force the heap to this heap}
+\NormalTok{[h.H.insert(elt) }\ControlFlowTok{for}\NormalTok{ elt }\KeywordTok{in}\NormalTok{  [}\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{22}\NormalTok{, }\DecValTok{31}\NormalTok{, }\DecValTok{7}\NormalTok{]]}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Initial data structure: \textquotesingle{}}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+
+\CommentTok{\# Insert an element {-}2}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test 1: Inserting element {-}2\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.insert(}\OperatorTok{{-}}\DecValTok{2}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\CommentTok{\# After insertion h.A should be [{-}10, {-}9, {-}8, {-}4, {-}2]}
+\CommentTok{\# After insertion h.H should be [None, 0, 1, 5, 4, 15, 22, 31, 7, 6]}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{,}\OperatorTok{{-}}\DecValTok{9}\NormalTok{,}\OperatorTok{{-}}\DecValTok{8}\NormalTok{,}\OperatorTok{{-}}\DecValTok{4}\NormalTok{,}\OperatorTok{{-}}\DecValTok{2}\NormalTok{]}
+\ControlFlowTok{assert}\NormalTok{ h.H.min\_element() }\OperatorTok{==} \DecValTok{0}\NormalTok{ , }\StringTok{\textquotesingle{}Minimum element of the heap is no longer 0\textquotesingle{}}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test2: Inserting element {-}11\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.insert(}\OperatorTok{{-}}\DecValTok{11}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{11}\NormalTok{, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{8}\NormalTok{, }\OperatorTok{{-}}\DecValTok{4}\NormalTok{]}
+\ControlFlowTok{assert}\NormalTok{ h.H.min\_element() }\OperatorTok{==} \OperatorTok{{-}}\DecValTok{2}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test 3 delete\_top\_k(3)\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_top\_k(}\DecValTok{3}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\NormalTok{h.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{11}\NormalTok{,}\OperatorTok{{-}}\DecValTok{10}\NormalTok{,}\OperatorTok{{-}}\DecValTok{9}\NormalTok{,}\OperatorTok{{-}}\DecValTok{4}\NormalTok{,}\OperatorTok{{-}}\DecValTok{2}\NormalTok{]}
+\ControlFlowTok{assert}\NormalTok{ h.H.min\_element() }\OperatorTok{==} \DecValTok{0}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test 4 delete\_top\_k(4)\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_top\_k(}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{11}\NormalTok{, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{4}\NormalTok{, }\DecValTok{0}\NormalTok{]}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test 5 delete\_top\_k(0)\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_top\_k(}\DecValTok{0}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{4}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{]}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Test 6 delete\_top\_k(1)\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_top\_k(}\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ A = \textquotesingle{}}\NormalTok{, h.A)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}t}\StringTok{ H = \textquotesingle{}}\NormalTok{, h.H)}
+\ControlFlowTok{assert}\NormalTok{ h.A }\OperatorTok{==}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\OperatorTok{{-}}\DecValTok{4}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{]}
+\NormalTok{h.satisfies\_assertions()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}All tests passed {-} 15 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+H:  [None, 1]
+index:  1
+pindex:  0
+H:  [None, 1, 4]
+index:  2
+pindex:  1
+H:  [None, 1, 4, 5]
+index:  3
+pindex:  1
+H:  [None, 1, 4, 5, 6]
+index:  4
+pindex:  2
+H:  [None, 1, 4, 5, 6, 15]
+index:  5
+pindex:  2
+H:  [None, 1, 4, 5, 6, 15, 22]
+index:  6
+pindex:  3
+H:  [None, 1, 4, 5, 6, 15, 22, 31]
+index:  7
+pindex:  3
+H:  [None, 1, 4, 5, 6, 15, 22, 31, 7]
+index:  8
+pindex:  4
+Initial data structure: 
+	 A =  [-10, -9, -8, -4, 0]
+	 H =  [1, 4, 5, 6, 15, 22, 31, 7]
+Test 1: Inserting element -2
+H:  [None, 1, 4, 5, 6, 15, 22, 31, 7, 0]
+index:  9
+pindex:  4
+	 A =  [-10, -9, -8, -4, -2]
+	 H =  [0, 1, 5, 4, 15, 22, 31, 7, 6]
+Test2: Inserting element -11
+H:  [None, 0, 1, 5, 4, 15, 22, 31, 7, 6, -2]
+index:  10
+pindex:  5
+	 A =  [-11, -10, -9, -8, -4]
+	 H =  [-2, 0, 5, 4, 1, 22, 31, 7, 6, 15]
+Test 3 delete_top_k(3)
+	 A =  [-11, -10, -9, -4, -2]
+	 H =  [0, 1, 5, 4, 15, 22, 31, 7, 6]
+Test 4 delete_top_k(4)
+	 A =  [-11, -10, -9, -4, 0]
+	 H =  [1, 4, 5, 6, 15, 22, 31, 7]
+Test 5 delete_top_k(0)
+	 A =  [-10, -9, -4, 0, 1]
+	 H =  [4, 6, 5, 7, 15, 22, 31]
+Test 6 delete_top_k(1)
+	 A =  [-10, -4, 0, 1, 4]
+	 H =  [5, 6, 22, 7, 15, 31]
+All tests passed - 15 points!
+\end{verbatim}
+
+\hypertarget{problem-2-heap-data-structure-to-mantainextract-median-instead-of-minimummaximum-key}{%
+\subsection{Problem 2: Heap data structure to mantain/extract median
+(instead of minimum/maximum
+key)}\label{problem-2-heap-data-structure-to-mantainextract-median-instead-of-minimummaximum-key}}
+
+We have seen how min-heaps can efficiently extract the smallest element
+efficiently and maintain the least element as we insert/delete elements.
+Similarly, max-heaps can maintain the largest element. In this exercise,
+we combine both to maintain the "median" element.
+
+The median is the middle element of a list of numbers.
+
+\begin{itemize}
+\tightlist
+\item
+  If the list has size \(n\) where \(n\) is odd, the median is the
+  \((n-1)/2^{th}\) element where \(0^{th}\) is least and \((n-1)^{th}\)
+  is the maximum.
+\item
+  If \(n\) is even, then we designate the median the average of the
+  \((n/2-1)^{th}\) and \((n/2)^{th}\) elements.
+\end{itemize}
+
+\hypertarget{example}{%
+\paragraph{Example}\label{example}}
+
+\begin{itemize}
+\tightlist
+\item
+  List is \([-1, 5, 4, 2, 3]\) has size \(5\), the median is the
+  \(2^{nd}\) element (remember again least element is designated as
+  \(0^{th}\)) which is \(3\).
+\item
+  List is \([-1, 3, 2, 1 ]\) has size \(4\). The median element is the
+  average of \(1^{st}\) element (1) and \(2^{nd}\) element (2) which is
+  \(1.5\).
+\end{itemize}
+
+\hypertarget{maintaining-median-using-two-heaps}{%
+\subsection{Maintaining median using two
+heaps.}\label{maintaining-median-using-two-heaps}}
+
+The data will be maintained as the union of the elements in two heaps
+\(H_{\min}\) and \(H_{\max}\), wherein \(H_{\min}\) is a min-heap and
+\(H_{\max}\) is a max-heap. We will maintain the following invariant:
+
+\begin{itemize}
+\tightlist
+\item
+  The max element of \(H_{\max}\) will be less than or equal to the min
+  element of \(H_{\min}\).
+\item
+  The sizes of \(H_{max}\) and \(H_{min}\) are equal (if number of
+  elements in the data structure is even) or \(H_{max}\) may have one
+  less element than \(H_{min}\) (if the number of elements in the data
+  structure is odd).
+\end{itemize}
+
+\hypertarget{a-design-algorithm-for-insertion}{%
+\subsection{(A) Design algorithm for
+insertion.}\label{a-design-algorithm-for-insertion}}
+
+Suppose, we have the current data split between \(H_{max}\) and
+\(H_{min}\) and we wish to insert an element \(e\) into the data
+structure, describe the algorithm you will use to insert. Your algorithm
+must decide which of the two heaps will \(e\) be inserted into and how
+to maintain the size balance condition.
+
+Describe the algorithm below and the overall complexity of an insert
+operation. This part will not be graded.
+
+YOUR ANSWER HERE
+
+\hypertarget{b-design-algorithm-for-finding-the-median}{%
+\subsection{(B) Design algorithm for finding the
+median.}\label{b-design-algorithm-for-finding-the-median}}
+
+Implement an algorithm for finding the median given the heaps
+\(H_{\min}\) and \(H_{\max}\). What is its complexity?
+
+YOUR ANSWER HERE
+
+\hypertarget{c-implement-the-algorithm}{%
+\subsection{(C) Implement the
+algorithm}\label{c-implement-the-algorithm}}
+
+Complete the implementation for maxheap data structure. First complete
+the implementation of MaxHeap. You can cut and paste relevant parts from
+previous problems although we do not really recommend doing that. A
+better solution would have been to write a single implementation that
+could have served as min/max heap based on a flag.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ MaxHeap:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.H }\OperatorTok{=}\NormalTok{ [}\VariableTok{None}\NormalTok{]}
+
+    \KeywordTok{def}\NormalTok{ size(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H)}\OperatorTok{{-}}\DecValTok{1}
+
+    \KeywordTok{def} \FunctionTok{\_\_repr\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \BuiltInTok{str}\NormalTok{(}\VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{:])}
+
+    \KeywordTok{def}\NormalTok{ satisfies\_assertions(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{2}\NormalTok{, }\BuiltInTok{len}\NormalTok{(}\VariableTok{self}\NormalTok{.H)):}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.H[i] }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.H[i}\OperatorTok{//}\DecValTok{2}\NormalTok{],  }\SpecialStringTok{f\textquotesingle{}Maxheap property fails at position }\SpecialCharTok{\{}\NormalTok{i}\OperatorTok{//}\DecValTok{2}\SpecialCharTok{\}}\SpecialStringTok{, parent elt: }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{H[i}\OperatorTok{//}\DecValTok{2}\NormalTok{]}\SpecialCharTok{\}}\SpecialStringTok{, child elt: }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{H[i]}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+    \KeywordTok{def}\NormalTok{ max\_element(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{]}
+
+    \KeywordTok{def}\NormalTok{ bubble\_up(}\VariableTok{self}\NormalTok{, index):}
+        \CommentTok{\# your code here}
+        \ControlFlowTok{assert}\NormalTok{ index }\OperatorTok{\textgreater{}=} \DecValTok{1}
+        \ControlFlowTok{if}\NormalTok{ index }\OperatorTok{==} \DecValTok{1}\NormalTok{:}
+            \ControlFlowTok{return}
+\NormalTok{        pindex }\OperatorTok{=}\NormalTok{ index }\OperatorTok{//} \DecValTok{2}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.H[pindex] }\OperatorTok{\textgreater{}} \VariableTok{self}\NormalTok{.H[index]:}
+            \ControlFlowTok{return}
+        \ControlFlowTok{else}\NormalTok{:}
+            \VariableTok{self}\NormalTok{.H[pindex], }\VariableTok{self}\NormalTok{.H[index] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[index], }\VariableTok{self}\NormalTok{.H[pindex]}
+            \VariableTok{self}\NormalTok{.bubble\_up(pindex)}
+
+
+    \CommentTok{\# def bubble\_down(self, index):}
+    \CommentTok{\#     \# your code here}
+    \CommentTok{\#     assert index \textgreater{}= 1 and index \textless{} self.size()}
+    \CommentTok{\#     if index \textgreater{} self.size():}
+    \CommentTok{\#         return}
+    \CommentTok{\#     lchild\_index = 2 * index}
+    \CommentTok{\#     rchild\_index = 2 * index + 1}
+    \CommentTok{\#     \# set up the value of left child to the element at that index if valid, or else make it +Infinity}
+    \CommentTok{\#     lchild\_value = self.H[lchild\_index] if lchild\_index \textless{} self.size() else float(\textquotesingle{}inf\textquotesingle{})}
+    \CommentTok{\#     \# set up the value of right child to the element at that index if valid, or else make it +Infinity}
+    \CommentTok{\#     rchild\_value = self.H[rchild\_index] if rchild\_index \textless{} self.size() else float(\textquotesingle{}inf\textquotesingle{})}
+    \CommentTok{\#     \# If the value at the index is larger than the maximum of two children, then nothing else to do}
+    \CommentTok{\#     if self.H[index] \textgreater{} max(lchild\_value, rchild\_value):}
+    \CommentTok{\#         return}
+    \CommentTok{\#     \# Otherwise, find the index and value of the smaller of the two children.}
+    \CommentTok{\#     \# A useful python trick is to compare}
+    \CommentTok{\#     max\_child\_value, max\_child\_index = max ((lchild\_value, lchild\_index), (rchild\_value, rchild\_index))}
+
+    \CommentTok{\#     if self.H[index] \textless{} max\_child\_value:}
+    \CommentTok{\#       \# Swap the current index with the largest of its two children}
+    \CommentTok{\#       self.H[index], self.H[max\_child\_index] = self.H[max\_child\_index], self.H[index]}
+    \CommentTok{\#       \# Bubble down on the minimum child index}
+    \CommentTok{\#       self.bubble\_down(max\_child\_index)}
+
+    \KeywordTok{def}\NormalTok{ bubble\_down(}\VariableTok{self}\NormalTok{, index):}
+      \ControlFlowTok{assert}\NormalTok{ index }\OperatorTok{\textgreater{}=} \DecValTok{1} \KeywordTok{and}\NormalTok{ index }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.size()  }\CommentTok{\# Ensure the index is within the valid range}
+      \ControlFlowTok{while} \VariableTok{True}\NormalTok{:}
+\NormalTok{          lchild\_index }\OperatorTok{=} \DecValTok{2} \OperatorTok{*}\NormalTok{ index}
+\NormalTok{          rchild\_index }\OperatorTok{=}\NormalTok{ lchild\_index }\OperatorTok{+} \DecValTok{1}
+\NormalTok{          largest }\OperatorTok{=}\NormalTok{ index}
+
+          \CommentTok{\# Check if the left child exists and if it\textquotesingle{}s greater than the current largest}
+          \ControlFlowTok{if}\NormalTok{ lchild\_index }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.size() }\KeywordTok{and} \VariableTok{self}\NormalTok{.H[lchild\_index] }\OperatorTok{\textgreater{}} \VariableTok{self}\NormalTok{.H[largest]:}
+\NormalTok{              largest }\OperatorTok{=}\NormalTok{ lchild\_index}
+
+          \CommentTok{\# Check if the right child exists and if it\textquotesingle{}s greater than the current largest}
+          \ControlFlowTok{if}\NormalTok{ rchild\_index }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.size() }\KeywordTok{and} \VariableTok{self}\NormalTok{.H[rchild\_index] }\OperatorTok{\textgreater{}} \VariableTok{self}\NormalTok{.H[largest]:}
+\NormalTok{              largest }\OperatorTok{=}\NormalTok{ rchild\_index}
+
+          \CommentTok{\# If largest is not changed, the heap property is maintained}
+          \ControlFlowTok{if}\NormalTok{ largest }\OperatorTok{==}\NormalTok{ index:}
+              \ControlFlowTok{break}
+
+          \CommentTok{\# Swap the current element with the largest of its children}
+          \VariableTok{self}\NormalTok{.H[index], }\VariableTok{self}\NormalTok{.H[largest] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[largest], }\VariableTok{self}\NormalTok{.H[index]}
+
+          \CommentTok{\# Move the index to the largest for the next iteration of the loop}
+\NormalTok{          index }\OperatorTok{=}\NormalTok{ largest}
+
+
+
+    \CommentTok{\# Function: insert}
+    \CommentTok{\# Insert elt into minheap}
+    \CommentTok{\# Use bubble\_up/bubble\_down function}
+    \KeywordTok{def}\NormalTok{ insert(}\VariableTok{self}\NormalTok{, elt):}
+        \CommentTok{\# your code here}
+\NormalTok{        H }\OperatorTok{=} \VariableTok{self}\NormalTok{.H}
+\NormalTok{        H.append(elt)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}H: \textquotesingle{}}\NormalTok{,H)}
+\NormalTok{        index}\OperatorTok{=}\NormalTok{H.index(elt)}
+\NormalTok{        pindex}\OperatorTok{=}\NormalTok{index}\OperatorTok{//}\DecValTok{2}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}index: \textquotesingle{}}\NormalTok{,index)}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}pindex: \textquotesingle{}}\NormalTok{,pindex)}
+        \ControlFlowTok{while}\NormalTok{ H[index] }\KeywordTok{is} \KeywordTok{not} \VariableTok{None} \KeywordTok{and}\NormalTok{ H[pindex] }\KeywordTok{is} \KeywordTok{not} \VariableTok{None}\NormalTok{:}
+          \ControlFlowTok{if}\NormalTok{ H[index]}\OperatorTok{\textless{}=}\NormalTok{H[pindex]:}
+              \ControlFlowTok{return}
+          \ControlFlowTok{else}\NormalTok{:}
+              \VariableTok{self}\NormalTok{.bubble\_up(index)}
+
+
+    \CommentTok{\# Function: delete\_max}
+    \CommentTok{\# delete the largest element in the heap. Use bubble\_up/bubble\_down}
+    \KeywordTok{def}\NormalTok{ delete\_max(}\VariableTok{self}\NormalTok{):}
+        \CommentTok{\# your code here}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+          \ControlFlowTok{return}
+        \VariableTok{self}\NormalTok{.H[}\DecValTok{1}\NormalTok{] }\OperatorTok{=} \VariableTok{self}\NormalTok{.H[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
+        \VariableTok{self}\NormalTok{.H.pop()}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.size() }\OperatorTok{\textgreater{}=} \DecValTok{1}\NormalTok{:}
+          \VariableTok{self}\NormalTok{.bubble\_down(}\DecValTok{1}\NormalTok{)}
+        \ControlFlowTok{return}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h }\OperatorTok{=}\NormalTok{ MaxHeap()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Inserting: 5, 2, 4, {-}1 and 7 in that order.\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{5}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{2}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.insert(}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.insert(}\DecValTok{7}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{7}\NormalTok{)}
+\NormalTok{h.satisfies\_assertions()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Deleting maximum element\textquotesingle{}}\NormalTok{)}
+\NormalTok{h.delete\_max()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{5}\NormalTok{)}
+\NormalTok{h.delete\_max()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{4}\NormalTok{)}
+\NormalTok{h.delete\_max()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\NormalTok{h.delete\_max()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{(h.max\_element() }\OperatorTok{==} \OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\CommentTok{\# Test delete\_max on heap of size 1, should result in empty heap.}
+\NormalTok{h.delete\_max()}
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}}\CharTok{\textbackslash{}t}\SpecialStringTok{ Heap = }\SpecialCharTok{\{}\NormalTok{h}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}All tests passed: 5 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Inserting: 5, 2, 4, -1 and 7 in that order.
+H:  [None, 5]
+index:  1
+pindex:  0
+	 Heap = [5]
+H:  [None, 5, 2]
+index:  2
+pindex:  1
+	 Heap = [5, 2]
+H:  [None, 5, 2, 4]
+index:  3
+pindex:  1
+	 Heap = [5, 2, 4]
+H:  [None, 5, 2, 4, -1]
+index:  4
+pindex:  2
+	 Heap = [5, 2, 4, -1]
+H:  [None, 5, 2, 4, -1, 7]
+index:  5
+pindex:  2
+	 Heap = [7, 5, 4, -1, 2]
+Deleting maximum element
+	 Heap = [5, 2, 4, -1]
+	 Heap = [4, 2, -1]
+	 Heap = [2, -1]
+	 Heap = [-1]
+	 Heap = []
+All tests passed: 5 points!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ MedianMaintainingHeap:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.hmin }\OperatorTok{=}\NormalTok{ MinHeap()}
+        \VariableTok{self}\NormalTok{.hmax }\OperatorTok{=}\NormalTok{ MaxHeap()}
+
+    \KeywordTok{def}\NormalTok{ satisfies\_assertions(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmax.size() }\OperatorTok{==} \DecValTok{0}
+            \ControlFlowTok{return}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmax.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{1}
+            \ControlFlowTok{return}
+        \CommentTok{\# 1. min heap min element \textgreater{}= max heap max element}
+        \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmax.max\_element() }\OperatorTok{\textless{}=} \VariableTok{self}\NormalTok{.hmin.min\_element(), }\SpecialStringTok{f\textquotesingle{}Failed: Max element of max heap = }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{hmax}\SpecialCharTok{.}\NormalTok{max\_element()}\SpecialCharTok{\}}\SpecialStringTok{ \textgreater{} min element of min heap }\SpecialCharTok{\{}\VariableTok{self}\SpecialCharTok{.}\NormalTok{hmin}\SpecialCharTok{.}\NormalTok{min\_element()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+        \CommentTok{\# 2. size of max heap must be equal or one lessthan min heap.}
+\NormalTok{        s\_min }\OperatorTok{=} \VariableTok{self}\NormalTok{.hmin.size()}
+\NormalTok{        s\_max }\OperatorTok{=} \VariableTok{self}\NormalTok{.hmax.size()}
+        \ControlFlowTok{assert}\NormalTok{ (s\_min }\OperatorTok{==}\NormalTok{ s\_max }\KeywordTok{or}\NormalTok{ s\_max  }\OperatorTok{==}\NormalTok{ s\_min }\OperatorTok{{-}}\DecValTok{1}\NormalTok{ ), }\SpecialStringTok{f\textquotesingle{}Heap sizes are unbalanced. Min heap size = }\SpecialCharTok{\{}\NormalTok{s\_min}\SpecialCharTok{\}}\SpecialStringTok{ and Maxheap size = }\SpecialCharTok{\{}\NormalTok{s\_max}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+    \KeywordTok{def} \FunctionTok{\_\_repr\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{return} \StringTok{\textquotesingle{}Maxheap:\textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(}\VariableTok{self}\NormalTok{.hmax) }\OperatorTok{+} \StringTok{\textquotesingle{} Minheap:\textquotesingle{}}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(}\VariableTok{self}\NormalTok{.hmin)}
+
+    \KeywordTok{def}\NormalTok{ get\_median(}\VariableTok{self}\NormalTok{):}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmax.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{, }\StringTok{\textquotesingle{}Sizes are not balanced\textquotesingle{}}
+            \ControlFlowTok{assert} \VariableTok{False}\NormalTok{, }\StringTok{\textquotesingle{}Cannot ask for median from empty heaps\textquotesingle{}}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmax.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{1}\NormalTok{, }\StringTok{\textquotesingle{}Sizes are not balanced\textquotesingle{}}
+            \ControlFlowTok{return} \VariableTok{self}\NormalTok{.hmin.min\_element()}
+        \CommentTok{\# your code here}
+        \CommentTok{\#all\_elt = [elt for elt in self.hmin.\_\_repr\_\_()][1:{-}1]+[elt for elt in self.hmax.\_\_repr\_\_()][1:{-}1]}
+
+\NormalTok{        reversed\_hmax }\OperatorTok{=} \VariableTok{self}\NormalTok{.hmax.H[}\DecValTok{1}\NormalTok{:]}
+\NormalTok{        reversed\_hmax.sort()}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}reversed\_hmax: \textquotesingle{}}\NormalTok{,reversed\_hmax)}
+
+\NormalTok{        all\_elt }\OperatorTok{=}\NormalTok{ reversed\_hmax}\OperatorTok{+}\VariableTok{self}\NormalTok{.hmin.H[}\DecValTok{1}\NormalTok{:]}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}all\_elt: \textquotesingle{}}\NormalTok{,all\_elt)}
+        \CommentTok{\#all\_elt.append(h.H.min\_element())}
+
+
+
+        \ControlFlowTok{if} \BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{\%}\DecValTok{2}\OperatorTok{==}\DecValTok{0}\NormalTok{: }\CommentTok{\# even}
+          \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}1: \textquotesingle{}}\NormalTok{,all\_elt[}\BuiltInTok{int}\NormalTok{((}\BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{/}\DecValTok{2} \OperatorTok{{-}} \DecValTok{1}\NormalTok{))])}
+          \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}2: \textquotesingle{}}\NormalTok{,all\_elt[}\BuiltInTok{int}\NormalTok{(}\BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{/}\DecValTok{2}\NormalTok{)])}
+\NormalTok{          median }\OperatorTok{=}\NormalTok{ (all\_elt[}\BuiltInTok{int}\NormalTok{((}\BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{/}\DecValTok{2} \OperatorTok{{-}} \DecValTok{1}\NormalTok{))] }\OperatorTok{+}\NormalTok{ all\_elt[}\BuiltInTok{int}\NormalTok{(}\BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{/}\DecValTok{2}\NormalTok{)]) }\OperatorTok{/} \DecValTok{2}
+          \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}median: \textquotesingle{}}\NormalTok{,median)}
+        \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{          median }\OperatorTok{=}\NormalTok{ all\_elt[}\BuiltInTok{int}\NormalTok{((}\BuiltInTok{len}\NormalTok{(all\_elt)}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}\OperatorTok{/}\DecValTok{2}\NormalTok{)]}
+
+        \ControlFlowTok{return}\NormalTok{ median}
+
+
+    \CommentTok{\# function: balance\_heap\_sizes}
+    \CommentTok{\# ensure that the size of hmax == size of hmin or size of hmax +1 == size of hmin}
+    \CommentTok{\# If the condition above does not hold, move the max element from max heap into the min heap or}
+    \CommentTok{\# vice versa as needed to balance the sizes.}
+    \CommentTok{\# This function could be called from insert/delete\_median methods}
+    \KeywordTok{def}\NormalTok{ balance\_heap\_sizes(}\VariableTok{self}\NormalTok{):}
+        \CommentTok{\# your code here}
+        \ControlFlowTok{return}
+
+
+    \KeywordTok{def}\NormalTok{ insert(}\VariableTok{self}\NormalTok{, elt):}
+        \CommentTok{\# Handle the case when either heap is empty}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \CommentTok{\# min heap is empty {-}{-} directly insert into min heap}
+            \VariableTok{self}\NormalTok{.hmin.insert(elt)}
+            \ControlFlowTok{return}
+        \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmax.size() }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \CommentTok{\# max heap is empty {-}{-} this better happen only if min heap has size 1.}
+            \ControlFlowTok{assert} \VariableTok{self}\NormalTok{.hmin.size() }\OperatorTok{==} \DecValTok{1}
+            \ControlFlowTok{if}\NormalTok{ elt }\OperatorTok{\textgreater{}} \VariableTok{self}\NormalTok{.hmin.min\_element():}
+                \CommentTok{\# Element needs to go into the min heap}
+\NormalTok{                current\_min }\OperatorTok{=} \VariableTok{self}\NormalTok{.hmin.min\_element()}
+                \VariableTok{self}\NormalTok{.hmin.delete\_min()}
+                \VariableTok{self}\NormalTok{.hmin.insert(elt)}
+                \VariableTok{self}\NormalTok{.hmax.insert(current\_min)}
+                \CommentTok{\# done!}
+            \ControlFlowTok{else}\NormalTok{:}
+                \CommentTok{\# Element goes into the max heap {-}{-} just insert it there.}
+                \VariableTok{self}\NormalTok{.hmax.insert(elt)}
+            \ControlFlowTok{return}
+        \CommentTok{\# Now assume both heaps are non{-}empty}
+        \CommentTok{\# your code here}
+        \BuiltInTok{min} \OperatorTok{=} \VariableTok{self}\NormalTok{.hmin.min\_element()}
+        \BuiltInTok{max}\OperatorTok{=} \VariableTok{self}\NormalTok{.hmax.max\_element()}
+        \ControlFlowTok{if}\NormalTok{ elt }\OperatorTok{\textless{}} \BuiltInTok{min} \KeywordTok{and}\NormalTok{ elt }\OperatorTok{\textgreater{}} \BuiltInTok{max}\NormalTok{:}
+          \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{==}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmin.insert(elt) }\CommentTok{\#one more element in minheap}
+            \VariableTok{self}\NormalTok{.hmin.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmin.H.index(elt))}
+            \CommentTok{\#self.hmax.bubble\_up(index=self.hmax.H.index(self.hmax.H[{-}1]))}
+          \ControlFlowTok{elif} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{\textgreater{}}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmax.insert(elt) }\CommentTok{\#make them equal}
+            \VariableTok{self}\NormalTok{.hmax.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmax.H.index(elt))}
+            \CommentTok{\#self.hmin.bubble\_up(index=self.hmin.H.index(self.hmin.H[{-}1]))}
+        \ControlFlowTok{elif}\NormalTok{ elt }\OperatorTok{\textgreater{}} \BuiltInTok{min}\NormalTok{:}
+          \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{==}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmin.insert(elt)}
+            \VariableTok{self}\NormalTok{.hmin.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmin.H.index(elt))}
+            \CommentTok{\#self.hmax.bubble\_up(index=self.hmax.H.index(self.hmax.H[{-}1]))}
+          \ControlFlowTok{elif} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{\textgreater{}}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmin.insert(elt)}
+            \VariableTok{self}\NormalTok{.hmin.H }\OperatorTok{=} \VariableTok{self}\NormalTok{.hmin.H[}\DecValTok{1}\NormalTok{:]}
+            \VariableTok{self}\NormalTok{.hmin.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmin.H.index(elt))}
+            \CommentTok{\#self.hmax.bubble\_up(index=self.hmax.H.index(self.hmax.H[{-}1]))}
+            \VariableTok{self}\NormalTok{.hmax.insert(}\BuiltInTok{min}\NormalTok{)}
+            \VariableTok{self}\NormalTok{.hmax.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmax.H.index(}\BuiltInTok{min}\NormalTok{))}
+        \ControlFlowTok{elif}\NormalTok{ elt }\OperatorTok{\textless{}=} \BuiltInTok{max}\NormalTok{:}
+          \ControlFlowTok{if} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{==}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmin.insert(elt)}
+            \VariableTok{self}\NormalTok{.hmin.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmin.H.index(elt))}
+            \CommentTok{\#self.hmax.bubble\_up(index=self.hmax.H.index(self.hmax.H[{-}1]))}
+          \ControlFlowTok{elif} \VariableTok{self}\NormalTok{.hmin.size()}\OperatorTok{\textgreater{}}\VariableTok{self}\NormalTok{.hmax.size():}
+            \VariableTok{self}\NormalTok{.hmax.insert(elt) }\CommentTok{\#make them equal}
+            \VariableTok{self}\NormalTok{.hmax.bubble\_up(index}\OperatorTok{=}\VariableTok{self}\NormalTok{.hmax.H.index(elt))}
+            \CommentTok{\#self.hmin.bubble\_up(index=self.hmin.H.index(self.hmin.H[{-}1]))}
+
+
+
+
+        \CommentTok{\# [max,x,x,...,x]}
+        \CommentTok{\# [min,x,x,...,x]}
+        \CommentTok{\# max \textless{}= min}
+        \CommentTok{\# len(max) == len(min) if even}
+        \CommentTok{\# len(max)+1 == len(min)if odd}
+        \CommentTok{\# max=[5,4,3],min=[7,8,9,10];insert 5}
+
+        \CommentTok{\# Maxheap:[1] Minheap:[2, 5]}
+        \CommentTok{\# Maxheap:[2, 1] Minheap:[5, 4]}
+
+
+
+
+    \KeywordTok{def}\NormalTok{ delete\_median(}\VariableTok{self}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.hmax.delete\_max()}
+        \VariableTok{self}\NormalTok{.balance\_heap\_sizes()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{m }\OperatorTok{=}\NormalTok{ MedianMaintainingHeap()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Inserting 1, 5, 2, 4, 18, {-}4, 7, 9\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{m.insert(}\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{1}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 1, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\DecValTok{5}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{3}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 3.0, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\DecValTok{2}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{2}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 2, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+\NormalTok{m.insert(}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{3}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 3, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\DecValTok{18}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{4}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 4, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\OperatorTok{{-}}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{3}\NormalTok{,  }\SpecialStringTok{f\textquotesingle{}expected median = 3, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\DecValTok{7}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median() }\OperatorTok{==} \DecValTok{4}\NormalTok{, }\SpecialStringTok{f\textquotesingle{}expected median = 4, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\NormalTok{m.insert(}\DecValTok{9}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(m)}
+\BuiltInTok{print}\NormalTok{(m.get\_median())}
+\NormalTok{m.satisfies\_assertions()}
+\ControlFlowTok{assert}\NormalTok{ m.get\_median()}\OperatorTok{==} \FloatTok{4.5}\NormalTok{, }\SpecialStringTok{f\textquotesingle{}expected median = 4.5, your code returned }\SpecialCharTok{\{}\NormalTok{m}\SpecialCharTok{.}\NormalTok{get\_median()}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}All tests passed: 15 points\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Inserting 1, 5, 2, 4, 18, -4, 7, 9
+H:  [None, 1]
+index:  1
+pindex:  0
+Maxheap:[] Minheap:[1]
+1
+H:  [None, 5]
+index:  1
+pindex:  0
+H:  [None, 1]
+index:  1
+pindex:  0
+Maxheap:[1] Minheap:[5]
+reversed_hmax:  [1]
+all_elt:  [1, 5]
+1:  1
+2:  5
+median:  3.0
+3.0
+reversed_hmax:  [1]
+all_elt:  [1, 5]
+1:  1
+2:  5
+median:  3.0
+H:  [None, 5, 2]
+index:  2
+pindex:  1
+Maxheap:[1] Minheap:[2, 5]
+reversed_hmax:  [1]
+all_elt:  [1, 2, 5]
+2
+reversed_hmax:  [1]
+all_elt:  [1, 2, 5]
+H:  [None, 2, 5, 4]
+index:  3
+pindex:  1
+H:  [None, 1, 2]
+index:  2
+pindex:  1
+Maxheap:[2, 1] Minheap:[4, 5]
+reversed_hmax:  [1, 2]
+all_elt:  [1, 2, 4, 5]
+1:  2
+2:  4
+median:  3.0
+3.0
+reversed_hmax:  [1, 2]
+all_elt:  [1, 2, 4, 5]
+1:  2
+2:  4
+median:  3.0
+H:  [2, 4, 5, 18]
+index:  3
+pindex:  1
+Maxheap:[2, 1] Minheap:[4, 5, 18]
+reversed_hmax:  [1, 2]
+all_elt:  [1, 2, 4, 5, 18]
+4
+reversed_hmax:  [1, 2]
+all_elt:  [1, 2, 4, 5, 18]
+H:  [None, 2, 1, -4]
+index:  3
+pindex:  1
+Maxheap:[2, 1, -4] Minheap:[4, 5, 18]
+reversed_hmax:  [-4, 1, 2]
+all_elt:  [-4, 1, 2, 4, 5, 18]
+1:  2
+2:  4
+median:  3.0
+3.0
+reversed_hmax:  [-4, 1, 2]
+all_elt:  [-4, 1, 2, 4, 5, 18]
+1:  2
+2:  4
+median:  3.0
+H:  [2, 4, 5, 18, 7]
+index:  4
+pindex:  2
+Maxheap:[2, 1, -4] Minheap:[4, 5, 18, 7]
+reversed_hmax:  [-4, 1, 2]
+all_elt:  [-4, 1, 2, 4, 5, 18, 7]
+4
+reversed_hmax:  [-4, 1, 2]
+all_elt:  [-4, 1, 2, 4, 5, 18, 7]
+H:  [2, 4, 5, 18, 7, 9]
+index:  5
+pindex:  2
+H:  [None, 2, 1, -4, 4]
+index:  4
+pindex:  2
+Maxheap:[4, 2, -4, 1] Minheap:[5, 9, 7, 18]
+reversed_hmax:  [-4, 1, 2, 4]
+all_elt:  [-4, 1, 2, 4, 5, 9, 7, 18]
+1:  4
+2:  5
+median:  4.5
+4.5
+reversed_hmax:  [-4, 1, 2, 4]
+all_elt:  [-4, 1, 2, 4, 5, 9, 7, 18]
+1:  4
+2:  5
+median:  4.5
+All tests passed: 15 points
+\end{verbatim}
+
+\hypertarget{solutions-to-manually-graded-portions}{%
+\subsection{Solutions to Manually Graded
+Portions}\label{solutions-to-manually-graded-portions}}
+
+\hypertarget{problem-1-a}{%
+\subsubsection{Problem 1 A}\label{problem-1-a}}
+
+In order to insert a new element \texttt{j}, we will first distinguish
+between two cases:
+
+\begin{itemize}
+\tightlist
+\item
+  \(j < A[k-1]\) : In this case \(j\) belongs to the array \(A\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    First, let \(j' = A[k-1]\).
+  \item
+    Replace \(A[k-1]\) by \(j\).
+  \item
+    Perform an insertion to move \(j\) into its correct place in the
+    sorted array \(A\).
+  \item
+    Insert \(j'\) into the heap using heap insert.
+  \end{itemize}
+\item
+  \(j \geq A[k-1]\): In this case, \(j\) belongs to the heap \(H\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Insert \(j\) into the heap using heap-insert.
+  \end{itemize}
+\end{itemize}
+
+In terms of \(k, n\), the worst case complexity is
+\(\Theta(k + \log(n))\) for each insertion operation.
+
+\hypertarget{problem-1b}{%
+\subsubsection{Problem 1B}\label{problem-1b}}
+
+\begin{itemize}
+\tightlist
+\item
+  First, in order to delete the index j from array, move elements from
+  j+1 .. k-1 left one position.
+\item
+  Insert the minimum heap element at position \(k-1\) of the array A.
+\item
+  Delete the element at index 1 of the heap.
+\end{itemize}
+
+Overall complexity = \(\Theta(k + \log(n))\) in the worst case.
+
+\hypertarget{problem-2-a}{%
+\subsubsection{Problem 2 A}\label{problem-2-a}}
+
+Let \(a\) be the largest element in \(H_{\max}\) and \(b\) be the least
+element in \(H_{\min}\).
+
+\begin{itemize}
+\tightlist
+\item
+  If \(elt < a\), then we insert the new element into \(H_{\max}\).
+\item
+  If \(elt >= a\), then we insert the new element into \(H_{\min}\).
+\end{itemize}
+
+If the size of \(H_{\max}\) and \(H_{\min}\) differ by 2, then
+
+\begin{itemize}
+\tightlist
+\item
+  If \(H_{\max}\) is larger then, extract the largest element from
+  \(H_{\max}\) andd insert into \(H_{\min}\).
+\item
+  If \(H_{\min}\) is larger then, extract the least element from
+  \(H_{\min}\) andd insert into \(H_{\max}\).
+\end{itemize}
+
+The overall complexity is \(\Theta(\log(n))\).
+
+\hypertarget{problem-2-b}{%
+\subsubsection{Problem 2 B}\label{problem-2-b}}
+
+If sizes of heaps are the same, then median is the average of maximum
+element of the max heap and minimum element of the minheap.
+
+Otherwise, the median is simply the minimum elemment of the min-heap.
+
+Overall complexity is \(\Theta(1)\).
+
+\hypertarget{thats-all-folks}{%
+\subsection{That\textquotesingle s all folks}\label{thats-all-folks}}
+
+\end{document}
