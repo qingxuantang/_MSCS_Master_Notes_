@@ -1,0 +1,596 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{assignment-3}{%
+\section{Assignment 3}\label{assignment-3}}
+
+\hypertarget{problem-1-design-a-correct-partition-algorithm}{%
+\subsection{Problem 1: Design a Correct Partition
+Algorithm}\label{problem-1-design-a-correct-partition-algorithm}}
+
+You are given code below for an incorrect partition algorithm that fails
+to partition arrays wrongly or cause out of bounds access in arrays. The
+comments include the invariants the algorithm wishes to maintain and
+will help you debug.
+
+Your goal is to write test cases that demonstrate that the partitioning
+will fail in various ways.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ swap(a, i, j):}
+    \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ i }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(a), }\SpecialStringTok{f\textquotesingle{}accessing index }\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{ beyond end of array }\SpecialCharTok{\{}\BuiltInTok{len}\NormalTok{(a)}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+    \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ j }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(a), }\SpecialStringTok{f\textquotesingle{}accessing index }\SpecialCharTok{\{}\NormalTok{j}\SpecialCharTok{\}}\SpecialStringTok{ beyond end of array }\SpecialCharTok{\{}\BuiltInTok{len}\NormalTok{(a)}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+\NormalTok{    a[i], a[j] }\OperatorTok{=}\NormalTok{ a[j], a[i]}
+
+\KeywordTok{def}\NormalTok{ tryPartition(a):}
+    \CommentTok{\# implementation of Lomuto partitioning algorithm}
+\NormalTok{    n }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(a)}
+\NormalTok{    pivot }\OperatorTok{=}\NormalTok{ a[n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] }\CommentTok{\# choose last element as the pivot.}
+\NormalTok{    i,j }\OperatorTok{=} \DecValTok{0}\NormalTok{,}\DecValTok{0} \CommentTok{\# initialize i and j both to be 0}
+    \ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{): }\CommentTok{\# j = 0 to n{-}2 (inclusive)}
+        \CommentTok{\# Invariant: a[0] .. a[i] are \textless{}= pivot}
+        \CommentTok{\#            a[i+1]...a[j{-}1] are \textgreater{} pivot}
+        \ControlFlowTok{if}\NormalTok{ a[j] }\OperatorTok{\textless{}=}\NormalTok{ pivot:}
+\NormalTok{            swap(a, i}\OperatorTok{+}\DecValTok{1}\NormalTok{, j)}
+\NormalTok{            i }\OperatorTok{=}\NormalTok{ i }\OperatorTok{+} \DecValTok{1}
+\NormalTok{    swap(a, i}\OperatorTok{+}\DecValTok{1}\NormalTok{, n}\OperatorTok{{-}}\DecValTok{1}\NormalTok{) }\CommentTok{\# place pivot in its correct place.}
+    \ControlFlowTok{return}\NormalTok{ i}\OperatorTok{+}\DecValTok{1} \CommentTok{\# return the index where we placed the pivot}
+\end{Highlighting}
+\end{Shaded}
+
+First write a function that will return True if an array is correctly
+partitioned at index \texttt{k}. I.e, all elements at indices
+\texttt{\textless{}\ k} are all \texttt{\textless{}=\ a{[}k{]}} and all
+elements indices \texttt{\textgreater{}\ k} are all
+\texttt{\textgreater{}\ a{[}k{]}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ testIfPartitioned(a, k):}
+    \CommentTok{\# }\AlertTok{TODO}\CommentTok{ : test if all elements at indices \textless{} k are all \textless{}= a[k]}
+    \CommentTok{\#         and all elements at indices \textgreater{} k are all \textgreater{} a[k]}
+    \CommentTok{\# return TRUE if the array is correctly partitioned around a[k] and return FALSE otherwise}
+    \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ k }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(a)}
+
+    \CommentTok{\# your code here}
+    \CommentTok{\# if k == 0:}
+    \CommentTok{\#   left = []}
+    \CommentTok{\#   right = a[k+1:]}
+    \CommentTok{\#   for j in right:}
+    \CommentTok{\#     if j \textless{} a[k]:}
+    \CommentTok{\#       return False}
+    \CommentTok{\# elif k == len(a){-}1:}
+    \CommentTok{\#   left = a[:k]}
+    \CommentTok{\#   right = []}
+    \CommentTok{\#   for i in left:}
+    \CommentTok{\#     if i \textgreater{} a[k]:}
+    \CommentTok{\#       return False}
+    \CommentTok{\# else:}
+    \CommentTok{\#   left = a[:k]}
+    \CommentTok{\#   right = a[k+1:]}
+    \CommentTok{\#   for i,j in zip(left,right):}
+    \CommentTok{\#     if i \textgreater{} a[k] or j \textless{} a[k]:}
+    \CommentTok{\#       return False}
+
+    \CommentTok{\# Check elements to the left of index k}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(k):}
+        \ControlFlowTok{if}\NormalTok{ a[i] }\OperatorTok{\textgreater{}}\NormalTok{ a[k]:}
+            \ControlFlowTok{return} \VariableTok{False}
+
+    \CommentTok{\# Check elements to the right of index k}
+    \ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(k}\OperatorTok{+}\DecValTok{1}\NormalTok{, }\BuiltInTok{len}\NormalTok{(a)):}
+        \ControlFlowTok{if}\NormalTok{ a[j] }\OperatorTok{\textless{}=}\NormalTok{ a[k]:}
+            \ControlFlowTok{return} \VariableTok{False}
+
+    \ControlFlowTok{return} \VariableTok{True}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{23}\NormalTok{],}\DecValTok{5}\NormalTok{) }\OperatorTok{==} \VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 1 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{23}\NormalTok{],}\DecValTok{4}\NormalTok{) }\OperatorTok{==} \VariableTok{False}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 2 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{23}\NormalTok{, }\DecValTok{21}\NormalTok{],}\DecValTok{0}\NormalTok{) }\OperatorTok{==} \VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 3 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{22}\NormalTok{, }\DecValTok{23}\NormalTok{],}\DecValTok{9}\NormalTok{) }\OperatorTok{==} \VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 4 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{23}\NormalTok{],}\DecValTok{5}\NormalTok{) }\OperatorTok{==} \VariableTok{False}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 5 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{9}\NormalTok{, }\OperatorTok{{-}}\DecValTok{11}\NormalTok{],}\DecValTok{5}\NormalTok{) }\OperatorTok{==} \VariableTok{False}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 6 failed.\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{ testIfPartitioned([}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{11}\NormalTok{],}\DecValTok{4}\NormalTok{) }\OperatorTok{==} \VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{} Test \# 7 failed.\textquotesingle{}}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Passed all tests (10 points)\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Passed all tests (10 points)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Write an array called a1 that will be incorrectly partitioned by the tryPartition algorithm above}
+\CommentTok{\# Your input when run on tryPartition algorithm should raise an out of bounds array access exception}
+\CommentTok{\# in the swap function or fail to partition correctly.}
+
+\CommentTok{\#\# Define an array a1 below of length \textgreater{} 0 that will be incorrectly partitioned by tryPartition algorithm.}
+\CommentTok{\#\# We will test whether your solution works in the subsequent cells.}
+\CommentTok{\# your code here}
+\NormalTok{a1 }\OperatorTok{=}\NormalTok{ [}\OperatorTok{{-}}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{8}\NormalTok{]}
+
+\ControlFlowTok{assert}\NormalTok{( }\BuiltInTok{len}\NormalTok{(a1) }\OperatorTok{\textgreater{}} \DecValTok{0}\NormalTok{)}
+
+\CommentTok{\# Write an array called a2 that will be incorrectly partitioned by the tryPartition algorithm above}
+\CommentTok{\# Your input when run on tryPartition algorithm should raise an out of bounds array access exception}
+\CommentTok{\# in the swap function or fail to partition correctly.}
+\CommentTok{\# a2 must be different from a1}
+
+\CommentTok{\# your code here}
+\NormalTok{a2 }\OperatorTok{=}\NormalTok{ [}\DecValTok{9}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{0}\NormalTok{]}
+
+\ControlFlowTok{assert}\NormalTok{( }\BuiltInTok{len}\NormalTok{(a2) }\OperatorTok{\textgreater{}} \DecValTok{0}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{ (a1 }\OperatorTok{!=}\NormalTok{ a2)}
+
+
+\CommentTok{\# Write an array called a3 that will be incorrectly partitioned by the tryPartition algorithm above}
+\CommentTok{\# Your input when run on tryPartition algorithm should raise an out of bounds array access exception}
+\CommentTok{\# in the swap function or fail to partition correctly.}
+\CommentTok{\# a3 must be different from a1, a2}
+
+\CommentTok{\# your code here}
+\NormalTok{a3 }\OperatorTok{=}\NormalTok{ [}\DecValTok{2}\NormalTok{,}\DecValTok{9}\NormalTok{,}\OperatorTok{{-}}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{3}\NormalTok{]}
+
+\ControlFlowTok{assert}\NormalTok{( }\BuiltInTok{len}\NormalTok{(a3) }\OperatorTok{\textgreater{}} \DecValTok{0}\NormalTok{)}
+\ControlFlowTok{assert}\NormalTok{ (a3 }\OperatorTok{!=}\NormalTok{ a2)}
+\ControlFlowTok{assert}\NormalTok{ (a3 }\OperatorTok{!=}\NormalTok{ a1)}
+
+\KeywordTok{def}\NormalTok{ dummyFunction():}
+    \ControlFlowTok{pass}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# your code here}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{try}\NormalTok{:}
+\NormalTok{    j1 }\OperatorTok{=}\NormalTok{ tryPartition(a1)}
+    \ControlFlowTok{assert} \KeywordTok{not}\NormalTok{ testIfPartitioned(a1, j1)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Partitioning was unsuccessful {-} this is what you were asked to break the code\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}Assertion failed }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{ {-} this is fine since you were asked to break the code.\textquotesingle{}}\NormalTok{)}
+
+\ControlFlowTok{try}\NormalTok{:}
+\NormalTok{    j2 }\OperatorTok{=}\NormalTok{ tryPartition(a2)}
+    \ControlFlowTok{assert} \KeywordTok{not}\NormalTok{ testIfPartitioned(a2, j2)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}Assertion failed }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{ {-} this is fine since you were asked to break the code.\textquotesingle{}}\NormalTok{)}
+
+
+\ControlFlowTok{try}\NormalTok{:}
+\NormalTok{    j3 }\OperatorTok{=}\NormalTok{ tryPartition(a3)}
+    \ControlFlowTok{assert} \KeywordTok{not}\NormalTok{ testIfPartitioned(a3, j3)}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ e:}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f\textquotesingle{}Assertion failed }\SpecialCharTok{\{}\NormalTok{e}\SpecialCharTok{\}}\SpecialStringTok{ {-} this is fine since you were asked to break the code.\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{dummyFunction()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Passed 5 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Assertion failed accessing index 3 beyond end of array 3 - this is fine since you were asked to break the code.
+Assertion failed accessing index 5 beyond end of array 5 - this is fine since you were asked to break the code.
+Passed 5 points!
+\end{verbatim}
+
+\hypertarget{debug-the-function}{%
+\subsubsection{Debug the function}\label{debug-the-function}}
+
+Point out where the bug is and what the fix is for the tryPartition
+function. Note that the answer below is not graded.
+
+YOUR ANSWER HERE
+
+\hypertarget{problem-2-rapid-sorting-of-arrays-with-bounded-number-of-elements}{%
+\subsection{Problem 2. Rapid Sorting of Arrays with Bounded Number of
+Elements.}\label{problem-2-rapid-sorting-of-arrays-with-bounded-number-of-elements}}
+
+Thus far, we have presented sorting algorithms that are
+comparison-based. Ie., they make no assumptions about the elements in
+the array just that we have a \texttt{\textless{}=} comparison operator.
+We now ask you to develop a rapid sorting algorithm for an array of size
+\(n\) when it is given to you that all elements in the array are between
+\(1, \ldots, k\) for a given \(k\). Eg., consider an array with n =
+100000 elements wherein all elements are between 1,..., k = 100.
+
+Develop a sorting algorithm using partition that runs in
+\(\Theta(n \times k)\) time for such arrays. \textbf{Hint} You can
+choose your pivots in a simple manner each time.
+
+\hypertarget{part-a}{%
+\subsubsection{Part A}\label{part-a}}
+
+Describe your algorithm as pseudocode and argue why it runs in time
+\(\Theta(n \times k)\). This part will not be graded but is intended for
+your own edification.
+
+YOUR ANSWER HERE
+
+\hypertarget{part-b}{%
+\subsection{Part B}\label{part-b}}
+
+Complete the implementation of a function \texttt{boundedSort(a,\ k)} by
+completing the \texttt{simplePatition} function. Given an array
+\texttt{a} and a fixed \texttt{pivot} element, it should partition the
+array "in-place" so that all elements \texttt{\textless{}=\ pivot} are
+on one side of the array and elements \texttt{\textgreater{}\ pivot} on
+the other. You should not create a new array in your code.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\KeywordTok{def}\NormalTok{ swap(a, i, j):}
+    \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ i }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(a), }\SpecialStringTok{f\textquotesingle{}accessing index }\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{ beyond end of array }\SpecialCharTok{\{}\BuiltInTok{len}\NormalTok{(a)}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+    \ControlFlowTok{assert} \DecValTok{0} \OperatorTok{\textless{}=}\NormalTok{ j }\OperatorTok{\textless{}} \BuiltInTok{len}\NormalTok{(a), }\SpecialStringTok{f\textquotesingle{}accessing index }\SpecialCharTok{\{}\NormalTok{j}\SpecialCharTok{\}}\SpecialStringTok{ beyond end of array }\SpecialCharTok{\{}\BuiltInTok{len}\NormalTok{(a)}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}
+\NormalTok{    a[i], a[j] }\OperatorTok{=}\NormalTok{ a[j], a[i]}
+
+
+
+\KeywordTok{def}\NormalTok{ simplePartition(a, pivot):}
+    \CommentTok{\#\# To do: partition the array a according to pivot.}
+    \CommentTok{\# Your array must be partitioned into two regions {-} \textless{}= pivot followed by elements \textgreater{} pivot}
+    \CommentTok{\#\# If an element at the beginning of the array is already \textless{}= pivot in the beginning of the array, it should not}
+    \CommentTok{\#\# be moved by the algorithm.}
+    \CommentTok{\# your code here}
+\NormalTok{    left }\OperatorTok{=} \DecValTok{0}
+\NormalTok{    right }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(a) }\OperatorTok{{-}} \DecValTok{1}
+
+    \ControlFlowTok{while}\NormalTok{ left }\OperatorTok{\textless{}=}\NormalTok{ right:}
+      \ControlFlowTok{while}\NormalTok{ left }\OperatorTok{\textless{}=}\NormalTok{ right }\KeywordTok{and}\NormalTok{ a[left] }\OperatorTok{\textless{}=}\NormalTok{ pivot:}
+\NormalTok{          left }\OperatorTok{+=} \DecValTok{1}
+      \ControlFlowTok{while}\NormalTok{ left }\OperatorTok{\textless{}=}\NormalTok{ right }\KeywordTok{and}\NormalTok{ a[right] }\OperatorTok{\textgreater{}}\NormalTok{ pivot:}
+\NormalTok{          right }\OperatorTok{{-}=} \DecValTok{1}
+      \ControlFlowTok{if}\NormalTok{ left }\OperatorTok{\textless{}}\NormalTok{ right:}
+\NormalTok{          swap(a, left, right)}
+\NormalTok{          left }\OperatorTok{+=} \DecValTok{1}
+\NormalTok{          right }\OperatorTok{{-}=} \DecValTok{1}
+
+
+
+
+
+
+
+\KeywordTok{def}\NormalTok{ boundedSort(a, k):}
+    \ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, k):}
+\NormalTok{        simplePartition(a, j)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(a)}
+\NormalTok{simplePartition(a, }\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(a)}
+\ControlFlowTok{assert}\NormalTok{(a[:}\DecValTok{5}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]), }\StringTok{\textquotesingle{}Simple partition test 1 failed\textquotesingle{}}
+
+\NormalTok{simplePartition(a, }\DecValTok{2}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(a)}
+\ControlFlowTok{assert}\NormalTok{(a[:}\DecValTok{5}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]), }\StringTok{\textquotesingle{}Simple partition test 2(A) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{5}\NormalTok{:}\DecValTok{8}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 2(B) failed\textquotesingle{}}
+
+
+\NormalTok{simplePartition(a, }\DecValTok{3}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(a)}
+\ControlFlowTok{assert}\NormalTok{(a[:}\DecValTok{5}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]), }\StringTok{\textquotesingle{}Simple partition test 3(A) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{5}\NormalTok{:}\DecValTok{8}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 3(B) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{8}\NormalTok{:}\DecValTok{12}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 3(C) failed\textquotesingle{}}
+
+\NormalTok{simplePartition(a, }\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(a)}
+\ControlFlowTok{assert}\NormalTok{(a[:}\DecValTok{5}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]), }\StringTok{\textquotesingle{}Simple partition test 4(A) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{5}\NormalTok{:}\DecValTok{8}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 4(B) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{8}\NormalTok{:}\DecValTok{12}\NormalTok{] }\OperatorTok{==}\NormalTok{ [}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 4(C) failed\textquotesingle{}}
+\ControlFlowTok{assert}\NormalTok{(a[}\DecValTok{12}\NormalTok{:}\DecValTok{14}\NormalTok{]}\OperatorTok{==}\NormalTok{[}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Partition test 4(D) failed\textquotesingle{}}
+
+\NormalTok{simplePartition(a, }\DecValTok{5}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(a)}
+\ControlFlowTok{assert}\NormalTok{(a }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{]}\OperatorTok{*}\DecValTok{5}\OperatorTok{+}\NormalTok{[}\DecValTok{2}\NormalTok{]}\OperatorTok{*}\DecValTok{3}\OperatorTok{+}\NormalTok{[}\DecValTok{3}\NormalTok{]}\OperatorTok{*}\DecValTok{4}\OperatorTok{+}\NormalTok{[}\DecValTok{4}\NormalTok{]}\OperatorTok{*}\DecValTok{2}\OperatorTok{+}\NormalTok{[}\DecValTok{5}\NormalTok{]}\OperatorTok{*}\DecValTok{2}\OperatorTok{+}\NormalTok{[}\DecValTok{6}\NormalTok{]), }\StringTok{\textquotesingle{}Simple Parition test 5 failed\textquotesingle{}}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Passed all tests : 10 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1, 3, 6, 1, 5, 4, 1, 1, 2, 3, 3, 1, 3, 5, 2, 2, 4]
+[1, 1, 1, 1, 1, 4, 5, 6, 2, 3, 3, 3, 3, 5, 2, 2, 4]
+[1, 1, 1, 1, 1, 2, 2, 2, 6, 3, 3, 3, 3, 5, 5, 4, 4]
+[1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 6, 5, 5, 4, 4]
+[1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6]
+[1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6]
+Passed all tests : 10 points!
+\end{verbatim}
+
+\hypertarget{problem-3-design-a-universal-family-hash-function}{%
+\subsection{Problem 3: Design a Universal Family Hash
+Function}\label{problem-3-design-a-universal-family-hash-function}}
+
+Suppose we are interested in hashing \(n\) bit keys into \(m\) bit hash
+values to hash into a table of size \(2^m\). We view our key as a bit
+vector of \(n\) bits in binary. Eg., for \(n = 4\), the key
+\(14 = \left(\begin{array}{c} 1\\ 1\\ 1\\ 0 \end{array} \right)\).
+
+The hash family is defined by random boolean matrices \(H\) with \(m\)
+rows and \(n\) columns. To compute the hash function, we perform a
+matrix multiplication. Eg., with \(m = 3\) and \(n= 4\), we can have a
+matrix \(H\) such as
+
+\[ H = \left[ \begin{array}{cccc} 0 & 1 & 0 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 \\
+\end{array} \right]\].
+
+The value of the hash function \(H(14)\) is now obtained by multiplying
+
+\[ \left[ \begin{array}{cccc} 0 & 1 & 0 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 \\
+\end{array} \right] \times \left( \begin{array}{c}
+1\\
+1\\
+1\\
+0
+\end{array} \right) \]
+
+The matrix multiplication is carried out using AND for multiplication
+and XOR instead of addition. For the example above, we compute the value
+of hash function as
+
+\[\left( \begin{array}{c}
+ 0 \cdot 1 + 1 \cdot 1 + 0 \cdot 1 + 1 \cdot 0 \\
+ 1 \cdot 1 + 0 \cdot 1 + 0 \cdot 1 + 0 \cdot 0 \\
+ 1 \cdot 1 + 0 \cdot 1 + 1 \cdot 1 + 1 \cdot 0 \\
+ \end{array} \right) = \left( \begin{array}{c} 1 \\ 1 \\ 0 \end{array} \right)\]
+
+(A) For a given matrix \(H\) and two keys \(x, y\) that differ only in
+their \(i^{th}\) bits, provide a condition for \(Hx = Hy\) holding.
+(\textbf{Hint} It may help to play with examples where you have two
+numbers \(x, y\) that just differ at a particular bit position. Figure
+out which entries in the matrix are multiplied with these bits that
+differ).
+
+YOUR ANSWER HERE
+
+(B) Prove that the probability that two keys \(x, y\) such that
+\(x \not= y\) collide under the random choice of a matrix \(x, y\) is at
+most \(\frac{1}{2^m}\).
+
+YOUR ANSWER HERE
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import}\NormalTok{ random}
+
+\KeywordTok{def}\NormalTok{ dot\_product(lst\_a, lst\_b):}
+\NormalTok{    and\_list }\OperatorTok{=}\NormalTok{ [elt\_a }\OperatorTok{*}\NormalTok{ elt\_b }\ControlFlowTok{for}\NormalTok{ (elt\_a, elt\_b) }\KeywordTok{in} \BuiltInTok{zip}\NormalTok{(lst\_a, lst\_b)]}
+    \ControlFlowTok{return} \DecValTok{0} \ControlFlowTok{if} \BuiltInTok{sum}\NormalTok{(and\_list)}\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0} \ControlFlowTok{else} \DecValTok{1}
+
+\CommentTok{\# encode a matrix as a list of lists with each row as a list.}
+\CommentTok{\# for instance, the example above is written as the matrix}
+\CommentTok{\# H = [[0,1,0,1],[1,0,0,0],[1,0,1,1]]}
+\CommentTok{\# encode column vectors simply as a list of elements.}
+\CommentTok{\# you can use the dot\_product function provided to you.}
+\KeywordTok{def}\NormalTok{ matrix\_multiplication(H, lst):}
+    \CommentTok{\# your code here}
+\NormalTok{    result }\OperatorTok{=}\NormalTok{ []}
+    \ControlFlowTok{for}\NormalTok{ lst\_a }\KeywordTok{in}\NormalTok{ H:}
+\NormalTok{      result.append(dot\_product(lst\_a, lst))}
+    \ControlFlowTok{return}\NormalTok{ result}
+
+
+\CommentTok{\# Generate a random m \textbackslash{}times n matrix}
+\CommentTok{\# see the comment next to matrix\_multiplication for how your matrix must be returned.}
+\KeywordTok{def}\NormalTok{ return\_random\_hash\_function(m, n):}
+    \CommentTok{\# return a random hash function wherein each entry is chosen as 1 with probability \textgreater{}= 1/2 and 0 with probability \textless{} 1/2}
+    \CommentTok{\# your code here}
+    \ImportTok{import}\NormalTok{ random}
+\NormalTok{    rand\_matrix }\OperatorTok{=}\NormalTok{ []}
+\NormalTok{    count }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{while}\NormalTok{ count }\OperatorTok{\textless{}=}\NormalTok{ m:}
+\NormalTok{      rand\_matrix.append([random.randint(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }\ControlFlowTok{for}\NormalTok{ \_ }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n)])}
+\NormalTok{      count}\OperatorTok{+=}\DecValTok{1}
+    \ControlFlowTok{return}\NormalTok{ rand\_matrix}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A1 }\OperatorTok{=}\NormalTok{ [[}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{],[}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{0}\NormalTok{],[}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]]}
+\NormalTok{b1 }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{]}
+\NormalTok{c1 }\OperatorTok{=}\NormalTok{ matrix\_multiplication(A1, b1)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}c1=\textquotesingle{}}\NormalTok{, c1)}
+\ControlFlowTok{assert}\NormalTok{ c1 }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{] , }\StringTok{\textquotesingle{}Test 1 failed\textquotesingle{}}
+
+\NormalTok{A2 }\OperatorTok{=}\NormalTok{ [ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{],[}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{]]}
+\NormalTok{b2 }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{]}
+\NormalTok{c2 }\OperatorTok{=}\NormalTok{ matrix\_multiplication(A2, b2)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}c2=\textquotesingle{}}\NormalTok{, c2)}
+\ControlFlowTok{assert}\NormalTok{ c2 }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{], }\StringTok{\textquotesingle{}Test 2 failed\textquotesingle{}}
+
+\NormalTok{A3 }\OperatorTok{=}\NormalTok{ [ [}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{],[}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{]]}
+\NormalTok{b3 }\OperatorTok{=}\NormalTok{  [}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{,}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{]}
+\NormalTok{c3 }\OperatorTok{=}\NormalTok{ matrix\_multiplication(A3, b3)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}c3=\textquotesingle{}}\NormalTok{, c3)}
+\ControlFlowTok{assert}\NormalTok{ c3 }\OperatorTok{==}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{], }\StringTok{\textquotesingle{}Test 3 failed\textquotesingle{}}
+
+\NormalTok{H }\OperatorTok{=}\NormalTok{ return\_random\_hash\_function(}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}H=\textquotesingle{}}\NormalTok{, H)}
+\ControlFlowTok{assert} \BuiltInTok{len}\NormalTok{(H) }\OperatorTok{==} \DecValTok{5}\NormalTok{, }\StringTok{\textquotesingle{}Test 5 failed\textquotesingle{}}
+\ControlFlowTok{assert} \BuiltInTok{all}\NormalTok{(}\BuiltInTok{len}\NormalTok{(row) }\OperatorTok{==} \DecValTok{4} \ControlFlowTok{for}\NormalTok{ row }\KeywordTok{in}\NormalTok{ H), }\StringTok{\textquotesingle{}Test 6 failed\textquotesingle{}}
+\ControlFlowTok{assert} \BuiltInTok{all}\NormalTok{(elt }\OperatorTok{==} \DecValTok{0} \KeywordTok{or}\NormalTok{ elt }\OperatorTok{==} \DecValTok{1} \ControlFlowTok{for}\NormalTok{ row }\KeywordTok{in}\NormalTok{ H }\ControlFlowTok{for}\NormalTok{ elt }\KeywordTok{in}\NormalTok{ row ),  }\StringTok{\textquotesingle{}Test 7 failed\textquotesingle{}}
+
+\NormalTok{H2 }\OperatorTok{=}\NormalTok{ return\_random\_hash\_function(}\DecValTok{6}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}H2=\textquotesingle{}}\NormalTok{, H2)}
+\ControlFlowTok{assert} \BuiltInTok{len}\NormalTok{(H2) }\OperatorTok{==} \DecValTok{6}\NormalTok{, }\StringTok{\textquotesingle{}Test 8 failed\textquotesingle{}}
+\ControlFlowTok{assert} \BuiltInTok{all}\NormalTok{(}\BuiltInTok{len}\NormalTok{(row) }\OperatorTok{==} \DecValTok{3} \ControlFlowTok{for}\NormalTok{ row }\KeywordTok{in}\NormalTok{ H2),  }\StringTok{\textquotesingle{}Test 9 failed\textquotesingle{}}
+\ControlFlowTok{assert} \BuiltInTok{all}\NormalTok{(elt }\OperatorTok{==} \DecValTok{0} \KeywordTok{or}\NormalTok{ elt }\OperatorTok{==} \DecValTok{1} \ControlFlowTok{for}\NormalTok{ row }\KeywordTok{in}\NormalTok{ H2 }\ControlFlowTok{for}\NormalTok{ elt }\KeywordTok{in}\NormalTok{ row ), }\StringTok{\textquotesingle{}Test 10 failed\textquotesingle{}}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Tests passed: 10 points!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+c1= [1, 1, 0]
+c2= [1, 0]
+c3= [1, 0]
+H= [[0, 1, 0, 1], [1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 1]]
+H2= [[0, 0, 0], [1, 1, 0], [0, 0, 0], [1, 1, 1], [1, 0, 1], [1, 1, 1]]
+Tests passed: 10 points!
+\end{verbatim}
+
+\hypertarget{manually-graded-answers}{%
+\subsection{Manually Graded Answers}\label{manually-graded-answers}}
+
+\hypertarget{problem-1}{%
+\subsubsection{Problem 1}\label{problem-1}}
+
+The bug is in the initialization of i in the algorithm. It must be i =-1
+rather than i = 0. Due to this, either the first element of the array is
+never considered during the partition or there could be an access to i+1
+that is out of array bounds.
+
+
+\hypertarget{problem-2-a}{%
+\subsubsection{Problem 2 A}\label{problem-2-a}}
+
+\begin{verbatim}
+for k = 1 to n
+   j = partition array a with k as pivot
+\end{verbatim}
+
+The running time is \(\Theta(n \times k)\).
+
+\hypertarget{problem-3-a}{%
+\subsubsection{Problem 3 A}\label{problem-3-a}}
+
+Since \(x,y\) differe only in their \(i^{th}\) bits, we can assume
+\(x_i = 0\) and \(y_i = 1\). Therefore, \(H x + H_i = Hy\) wherein,
+\(+\) refers to entrywise XOR and \(H_i\) is the \(i^{th}\) column of
+\(H\). Thus, \(Hx = Hy\) if and only if \(H_i\) has all zeros. This
+happens with probability \(\frac{1}{2^m}\).
+
+\hypertarget{problem-3-b}{%
+\subsubsection{Problem 3 B}\label{problem-3-b}}
+
+Let us assume that \(x\) and \(y\) differ in \(k\) out of \(n\)
+positions. We know that \(Hx = Hy\) if and only if \(Hx + Hy = 0\) where
+\(+\) is XOR and \(0\) is the vector of all zeros. But
+\(Hx + Hy = H (x + y)\) since AND distributes over XOR.
+
+Whenever \(x\) and \(y\) agree in the \(i^{th}\) entries, we have the
+\(i^{th}\) entry of \((x+y)\) is zero. Therefore, \(H(x+y)\) is just the
+XOR sum of \(k\) columns of \(H\) corresponding to positions where \(x\)
+and \(y\) differ.
+
+Thus, one of the columns must equal the sum of the remaining \(k-1\)
+columns. Let us fix these \(k-1\) columns as given and the last column
+as randomly chosen. The probability that each of the \(m\) entries of
+the last column matches the sum of the first \(k-1\) column is
+\(\frac{1}{2^m}\).
+
+\hypertarget{thats-all-folks}{%
+\subsection{That\textquotesingle s all folks}\label{thats-all-folks}}
+
+\end{document}
