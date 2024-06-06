@@ -2,7 +2,7 @@
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{ {./images/} }
 
-\title{MS-CS Master Course Note (Non-Credit)}
+\title{MS-CS Course Note (Non-Credit Course 2)}
 \author{Mark Zhou}
 \date{March 2024}
 
@@ -1079,7 +1079,9 @@ When we are looking for a key, we will treat the deleted slot as empty.\\
 However since the slot is marked deleted, we will prevent from encountering a problem of early stop,
 that is to say, when looking up with linear probing, we will not stop at the deleted slot.\\}
 
-\subsection{Perfect Hashing and Cuckoo Hashing}
+\section{Perfect Hashing and Cuckoo Hashing}
+
+\subsection{Perfect Hashing}
 
 \paragraph{In a chaining solution, even if the average time cost is small, there may be still large 
 outliers. We can expect the largest chain is as large as $O(\log(n)/\log(\log(n)))$.\\
@@ -1098,12 +1100,55 @@ set of hash functions $H$, hence $h \in H$.\\
 The hashtable will be of size $k*n^2$, in which $k$ is a parameter to be determined.\\}
 
 \begin{figure}[H]
-    \includegraphics[width=\textwidth]{perfecthashinganalysis.jpg}
+    \includegraphics[width=\textwidth]{perfecthashinganalysis2.jpg}
 \end{figure}
 
 
+\paragraph{Since the probability of collision of two keys $\leq c/m$, and in this case, $m=k*n^2$.\\
+Therefore, in a array of $n$ elements, the probablity of at least one collision happening is 
+$(c/k*n^2) * (n*(n-1)/2) \leq c/2k$.\\}
+
+\paragraph{The main recipe of the above hashing approach is to use a huge hashtable, and the universal hashing scheme.\\
+But can we get rid of the relies on the hashtable size?\\
+The answer is yes, we can use a two-level hashing scheme.\\
+The first level is to use a universal hash function to hash the keys into $n$ slots.\\
+The second level is to use a universal hash function to hash the keys in the $n$ slots into $k*n^2$ slots.\\
+The total number of slots will be $\leq \sum_{j=1}^n n_j^2$, $n_j$ is the number of elements that collide with key $k_j$.\\
+This sumation is actually $\leq$ some constant for each $j$. Therefore, the total size of the second level hashtable is 
+$\leq c*n$, $c$ as the constant for each $j$.\\
+The main advantage of perfect hashing is that it can achieve $O(1)$ time complexity.\\}
+
+\paragraph{Along with all the benefits from perfect hashing, there are still some disadvantages.\\
+First, all keys need to be known in advance.\\
+Second, you cannot insert or delete keys.\\}
 
 
+\subsection{Cuckoo Hashing}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{cuckoohashing.png}
+\end{figure}
+
+\paragraph{The main idea of Cuckoo Hashing is to use two hash functions in two hashtables.\\
+The first hash function is used to calculate the slot, while the second hash function is
+used to calculate the alternative slot.\\
+If both the first and the alternative slots are occupied, we will insert the key-value pair to the alternative slot anyway 
+and kick out the one that's already been there. Then recursively insert the kicked-out key-value pair to another alternative slot.\\
+If the alternative slot is empty, we will insert the key-value pair to that slot.\\
+This is called a displacement chain. Once an empty slot is found, the chain will end.\\
+There are two possible scenarios here. One is that the replacement chain just carries on and on;
+the other is that the chain will get into a loop, a.k.a the new alternative slot is occupied by some key we just encountered,
+then the whole kicking out situation starts again.\\
+How do we resolve this?\\
+If there is too many displacement, say in an array of $n=2^{10}$, we encounter more than 10 replacement, which is rare, we simply 
+create a new hashtable with a larger size and rehash all the key-value pairs.\\}
+
+
+\section{Bloom Filters and Analysis}
+
+\paragraph{The main idea of Bloom Filters is to use multiple hash functions to check if a key is in the hashtable.\\
+The main advantage of Bloom Filters is that it can save a lot of space.\\
+The main disadvantage of Bloom Filters is that it may have false positives.\\}
 
 
 

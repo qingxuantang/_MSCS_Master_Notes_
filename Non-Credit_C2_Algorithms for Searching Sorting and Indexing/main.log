@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  5 JUN 2024 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  6 JUN 2024 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -701,31 +701,37 @@ Overfull \hbox (3.55173pt too wide) in paragraph at lines 1075--1075
 <./images/expectedworstcaseforchaining.jpg, id=298, 2409.0pt x 1084.05pt>
 File: ./images/expectedworstcaseforchaining.jpg Graphic file (type jpg)
 <use ./images/expectedworstcaseforchaining.jpg>
-Package pdftex.def Info: ./images/expectedworstcaseforchaining.jpg  used on input line 1091.
+Package pdftex.def Info: ./images/expectedworstcaseforchaining.jpg  used on input line 1093.
 (pdftex.def)             Requested size: 345.0pt x 155.23962pt.
-<./images/perfecthashinganalysis.jpg, id=299, 2409.0pt x 1084.05pt>
-File: ./images/perfecthashinganalysis.jpg Graphic file (type jpg)
-<use ./images/perfecthashinganalysis.jpg>
-Package pdftex.def Info: ./images/perfecthashinganalysis.jpg  used on input line 1101.
-(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
- [73 <./images/expectedworstcaseforchaining.jpg>] [74 <./images/perfecthashinganalysis.jpg>] (main.aux)
+<./images/perfecthashinganalysis2.jpg, id=299, 1001.7425pt x 565.11125pt>
+File: ./images/perfecthashinganalysis2.jpg Graphic file (type jpg)
+<use ./images/perfecthashinganalysis2.jpg>
+Package pdftex.def Info: ./images/perfecthashinganalysis2.jpg  used on input line 1103.
+(pdftex.def)             Requested size: 345.0pt x 194.62729pt.
+ [73 <./images/expectedworstcaseforchaining.jpg>] [74 <./images/perfecthashinganalysis2.jpg>]
+<./images/cuckoohashing.png, id=307, 1005.7575pt x 508.90125pt>
+File: ./images/cuckoohashing.png Graphic file (type png)
+<use ./images/cuckoohashing.png>
+Package pdftex.def Info: ./images/cuckoohashing.png  used on input line 1129.
+(pdftex.def)             Requested size: 345.0pt x 174.56165pt.
+ [75] [76 <./images/cuckoohashing.png>] [77] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4323 strings out of 474424
- 73183 string characters out of 5751554
+ 4332 strings out of 474424
+ 73468 string characters out of 5751554
  1935496 words of memory out of 5000000
- 26650 multiletter control sequences out of 15000+600000
+ 26659 multiletter control sequences out of 15000+600000
  566775 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,2896b,277s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (74 pages, 7677871 bytes).
+Output written on main.pdf (77 pages, 7803997 bytes).
 PDF statistics:
- 376 PDF objects out of 1000 (max. 8388607)
+ 386 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
