@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1717645986.1602 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1717645987.92004 0
+["pdflatex"] 1718717798.961 "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" "main.pdf" "main" 1718717800.77287 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcbx1000.tfm" 993062478 1456 278016b1e421c8e979679e0372f68bf1 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -67,7 +67,7 @@
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1000.pk" 1711116133 12124 3f55655e9ad998fa05fe3bd34b0502f0 ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1711189794 11548 6690463b37f8f6ff2a9c97a6cfc1ffae ""
   "C:/Users/zhoub/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1711116086 24226191 7d61f7906594d76c59711cb40eca4076 ""
-  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1717645983 59627 e417007ea859b10aa48ebb1ce998b109 ""
+  "c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex" 1718717798 60395 bfad9eb01c352563d34a00eb4a014367 ""
   "images/array2minheap.png" 1712558434 213058 1db47235f4cae52b6205b703ecf8500e ""
   "images/averagerunningtimetp.png" 1713852706 64699 c924b060528d1d260d4098463983f1bb ""
   "images/binarysearchhelper.jpg" 1711200181 256110 b34ee827ccb19f155ddac19e75e32dcd ""
@@ -118,9 +118,9 @@
   "images/week3lomutoquiz2.png" 1715410641 112685 245c38fbff216db3facaf95379526b25 ""
   "images/week3quicksortquiz1.png" 1715166695 175501 551a8e03f417eaa14eaa2b98a134540c ""
   "images/week3quicksortquiz2.png" 1715166710 144186 89ae86469afe85ccb41ee372b884c5d6 ""
-  "main.aux" 1717645987 58158 a2788afb34eb24e35ff14a7e4337b641 "pdflatex"
-  "main.tex" 1717645983 59627 e417007ea859b10aa48ebb1ce998b109 ""
-  "main.toc" 1717645987 48496 327a3d055dbb0e088a0bdd960da4b3b6 "pdflatex"
+  "main.aux" 1718717800 58914 3f39027455718ad4f8cc7fa170309601 "pdflatex"
+  "main.tex" 1718717798 60395 bfad9eb01c352563d34a00eb4a014367 ""
+  "main.toc" 1718717800 49251 24d65e07148f983cbaf4c3d5a29e70d7 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

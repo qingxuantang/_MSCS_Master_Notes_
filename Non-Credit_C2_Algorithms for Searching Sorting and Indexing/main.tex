@@ -1146,11 +1146,18 @@ create a new hashtable with a larger size and rehash all the key-value pairs.\\}
 
 \section{Bloom Filters and Analysis}
 
-\paragraph{The main idea of Bloom Filters is to use multiple hash functions to check if a key is in the hashtable.\\
-The main advantage of Bloom Filters is that it can save a lot of space.\\
-The main disadvantage of Bloom Filters is that it may have false positives.\\}
+\paragraph{This is a fast set data structure based on hashing. The main idea of Bloom Filters is to use multiple hash functions to 
+check if a key is in the hashtable.\\
+The main advantage of Bloom Filters is that it can save a lot of space, while the 
+main disadvantage is that it may have false positives, due to the approximaty nature. How? Let`s find out latter.\\
+Here is the basic idea of Bloom Filters. We will use $k$ randomly choosen hash functions to hash the key into $m$ slots.\\
+In each slot, we only has ones and zeros, one means the slot is set while zero means not.\\
+Now we are going to hash the keys. For key $x$, we have hashed value $h_1(x)$, which is a number ranging from $0$ to $m-1$.
+Then we will go ahead and using all the hash functions choosen and calculate the hashed values of $x$, and correspondingly set slots.\\
+So, if we want to check whether $x$ is in the hashtable, we will simply check every hashed value of $x$, 
+a.k.a. $h_1(x), h_2(x), \ldots, h_k(x)$, and see if all the slots are set.\\}
 
-
+3:47, TBC.
 
 
 
