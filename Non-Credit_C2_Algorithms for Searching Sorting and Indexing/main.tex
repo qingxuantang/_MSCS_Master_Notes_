@@ -1146,24 +1146,100 @@ create a new hashtable with a larger size and rehash all the key-value pairs.\\}
 
 \section{Bloom Filters and Analysis}
 
+\subsection{The Probability of False Positive}
+
 \paragraph{This is a fast set data structure based on hashing. The main idea of Bloom Filters is to use multiple hash functions to 
 check if a key is in the hashtable.\\
 The main advantage of Bloom Filters is that it can save a lot of space, while the 
-main disadvantage is that it may have false positives, due to the approximaty nature. How? Let`s find out latter.\\
-Here is the basic idea of Bloom Filters. We will use $k$ randomly choosen hash functions to hash the key into $m$ slots.\\
+main disadvantage is that it may have false positives, due to the approximaty nature. How? Let`s find out later.\\
+Here is the basic idea of Bloom Filters. We will use $k$ randomly choosen hash functions to hash the keys into $m$ slots.\\
 In each slot, we only has ones and zeros, one means the slot is set while zero means not.\\
 Now we are going to hash the keys. For key $x$, we have hashed value $h_1(x)$, which is a number ranging from $0$ to $m-1$.
 Then we will go ahead and using all the hash functions choosen and calculate the hashed values of $x$, and correspondingly set slots.\\
 So, if we want to check whether $x$ is in the hashtable, we will simply check every hashed value of $x$, 
-a.k.a. $h_1(x), h_2(x), \ldots, h_k(x)$, and see if all the slots are set.\\}
+a.k.a. $h_1(x), h_2(x), \ldots, h_k(x)$, and see if all the slots are set to 1.\\
+Now the ambiguity comes in. Even if all the slots are set to 1, we are still prone to the possibility of false positive, because other hashed values 
+of certain keys may set the slots into 1, which has nothing to do with $x$.\\}
 
-3:47, TBC.
+\paragraph{What is the probability of false positive?\\
+Let's say we have $m$ slots and $n$ keys.\\
+The probability of a slot being set to 1 is $1/m$. And the probability of a slot being set to 0 is $1-1/m$.\\
+The probability of a slot being set to 0 after hashing $n$ keys with $k$ hash functions is $(1-1/m)^{kn} \approx e^{-kn/m}$.\\
+Then the probability of a slot being set to 1 with the same condition is $1-e^{-kn/m}$.\\
+Last, the probability of every slots being set to 1 with the same conditions is $(1-e^{-kn/m})^k$. This is the probability of false positive.\\}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{bloomflitersfalsepositive.png}
+\end{figure}
 
 
+\section{Count-Min Sketching Using Hashing}
 
+\paragraph{The main idea of Count-Min Sketching is to use multiple hash functions to count the frequency of keys.\\
+We have a large stream of keys and we will keep a counter in order to record the apprearance of each key.\\
+There are two counts involved in this concept: the real count and the appoximate count.\\
+Let's take a look at a simple example.\\
+We would like to keep count of how ofter each URL in a given web server is requested.\\}
 
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{webserver.jpg}
+\end{figure}
 
+\paragraph{
+    For each time we get a request, we will hash the URL and increase the counter by 1.\\
+    Let's say URL $U_j$ is hashed into slot $h_i(U_j)$, and we will increase the counter $C(j)$ by 1.\\
+}
 
+\subsection{Approximate Counting Data Structure}
 
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{appoximatecountingdatastructure.jpg}
+\end{figure}
+
+\paragraph{
+    Let's take a look at a stream of elements ${x_1, x_2, \ldots ,x_w}$ in which $w$ is the size of the stream.\\
+    Each element $x_j \in {1,2,\ldots,n}$ (The number type is just an example, it can be any type), 
+    therefore there'll be $n$ possibilities of $x_j$.\\
+    In order to get an appoximate count, the returned value must be within the range of $\epsilon*w$, where $\epsilon$
+    is a relatively small number.\\
+    And the probability of approximate count must larger than $\delta$.\\
+    Here are the typical number choice for above variables:\\
+    $w \approx 10^9,n \approx 10^8, \epsilon \approx 10^{-6}, \delta \approx 0.99$.\\
+}
+
+\paragraph{
+    Let's dive into the basic idea of Count-Min Sketching.\\
+    We will use $m$ counters: $C(1), \ldots, C(m)$.\\
+    Once we encounter an element $X(j)$, we will hash it into $m$ slots, a.k.a. $h_1(X(j)), \ldots, h_m(X(j))$.\\
+    Then we will increase the counters in the corresponding slots, such as $C(j)$, by 1.\\
+    As this mechanism goes on, we will have multiple hashes that are the same, and the counter will be increased by 1 multiple times
+    (that is to say, multiple hashes may point to the same $C(j)$);\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{countminsketchbasicidea.jpg}
+\end{figure}
+
+\begin{verbatim}
+    Xj -> Cj
+    Xm -> Cj
+    Xn -> Cj
+\end{verbatim}
+
+\subsection{Count-Min Sketch Error Analysis}
+
+\paragraph{
+    We know that the approximate count generally is larger than the real count. But how do they relate to each other?\\
+    The probability that $h(j) = h(i)$ under certain hash function is as following;\\
+    $Pr(h(i)=h(j)) = c/m, h \in H, i \neq j$\\
+    Typically, $c=1$.\\
+    Then the expected value of appoximatecount(j) is as following;\\
+    $E[appoximatecount(j)] = \sum_{i=1}^n Pr(h(i)=h(j)) * realcount(i) = \sum_{i=1}^n c/m * realcount(i)$;\\
+    And it's $\leq realcount(j) + c*w/m$.\\
+    Therefore, the `error` in the analysis is denoted as;\\
+    $error = appoximatecount(j) - realcount(j) \leq c*w/m$.\\
+}
+
+\subsection{Chosing m}
 
 \end{document}
