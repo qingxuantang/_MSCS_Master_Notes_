@@ -1242,4 +1242,63 @@ We would like to keep count of how ofter each URL in a given web server is reque
 
 \subsection{Chosing m}
 
+\paragraph{
+    The main idea of choosing $m$ is to make sure the error is within the range of $\epsilon*w$.\\
+    Therefore, we need to make sure $c*w/m \leq \epsilon*w$, which is $m \geq c/\epsilon$.\\
+    Using Maklov's inequality, we can get the probability of the error being larger than $\epsilon*w$ is as following;\\
+    $Pr[error(j) \geq \epsilon*w] \leq Expectation(error(j)) / \epsilon*w$, which is $\approx c/m*\epsilon$.\\
+}
+
+\begin{verbatim}
+    Here is the theory of Markov's inequality:
+    If X is a non-negative random variable, then for any t > 0,
+    Pr[X >= t] <= E[X] / t.
+\end{verbatim}
+
+\paragraph{
+    So, the probability of $Error(j) \geq \epsilon*w$ is upper bounded by $c/m*\epsilon$, a.k.a. $E(x)/t$.\\
+    That gives us $m = e*c/\epsilon$, e is the natural number.\\
+    With the given value of these variables, $c=1,\epsilon=10^{-6}, e=2.73$, then $m=2.73*10^6$.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{choosingm.jpg}
+\end{figure}
+
+\paragraph{
+    Under such circumstances, we still need to reduce the error probability.\\
+    In order to do that, we need to assimilate k different hash functions.\\
+    Then  we will find the min count, a.k.a. the min $Pr(k)$.\\
+    We can tell that $Pr(all k goes wrong)=(1/e)^k$, therefore when k goes up, $(1/e)^k$ goes down exponentially.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{reducingerrorprobability.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{overallalgorithm.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{someactualnumbers.jpg}
+\end{figure}
+
+
+\section{String Matching Using Hashing and Rabin-Karp Algorithm}
+
+\paragraph{
+    The main idea of Rabin-Karp Algorithm is to use hashing to find the pattern in a string.\\
+    The main advantage of Rabin-Karp Algorithm is that it can find the pattern in $O(n+m)$ time complexity.\\
+    The main disadvantage of Rabin-Karp Algorithm is that it may have false positives.\\
+    Here is the basic idea of Rabin-Karp Algorithm.\\
+    We will hash the pattern and the string, and then compare the hashed values.\\
+    If the hashed values are the same, we will compare the pattern and the string.\\
+    If the hashed values are not the same, we will move the window and rehash the string.\\
+    The main idea of the hashing function is to use the polynomial rolling hash function.\\
+    The main advantage of the polynomial rolling hash function is that it can hash the string in $O(1)$ time complexity.\\
+    The main disadvantage of the polynomial rolling hash function is that it may have collisions.\\
+}
+
+
 \end{document}
