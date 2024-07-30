@@ -28,6 +28,7 @@ This is a non-credit prep course for an MS-CS degree.}
 
 \section{Binary Search Trees}
 
+\subsection{Basic Concepts}
 
 \paragraph{
     Binary search tree is a binary tree is a kind of data type with set of data elements without repeatition.\\
@@ -91,6 +92,115 @@ A: We would traverse the left subtree of the root node until we
 reach a leaf node, which means a node with a NIL as its left child.
 \end{verbatim}
 
-TBC at 9:09
+
+\subsection{The Height of a Binary Search Tree}
+
+\paragraph{
+    The height of a binary search tree is the number of edges on the
+    longest path from the root node to a leaf node.\\
+    We will define the height of a leaf node as 0. Then the height of number 25, 
+    a.k.a. the root node of the below binary search tree is 2.\\
+}
+
+\newpage
+
+\begin{verbatim}
+    Example:
+     25       -> height = 2
+    /  \
+   15  50     -> height = 1
+  / \  / \
+ 10 22 35 70  -> height = 0, since they are leaf nodes
+\end{verbatim}
+
+\paragraph{
+    Let's assume we have a balanced binary search tree with n internal nodes.\\
+    One each layer from the root node, there'll be $2^0$ nodes, $2^1$ nodes, $2^2$ nodes, $\cdots$, $2^h$ nodes.\\
+    The total number of nodes in the tree will be $2^0+2^1+2^2+ \cdots +2^h=2^{h+1}-1$.\\
+    So, the height of the tree will be $h=\log_2(n+1)-1$.\\
+    In the sense of big O notation, the height of a binary search tree is $O(\log_2(n))$, in a balanced binary 
+    search tree scenario.\\
+    For example, $\log_2^8=3$, so the height of a binary search tree with 8 nodes is 3.\\
+    $\log_2^{15}=4$, so the height of a binary search tree with 15 nodes is 4.\\
+}
+
+\paragraph{
+    In the worst case scenario, where the binary search tree is not balanced, the height of the tree will be $O(n)$.\\
+    That is to say, the tree will be a linked list looks like this;\\
+}
+
+\newpage
+
+\begin{verbatim}
+    Linked List Example:
+     10
+      \
+       15
+        \
+         20
+          \
+           25
+            \
+             30
+              \
+               35
+\end{verbatim}
+
+\paragraph{
+    In this case, the height of the tree is 6, which is equal to the number of nodes in the tree.\\
+    The height of the tree is $O(n)$, which is the worst case scenario.\\
+    Normally, we will have something in between the best case scenario and the worst case scenario, 
+    $O(\log(n)) < height < O(n)$.\\
+}
+
+\subsection{Basics of Binary Search Tree Quiz}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{binarysearchtreequiz01.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{binarysearchtreequiz02.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{binarysearchtreequiz03.png}
+\end{figure}
+
+
+
+\subsection{Insertion and Deletion in a Binary Search Tree}
+
+\paragraph{
+    We can insert a new element into a binary search tree by comparing the key of the new element with the key of the root node.\\
+    If the key of the new element is less than the key of the root node, we will insert the new element into the left subtree.\\
+    If the key of the new element is greater than the key of the root node, we will insert the new element into the right subtree.\\
+    We will repeat the process until we reach a leaf node.\\
+}
+
+\paragraph{
+    For example, we have a binary search tree with the following nodes;\\
+}
+
+\begin{verbatim}
+    Example:
+     25
+    /  \
+   15  50
+  / \  / \
+ 10 22 35 70
+\end{verbatim}
+
+\paragraph{
+    If we want to insert a new element with the key 40, we will compare 40 with 25, and then 40 with 50, and then 40 with 35.\\
+    Since 40 is greater than 35, we will insert 40 as the right child node of 35.\\
+}
+
+
+
+
+
+TBC: Binary search tree: insertion and deletion video.
+
 
 \end{document}

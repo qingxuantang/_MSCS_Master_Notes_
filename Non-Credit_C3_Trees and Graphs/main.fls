@@ -95,13 +95,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\main.toc
 INPUT .\main.toc
 INPUT main.toc
-OUTPUT main.toc
-INPUT .\images\binarysearchtreenodes.png
-INPUT .\images\binarysearchtreenodes.png
-INPUT .\images\binarysearchtreenodes.png
-INPUT .\images\binarysearchtreenodes.png
-INPUT .\images\binarysearchtreenodes.png
-INPUT .\images\binarysearchtreenodes.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -110,6 +103,14 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+OUTPUT main.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\images\binarysearchtreenodes.png
+INPUT .\images\binarysearchtreenodes.png
+INPUT .\images\binarysearchtreenodes.png
+INPUT .\images\binarysearchtreenodes.png
+INPUT .\images\binarysearchtreenodes.png
+INPUT .\images\binarysearchtreenodes.png
 INPUT .\images\binarysearchtreerealexample.png
 INPUT .\images\binarysearchtreerealexample.png
 INPUT .\images\binarysearchtreerealexample.png
@@ -117,6 +118,24 @@ INPUT .\images\binarysearchtreerealexample.png
 INPUT .\images\binarysearchtreerealexample.png
 INPUT .\images\binarysearchtreerealexample.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz01.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz02.png
+INPUT .\images\binarysearchtreequiz03.png
+INPUT .\images\binarysearchtreequiz03.png
+INPUT .\images\binarysearchtreequiz03.png
+INPUT .\images\binarysearchtreequiz03.png
+INPUT .\images\binarysearchtreequiz03.png
+INPUT .\images\binarysearchtreequiz03.png
 INPUT main.aux
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
@@ -124,11 +143,17 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
