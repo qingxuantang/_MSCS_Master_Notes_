@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  27 JUL 2024 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  4 AUG 2024 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex"
-(c:/Users/zhoub/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex
+**"f:/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex"
+(f:/git_repo/_MSCS_/_MSCS_Master_Notes_/Non-Credit_C2_Algorithms for Searching Sorting and Indexing/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -760,24 +760,47 @@ File: ./images/someactualnumbers.jpg Graphic file (type jpg)
 <use ./images/someactualnumbers.jpg>
 Package pdftex.def Info: ./images/someactualnumbers.jpg  used on input line 1284.
 (pdftex.def)             Requested size: 345.0pt x 155.23962pt.
- [84 <./images/overallalgorithm.jpg> <./images/someactualnumbers.jpg>] [85] (main.aux)
+<./images/stringmatching.png, id=344, 710.655pt x 448.67625pt>
+File: ./images/stringmatching.png Graphic file (type png)
+<use ./images/stringmatching.png>
+Package pdftex.def Info: ./images/stringmatching.png  used on input line 1299.
+(pdftex.def)             Requested size: 345.0pt x 217.81995pt.
+ [84 <./images/overallalgorithm.jpg> <./images/someactualnumbers.jpg>]
+<./images/stringmatchingusinghash.png, id=348, 1002.74625pt x 569.12625pt>
+File: ./images/stringmatchingusinghash.png Graphic file (type png)
+<use ./images/stringmatchingusinghash.png>
+Package pdftex.def Info: ./images/stringmatchingusinghash.png  used on input line 1312.
+(pdftex.def)             Requested size: 345.0pt x 195.81035pt.
+ [85 <./images/stringmatching.png>]
+<./images/stringmatchingproblem2simplealgo.png, id=353, 914.41624pt x 526.96875pt>
+File: ./images/stringmatchingproblem2simplealgo.png Graphic file (type png)
+<use ./images/stringmatchingproblem2simplealgo.png>
+Package pdftex.def Info: ./images/stringmatchingproblem2simplealgo.png  used on input line 1329.
+(pdftex.def)             Requested size: 345.0pt x 198.81892pt.
+ [86 <./images/stringmatchingusinghash.png>] [87 <./images/stringmatchingproblem2simplealgo.png>]
+<./images/stringmatchingproblem2improvedalgo.png, id=360, 1003.75pt x 591.20876pt>
+File: ./images/stringmatchingproblem2improvedalgo.png Graphic file (type png)
+<use ./images/stringmatchingproblem2improvedalgo.png>
+Package pdftex.def Info: ./images/stringmatchingproblem2improvedalgo.png  used on input line 1344.
+(pdftex.def)             Requested size: 345.0pt x 203.20946pt.
+ [88 <./images/stringmatchingproblem2improvedalgo.png>] [89] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4404 strings out of 474424
- 76126 string characters out of 5751554
+ 4440 strings out of 474424
+ 77593 string characters out of 5751554
  1935496 words of memory out of 5000000
- 26731 multiletter control sequences out of 15000+600000
+ 26767 multiletter control sequences out of 15000+600000
  566775 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,2896b,277s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,2884b,277s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zhoub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (85 pages, 10118779 bytes).
+Output written on main.pdf (89 pages, 10678951 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
+ 436 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

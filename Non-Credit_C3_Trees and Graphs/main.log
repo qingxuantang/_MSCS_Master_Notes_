@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  30 JUL 2024 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  1 AUG 2024 12:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -199,24 +199,70 @@ File: ./images/binarysearchtreequiz03.png Graphic file (type png)
 <use ./images/binarysearchtreequiz03.png>
 Package pdftex.def Info: ./images/binarysearchtreequiz03.png  used on input line 167.
 (pdftex.def)             Requested size: 345.0pt x 149.22798pt.
- [9 <./images/binarysearchtreequiz02.png>] [10 <./images/binarysearchtreequiz03.png>] [11] (main.aux)
+ [9 <./images/binarysearchtreequiz02.png>] [10 <./images/binarysearchtreequiz03.png>]
+<./images/binarysearchtreeinsertion.jpg, id=48, 2409.0pt x 1084.05pt>
+File: ./images/binarysearchtreeinsertion.jpg Graphic file (type jpg)
+<use ./images/binarysearchtreeinsertion.jpg>
+Package pdftex.def Info: ./images/binarysearchtreeinsertion.jpg  used on input line 207.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [11 <./images/binarysearchtreeinsertion.jpg>]
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 227--227
+[]            \OT1/cmtt/m/n/10 return find(root.left, key) # This is the recursive call.[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 227--227
+[]        \OT1/cmtt/m/n/10 return find(root.right, key) # This is the recursive call.[] 
+ []
+
+
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 245--245
+[]            \OT1/cmtt/m/n/10 root.left = insert(root.left, key) # This is the recursive call.[] 
+ []
+
+[12]
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 245--245
+[]            \OT1/cmtt/m/n/10 root.right = insert(root.right, key) # This is the recursive call.[] 
+ []
+
+<./images/binarysearchtreeinsertion2.jpg, id=55, 2409.0pt x 1084.05pt>
+File: ./images/binarysearchtreeinsertion2.jpg Graphic file (type jpg)
+<use ./images/binarysearchtreeinsertion2.jpg>
+Package pdftex.def Info: ./images/binarysearchtreeinsertion2.jpg  used on input line 248.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+[13 <./images/binarysearchtreeinsertion2.jpg>] [14]
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 311--311
+[]            \OT1/cmtt/m/n/10 root.left = delete(root.left, key) # This is the recursive call.[] 
+ []
+
+
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 311--311
+[]            \OT1/cmtt/m/n/10 root.right = delete(root.right, key) # This is the recursive call.[] 
+ []
+
+
+Overfull \hbox (90.7462pt too wide) in paragraph at lines 311--311
+[]            \OT1/cmtt/m/n/10 root.right = delete(root.right, root.key) # This is the recursive call.[] 
+ []
+
+[15] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3880 strings out of 474424
- 58347 string characters out of 5751554
- 1931496 words of memory out of 5000000
- 26209 multiletter control sequences out of 15000+600000
+ 3898 strings out of 474424
+ 59124 string characters out of 5751554
+ 1934496 words of memory out of 5000000
+ 26227 multiletter control sequences out of 15000+600000
  566100 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,876b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (11 pages, 688072 bytes).
+Output written on main.pdf (15 pages, 1403980 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -171,14 +171,13 @@ reach a leaf node, which means a node with a NIL as its left child.
 
 \subsection{Insertion and Deletion in a Binary Search Tree}
 
+\subsubsection{Insertion}
+
 \paragraph{
     We can insert a new element into a binary search tree by comparing the key of the new element with the key of the root node.\\
     If the key of the new element is less than the key of the root node, we will insert the new element into the left subtree.\\
     If the key of the new element is greater than the key of the root node, we will insert the new element into the right subtree.\\
     We will repeat the process until we reach a leaf node.\\
-}
-
-\paragraph{
     For example, we have a binary search tree with the following nodes;\\
 }
 
@@ -196,11 +195,135 @@ reach a leaf node, which means a node with a NIL as its left child.
     Since 40 is greater than 35, we will insert 40 as the right child node of 35.\\
 }
 
+\paragraph{
+    The above example actually consists of two steps.\\
+    First, we will search for the element to be inserted, which is called the $find()$ operation.\\
+    Then, after successfully locates the element, we will insert it into the binary search tree.\\
+    We will talk about find operation now.\\
+    Assuming we have an impefect binary search tree and we want to locate the key $45$, how should we do that?\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{binarysearchtreeinsertion.jpg}
+\end{figure}
+
+\paragraph{
+    We will start from the root node, and then compare the key of the root node with the key of the element to be located.\\
+    If the key of the root node is equal to the key of the element to be located, we will return the root node. 
+    If the key of the root node is greater than the key of the element to be located, we will search the left subtree. 
+    Otherwise, we will search the right subtree.\\
+    The overall process will be repeated until we reach a leaf node.\\
+    If we reach a leaf node and the key of the leaf node is not equal to the key of the element to be located, we will return NIL.\\
+}
+
+\begin{verbatim}
+    Here is the pseudo code for the find operation:
+    find(root, key)
+        if root == NIL or root.key == key
+            return root
+        if root.key > key
+            return find(root.left, key) # This is the recursive call.
+        return find(root.right, key) # This is the recursive call.
+\end{verbatim}
+
+\paragraph{
+    As for the time complexity, the find operation will take $O(h)$ time, where $h$ is the height of the binary search tree.\\
+    Now we will go ahead with the second step of the insertion operation.\\
+    We will insert the new element into the binary search tree by comparing the key of the new element with the key of the root node.\\
+    }
+
+\begin{verbatim}
+    Here is the pseudo code for the insertion operation:
+    insert(root, key)
+        if root == NIL
+            return new Node(key)
+        if key < root.key
+            root.left = insert(root.left, key) # This is the recursive call.
+        else
+            root.right = insert(root.right, key) # This is the recursive call.
+        return root
+\end{verbatim}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{binarysearchtreeinsertion2.jpg}
+\end{figure}
+
+\subsubsection{Deletion}
+
+\paragraph{
+    Now we will talk about the deletion operation.\\
+    There are three cases to consider when deleting a node from a binary search tree.\\
+    The node to be deleted can be a leaf node, a node with only one child,or one with two child nodes.\\
+    If both child nodes are NIL, we can simply delete the node.\\
+    If one of the child nodes is NIL, we can delete the node, then reconnect between the past-parrent node and past-child node,
+     like this;\\
+}
+
+\newpage
+
+\begin{verbatim}
+    Only One Child Node Example:
+     25                     25
+    /  \                   /  \
+   15  50   delete 15     /   50
+  / \       --------->   / \
+ 10 NIL                 10  NIL
+ /\                    / \
+NIL NIL               NIL NIL
+\end{verbatim}
+
+\paragraph{
+    What if we want to delete a node that has two non-NIL children?\\
+    We will find the smallest node in the right subtree of the node to be deleted, and then replace the node to be deleted with the smallest node.\\
+    To perform this operation, we will `walk' right from the root node by one step and then `walk' left until we reach a leaf node.\\
+    During each step, we will compare the key of the current node with the key of the node to be deleted.\\
+    The leaf node we reached will be the successor of the node we deleted.\\
+}
+
+\begin{verbatim}
+    Two Child Nodes Example:
+     25                     25
+    /  \                   /  \
+   15  50   delete 15     22   50
+  / \       --------->   / \
+ 10 22                 10  NIL
+ /\                    / \
+NIL NIL               NIL NIL
+\end{verbatim}
+
+\begin{verbatim}
+    Here is the pseudo code for the deletion operation:
+    delete(root, key)
+        if root == NIL
+            return root
+        if key < root.key
+            root.left = delete(root.left, key) # This is the recursive call.
+        else if key > root.key
+            root.right = delete(root.right, key) # This is the recursive call.
+        else
+            if root.left == NIL
+                return root.right
+            else if root.right == NIL
+                return root.left
+            root.key = minValue(root.right)
+            root.right = delete(root.right, root.key) # This is the recursive call.
+        return root
+\end{verbatim}
+
+
+\subsubsection{Tree Traversal}
+
+\paragraph{
+    There are three ways to traverse a binary search tree.\\
+    In-order traversal, pre-order traversal, and post-order traversal.\\
+    In-order traversal will visit the left subtree, then the root node, and then the right subtree.\\
+    Pre-order traversal will visit the root node, then the left subtree, and then the right subtree.\\
+    Post-order traversal will visit the left subtree, then the right subtree, and then the root node.\\
+}
 
 
 
-
-TBC: Binary search tree: insertion and deletion video.
+TBC: Binary search tree: insertion and deletion video: preorder traversal
 
 
 \end{document}

@@ -1,6 +1,6 @@
-PWD c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing
+PWD f:\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\zhoub\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing\main.tex
+INPUT f:\git_repo\_MSCS_\_MSCS_Master_Notes_\Non-Credit_C2_Algorithms for Searching Sorting and Indexing\main.tex
 OUTPUT main.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
@@ -459,6 +459,30 @@ INPUT .\images\someactualnumbers.jpg
 INPUT .\images\someactualnumbers.jpg
 INPUT .\images\someactualnumbers.jpg
 INPUT .\images\someactualnumbers.jpg
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatching.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingusinghash.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2simplealgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
+INPUT .\images\stringmatchingproblem2improvedalgo.png
 INPUT main.aux
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk

@@ -1,66 +1,58 @@
-\section{Count-Min Sketching Using Hashing}
-
-\paragraph{The main idea of Count-Min Sketching is to use multiple hash functions to count the frequency of keys.\\
-We have a large stream of keys and we will keep a counter in order to record the apprearance of each key.\\
-There are two counts involved in this concept: the real count and the appoximate count.\\
-Let's take a look at a simple example.\\
-We would like to keep count of how ofter each URL in a given web server is requested.\\}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{webserver.jpg}
-\end{figure}
+\section{String Matching Using Hashing and Rabin-Karp Algorithm}
 
 \paragraph{
-    For each time we get a request, we will hash the URL and increase the counter by 1.\\
-    Let's say URL $U_j$ is hashed into slot $h_i(U_j)$, and we will increase the counter $C(j)$ by 1.\\
-}
-
-\subsection{Approximate Counting Data Structure}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{appoximatecountingdatastructure.jpg}
-\end{figure}
-
-\paragraph{
-    Let's take a look at a stream of elements ${x_1, x_2, \ldots ,x_w}$ in which $w$ is the size of the stream.\\
-    Each element $x_j \in {1,2,\ldots,n}$ (The number type is just an example, it can be any type), 
-    therefore there'll be $n$ possibilities of $x_j$.\\
-    In order to get an appoximate count, the returned value must be within the range of $\epsilon*w$, where $\epsilon$
-    is a relatively small number.\\
-    And the probability of approximate count must larger than $\delta$.\\
-    Here are the typical number choice for above variables:\\
-    $w \approx 10^9,n \approx 10^8, \epsilon \approx 10^{-6}, \delta \approx 0.99$.\\
-}
-
-\paragraph{
-    Let's dive into the basic idea of Count-Min Sketching.\\
-    We will use $m$ counters: $C(1), \ldots, C(m)$.\\
-    Once we encounter an element $X(j)$, we will hash it into $m$ slots, a.k.a. $h_1(X(j)), \ldots, h_m(X(j))$.\\
-    Then we will increase the counters in the corresponding slots, such as $C(j)$, by 1.\\
-    As this mechanism goes on, we will have multiple hashes that are the same, and the counter will be increased by 1 multiple times
-    (that is to say, multiple hashes may point to the same $C(j)$);\\
+    We will go through an algorithm called the Rabin-Karp Algorithm which is a typical example of string matching. 
+    The main idea is to use hashing to find the pattern in a string.\\
+    But first, what is string matching exactly?\\
+    Well, we want to know whether a given pattern is in a string or not, for example, does $p$ of size $m$ occur in 
+    string $s$ of size $n$.\\
 }
 
 \begin{figure}[H]
-    \includegraphics[width=\textwidth]{countminsketchbasicidea.jpg}
+    \includegraphics[width=\textwidth]{stringmatching.png}
 \end{figure}
 
-\begin{verbatim}
-    Xj -> Cj
-    Xm -> Cj
-    Xn -> Cj
-\end{verbatim}
+\paragraph{
+    We can use a simple algorithm to solve the problem.\\
+    First compute $r=h(p)$;\\
+    Then for each $s = 1, 2, \ldots, n-m+1$, check if $s[1], s[2], \ldots, s[m]$ has the same hash value as $p$.\\
+    The total running time of it is $\theta(m*(n-m+1))$.\\
+    This is just a brute force method. Now we need to speed up the process.\\
+    We can try to use hash functions to hash the pattern and the string.\\
+}
 
-\subsection{Count-Min Sketch Error Analysis}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{stringmatchingusinghash.png}
+\end{figure}
 
 \paragraph{
-    We know that the approximate count generally is larger than the real count. But how do they relate to each other?\\
-    The probability that $h(j) = h(i)$ under certain hash function is as following;\\
-    $Pr(h(i)=h(j)) = c/m, h \in H, i \neq j$\\
-    Typically, $c=1$.\\
-    Then the expected value of appoximatecount(j) is as following;\\
-    $E[appoximatecount(j)] = \sum_{i=1}^n Pr(h(i)=h(j)) * realcount(i) = \sum_{i=1}^n c/m * realcount(i)$;\\
-    And it's $\leq realcount(j) + c*w/m$.\\
-    Therefore, the `error` in the analysis is denoted as;\\
-    $error = appoximatecount(j) - realcount(j) \leq c*w/m$.\\
+    We need to randomly choose a prime number in order to perform the rolling hash function.\\
+    The main advantage of the rolling hash function is that it can hash the string in $O(1)$ time complexity.\\
+    The idea is that when conducting hashes on different element $S$, for $S = 1, 2, \ldots, n$, 
+    we can use the previous hash value to calculate the new hash value.\\
+    $h(s[i], s[i+1], \ldots, s[i+m-1]) = h(s[i], s[i+1], \ldots, s[i+m-2]) * p + s[i+m-1]$.\\
+    $h(s[i+1], s[i+2], \ldots, s[i+m]) = (h(s[i], s[i+1], \ldots, s[i+m-2]) - s[i]*p^{m-1})*p + s[i+m]$.\\
+    Which equals to $p * h(s[i], s[i+1], \ldots, s[i+m-2]) + s[i+m-1]$.\\
+    That is to say, the new hash value is the previous hash value times $p$ plus the new element.\\
+    Using the rolling hash function mechanism, the worst case running time will still be $\theta(m*(n-m+1))$.\\
+    But the average running time will be $\theta(n+m)$ when the function collision is low.\\
 }
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{stringmatchingproblem2simplealgo.png}
+\end{figure}
+
+\paragraph{
+    Instead of taking each pattern and comparing one by one, we can also hash all the pattern and store them in a hashtable.\\
+    Then we will hash the string and compare the hash value with the hashtable.\\
+    At first, we need to use the rolling hash of string 1, a.k.a. $h(s[i], s[i+1], \ldots, s[i+m-1])$.\\
+    Then we will insert the `key/value` pair into the hashtable.\\
+    After these steps, we will begin to hash string 2 by computing the rolling hash 
+    $r_j= h(s_2(j), s_2(j+1), \ldots, s_2(j+m-1))$.\\
+    Then we will check if $r_j$ is in the hashtable. If $r_j$ is in the hashtable, we will compare the pattern with the string.\\
+    The running time of the above algorithm is $\theta(n+m)$.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{stringmatchingproblem2improvedalgo.png}
+\end{figure}
