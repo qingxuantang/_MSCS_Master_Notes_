@@ -11,6 +11,9 @@
 \usepackage{amssymb}
 \usepackage{xcolor}
 \usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
 
 \setlength{\intextsep}{1cm}
 
@@ -316,14 +319,143 @@ NIL NIL               NIL NIL
 \paragraph{
     There are three ways to traverse a binary search tree.\\
     In-order traversal, pre-order traversal, and post-order traversal.\\
-    In-order traversal will visit the left subtree, then the root node, and then the right subtree.\\
-    Pre-order traversal will visit the root node, then the left subtree, and then the right subtree.\\
-    Post-order traversal will visit the left subtree, then the right subtree, and then the root node.\\
+    Inorder traversal visits nodes in a binary tree in the following order:\\
+    Visit the left subtree.\\
+    Visit the root node.\\
+    Visit the right subtree.\\
+    This traversal method is particularly useful for binary search trees (BSTs) because it visits the nodes in ascending order.\\
 }
 
+\begin{verbatim}
+    Example:
+    Consider the following binary search tree (BST):
+       4
+      / \
+     2   6
+    / \ / \
+    1  3 5  7
+    Inorder traversal of this tree would be: 1, 2, 3, 4, 5, 6, 7.
+
+    Python Code:
+    class Node:
+        def __init__(self, key):
+            self.left = None
+            self.right = None
+            self.val = key
+
+    def inorder_traversal(root):
+        if root:
+            # Traverse the left subtree
+            inorder_traversal(root.left)
+            # Visit the root node
+            print(root.val, end=' ')
+            # Traverse the right subtree
+            inorder_traversal(root.right)
+\end{verbatim}
+
+\paragraph{
+    Preorder traversal visits nodes in the following order:\\
+    Visit the root node.\\
+    Visit the left subtree.\\
+    Visit the right subtree.\\
+    Preorder traversal is useful for creating a copy of the tree or getting a prefix expression of an expression tree.\\
+}
+
+\begin{verbatim}
+    Example:
+    Consider the same BST:
+       4
+      / \
+     2   6
+    / \ / \
+    1  3 5  7
+    Preorder traversal of this tree would be: 4, 2, 1, 3, 6, 5, 7.
+
+    Python Code:
+    def preorder_traversal(root):
+        if root:
+            # Visit the root node
+            print(root.val, end=' ')
+            # Traverse the left subtree
+            preorder_traversal(root.left)
+            # Traverse the right subtree
+            preorder_traversal(root.right)
+\end{verbatim}
+
+\paragraph{
+    Postorder traversal visits nodes in the following order:\\
+    Visit the left subtree.\\
+    Visit the right subtree.\\
+    Visit the root node.\\
+    Postorder traversal is useful for deleting a tree or evaluating postfix expressions of an expression tree.\\
+}
+
+\begin{verbatim}
+    Example:
+    Consider the same BST:
+       4
+      / \
+     2   6
+    / \ / \
+    1  3 5  7
+    Postorder traversal of this tree would be: 1, 3, 2, 5, 7, 6, 4.
+
+    Python Code:
+    def postorder_traversal(root):
+        if root:
+            # Traverse the left subtree
+            postorder_traversal(root.left)
+            # Traverse the right subtree
+            postorder_traversal(root.right)
+            # Visit the root node
+            print(root.val, end=' ')
+\end{verbatim}
 
 
-TBC: Binary search tree: insertion and deletion video: preorder traversal
+\subsubsection{Quiz}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz1-1.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz1-2.jpg}
+    }
+    \caption{Question 1}
+    \label{fig:sidebyside}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz2-1.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz2-2.jpg}
+    }
+    \caption{Question 2}
+    \label{fig:sidebyside}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth]{bstinsertiondeletionquiz3.jpg}
+    \caption{Question 3}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz4-1.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz4-2.jpg}
+    }
+    \caption{Question 4}
+    \label{fig:sidebyside}
+\end{figure}
 
 
 \end{document}
