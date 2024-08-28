@@ -412,9 +412,9 @@ NIL NIL               NIL NIL
 \end{verbatim}
 
 
-\subsubsection{Quiz}
+\subsection{BST Quiz}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \subfigure{
         \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz1-1.jpg}
@@ -426,7 +426,7 @@ NIL NIL               NIL NIL
     \label{fig:sidebyside}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \subfigure{
         \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz2-1.jpg}
@@ -439,13 +439,13 @@ NIL NIL               NIL NIL
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{bstinsertiondeletionquiz3.jpg}
     \caption{Question 3}
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \subfigure{
         \includegraphics[width=0.45\textwidth]{bstinsertiondeletionquiz4-1.jpg}
@@ -456,6 +456,198 @@ NIL NIL               NIL NIL
     \caption{Question 4}
     \label{fig:sidebyside}
 \end{figure}
+
+
+
+
+
+\section{Algorithms on Trees}
+
+
+\subsection{Red-Black Trees Basics}
+
+\paragraph{
+    Normally the performance of a BST depends on its height or depth.\\
+    If we have a bad (not well-balanced) binary search tree, the height of the tree will be $O(n)$.\\
+    In this case, the performance of the tree will be the same as that of a linked list.\\
+    If it's balanced, the running time will be as good as $O(\log(n))$. This is not good enough.\\
+    What we need is self-balancing BSTs.\\
+    Here are some different types of self-balancing BSTs.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{differenttypesofbst.jpg}
+\end{figure}
+
+\paragraph{
+    Red-black trees are a type of self-balancing binary search tree.\\
+    They are named after their property of having red and black nodes.\\
+    The red-black tree has the following properties:\\
+    1. Every node is either red or black.\\
+    2. The root node is always black.\\
+    3. Every leaf node is black.\\
+    4. If a red node has children, the children must be black.\\
+    5. Every path from a node to its descendant NIL nodes must have the same number of black nodes.\\
+    The height of a red-black tree is $O(\log(n))$.\\
+    The red-black tree is a balanced binary search tree.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{redblacktree.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{redblacktreesamenumberofblacknoderule.jpg}
+\end{figure}
+
+\paragraph{
+    When counting the number of black nodes, we do not count the red nodes in between.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{redblacktreeblackheight.jpg}
+\end{figure}
+
+\paragraph{
+    Here is a question regarding red-black trees.\\
+    We can come up with two scenarios for it.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{redblacktreequestion.jpg}
+\end{figure}
+
+\newpage
+\begin{verbatim}
+    Scenario 1:
+    Parent node with RED child:
+       B (parent node: height of 1)
+         \
+          red
+         /   \
+      NIL     NIL  (height of 1)
+\end{verbatim}
+
+\begin{verbatim}
+    Scenario 2:
+    Parent node with BLACK child:
+       B (parent node: height of 2)
+         \
+           B (height of 1)
+        /   \
+       NIL  red
+           /   \
+        NIL     NIL  (height of 2)
+\end{verbatim}    
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{notredblacktree.jpg}
+\end{figure}
+
+\paragraph{
+    As we can see, the tree in the figure is not a red-black tree.\\
+    On the left corner, the height of the root node is 2, however, the height of the middle subtree is 3.\\
+    For any red-black tree with $n$ nodes, the height $h$ must obey the following rule: \\
+    $\log(n) \leq h \leq 2*\log(n)$.\\
+    Here is another example of a unbalanced tree that cannot satisfy the red-black tree properties.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{notbalancedtree.jpg}
+\end{figure}
+
+
+\paragraph{
+    Now we can try to figure out how can we find a red-black tree.\\
+    Suppose we have a $n$ node, $h$ height binary search tree.\\
+    If it is a red-black tree, any path $l$ in the tree must be $h/2 < l < h$, since on any given path,
+    at least half of the nodes must be black.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{halfofthepathareblack.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{hrelated.jpg}
+\end{figure}
+
+\paragraph{
+    Let's assume the black height of a specific node is $bh$. The subtree under that node will have a total node count $nc \geq 2^{bh} - 1$.\\
+    This can be proved by induction, or we can also directly see the logic via such graph:\\
+}
+
+\begin{verbatim}
+     N     1 node ---- 2^0
+    / \    
+   N   N   2 nodes --- 2^1
+  / \ / \
+N   N N  N 4 nodes --- 2^2
+\end{verbatim}  
+
+\paragraph{
+    Since we have the property that any path $l \geq h/2$, we can say that $nc \geq 2^{bh} - 1 \geq 2^{h/2} - 1$.\\
+    Then we can conclude that $h \leq 2*\log(n+1)$.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{bhrelated.jpg}
+\end{figure}
+
+\subsubsection{RBT Quiz}
+
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{rbtquiz01.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{rbtquiz01-2.jpg}
+    }
+    \caption{RBT Question 1}
+    \label{fig:sidebyside}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{rbtquiz02.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{rbtquiz02-2.jpg}
+    }
+    \caption{RBT Question 2}
+    \label{fig:sidebyside}
+\end{figure}
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{rbtquiz03.jpg}
+    \caption{RBT Question 3}
+\end{figure}
+
+
+\subsection{Red-Black Tree Rotation, Algorithms for Insertion/Deletion}
+
+TBC from notebook.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}

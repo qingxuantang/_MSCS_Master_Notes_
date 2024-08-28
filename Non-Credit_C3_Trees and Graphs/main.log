@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  8 AUG 2024 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  28 AUG 2024 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -124,6 +124,12 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box55
 ) (main.aux
+
+LaTeX Warning: Label `fig:sidebyside' multiply defined.
+
+
+LaTeX Warning: Label `fig:sidebyside' multiply defined.
+
 
 LaTeX Warning: Label `fig:sidebyside' multiply defined.
 
@@ -291,35 +297,133 @@ File: ./images/bstinsertiondeletionquiz1-2.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz1-2.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz1-2.jpg  used on input line 424.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
-<./images/bstinsertiondeletionquiz2-1.jpg, id=74, 1084.05pt x 2409.0pt>
+[18]
+<./images/bstinsertiondeletionquiz2-1.jpg, id=77, 1084.05pt x 2409.0pt>
 File: ./images/bstinsertiondeletionquiz2-1.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz2-1.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz2-1.jpg  used on input line 433.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
-<./images/bstinsertiondeletionquiz2-2.jpg, id=75, 1084.05pt x 2409.0pt>
+<./images/bstinsertiondeletionquiz2-2.jpg, id=78, 1084.05pt x 2409.0pt>
 File: ./images/bstinsertiondeletionquiz2-2.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz2-2.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz2-2.jpg  used on input line 436.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
-<./images/bstinsertiondeletionquiz3.jpg, id=76, 1084.05pt x 2409.0pt>
+ [19 <./images/bstinsertiondeletionquiz1-1.jpg> <./images/bstinsertiondeletionquiz1-2.jpg>]
+<./images/bstinsertiondeletionquiz3.jpg, id=83, 1084.05pt x 2409.0pt>
 File: ./images/bstinsertiondeletionquiz3.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz3.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz3.jpg  used on input line 443.
 (pdftex.def)             Requested size: 345.0pt x 766.66856pt.
+ [20 <./images/bstinsertiondeletionquiz2-1.jpg> <./images/bstinsertiondeletionquiz2-2.jpg>]
+Overfull \vbox (248.6171pt too high) has occurred while \output is active []
 
-LaTeX Warning: Float too large for page by 240.613pt on input line 445.
-
-<./images/bstinsertiondeletionquiz4-1.jpg, id=77, 1084.05pt x 2409.0pt>
+ [21 <./images/bstinsertiondeletionquiz3.jpg>]
+<./images/bstinsertiondeletionquiz4-1.jpg, id=90, 1084.05pt x 2409.0pt>
 File: ./images/bstinsertiondeletionquiz4-1.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz4-1.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz4-1.jpg  used on input line 452.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
-<./images/bstinsertiondeletionquiz4-2.jpg, id=78, 1084.05pt x 2409.0pt>
+<./images/bstinsertiondeletionquiz4-2.jpg, id=91, 1084.05pt x 2409.0pt>
 File: ./images/bstinsertiondeletionquiz4-2.jpg Graphic file (type jpg)
 <use ./images/bstinsertiondeletionquiz4-2.jpg>
 Package pdftex.def Info: ./images/bstinsertiondeletionquiz4-2.jpg  used on input line 455.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
-[18] [19 <./images/bstinsertiondeletionquiz1-1.jpg> <./images/bstinsertiondeletionquiz1-2.jpg>] [20 <./images/bstinsertiondeletionquiz2-1.jpg> <./images/bstinsertiondeletionquiz2-2.jpg>] [21 <./images/bstinsertiondeletionquiz3.jpg>] [22 <./images/bstinsertiondeletionquiz4-1.jpg> <./images/bstinsertiondeletionquiz4-2.jpg>] (main.aux)
+<./images/differenttypesofbst.jpg, id=92, 2409.0pt x 1084.05pt>
+File: ./images/differenttypesofbst.jpg Graphic file (type jpg)
+<use ./images/differenttypesofbst.jpg>
+Package pdftex.def Info: ./images/differenttypesofbst.jpg  used on input line 479.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [22 <./images/bstinsertiondeletionquiz4-1.jpg> <./images/bstinsertiondeletionquiz4-2.jpg>]
+<./images/redblacktree.jpg, id=96, 2409.0pt x 1084.05pt>
+File: ./images/redblacktree.jpg Graphic file (type jpg)
+<use ./images/redblacktree.jpg>
+Package pdftex.def Info: ./images/redblacktree.jpg  used on input line 496.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [23 <./images/differenttypesofbst.jpg>]
+<./images/redblacktreesamenumberofblacknoderule.jpg, id=100, 2409.0pt x 1084.05pt>
+File: ./images/redblacktreesamenumberofblacknoderule.jpg Graphic file (type jpg)
+<use ./images/redblacktreesamenumberofblacknoderule.jpg>
+Package pdftex.def Info: ./images/redblacktreesamenumberofblacknoderule.jpg  used on input line 500.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [24 <./images/redblacktree.jpg> <./images/redblacktreesamenumberofblacknoderule.jpg>]
+<./images/redblacktreeblackheight.jpg, id=104, 2409.0pt x 1084.05pt>
+File: ./images/redblacktreeblackheight.jpg Graphic file (type jpg)
+<use ./images/redblacktreeblackheight.jpg>
+Package pdftex.def Info: ./images/redblacktreeblackheight.jpg  used on input line 508.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+<./images/redblacktreequestion.jpg, id=105, 2409.0pt x 1084.05pt>
+File: ./images/redblacktreequestion.jpg Graphic file (type jpg)
+<use ./images/redblacktreequestion.jpg>
+Package pdftex.def Info: ./images/redblacktreequestion.jpg  used on input line 517.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [25 <./images/redblacktreeblackheight.jpg>] [26 <./images/redblacktreequestion.jpg>]
+<./images/notredblacktree.jpg, id=113, 2409.0pt x 1084.05pt>
+File: ./images/notredblacktree.jpg Graphic file (type jpg)
+<use ./images/notredblacktree.jpg>
+Package pdftex.def Info: ./images/notredblacktree.jpg  used on input line 545.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+<./images/notbalancedtree.jpg, id=114, 2409.0pt x 1084.05pt>
+File: ./images/notbalancedtree.jpg Graphic file (type jpg)
+<use ./images/notbalancedtree.jpg>
+Package pdftex.def Info: ./images/notbalancedtree.jpg  used on input line 557.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [27 <./images/notredblacktree.jpg>]
+<./images/halfofthepathareblack.jpg, id=118, 1084.05pt x 2409.0pt>
+File: ./images/halfofthepathareblack.jpg Graphic file (type jpg)
+<use ./images/halfofthepathareblack.jpg>
+Package pdftex.def Info: ./images/halfofthepathareblack.jpg  used on input line 569.
+(pdftex.def)             Requested size: 345.0pt x 766.66856pt.
+ [28 <./images/notbalancedtree.jpg>]
+Overfull \vbox (216.66856pt too high) has occurred while \output is active []
+
+ [29 <./images/halfofthepathareblack.jpg>]
+<./images/hrelated.jpg, id=125, 2409.0pt x 1084.05pt>
+File: ./images/hrelated.jpg Graphic file (type jpg)
+<use ./images/hrelated.jpg>
+Package pdftex.def Info: ./images/hrelated.jpg  used on input line 573.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+<./images/bhrelated.jpg, id=126, 2409.0pt x 1084.05pt>
+File: ./images/bhrelated.jpg Graphic file (type jpg)
+<use ./images/bhrelated.jpg>
+Package pdftex.def Info: ./images/bhrelated.jpg  used on input line 595.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+ [30 <./images/hrelated.jpg>]
+<./images/rbtquiz01.jpg, id=130, 1084.05pt x 2409.0pt>
+File: ./images/rbtquiz01.jpg Graphic file (type jpg)
+<use ./images/rbtquiz01.jpg>
+Package pdftex.def Info: ./images/rbtquiz01.jpg  used on input line 605.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+<./images/rbtquiz01-2.jpg, id=131, 1084.05pt x 2409.0pt>
+File: ./images/rbtquiz01-2.jpg Graphic file (type jpg)
+<use ./images/rbtquiz01-2.jpg>
+Package pdftex.def Info: ./images/rbtquiz01-2.jpg  used on input line 608.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+ [31 <./images/bhrelated.jpg>]
+<./images/rbtquiz02.jpg, id=136, 1084.05pt x 2409.0pt>
+File: ./images/rbtquiz02.jpg Graphic file (type jpg)
+<use ./images/rbtquiz02.jpg>
+Package pdftex.def Info: ./images/rbtquiz02.jpg  used on input line 618.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+<./images/rbtquiz02-2.jpg, id=137, 1084.05pt x 2409.0pt>
+File: ./images/rbtquiz02-2.jpg Graphic file (type jpg)
+<use ./images/rbtquiz02-2.jpg>
+Package pdftex.def Info: ./images/rbtquiz02-2.jpg  used on input line 621.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+ [32 <./images/rbtquiz01.jpg> <./images/rbtquiz01-2.jpg>]
+<./images/rbtquiz03.jpg, id=141, 1084.05pt x 2409.0pt>
+File: ./images/rbtquiz03.jpg Graphic file (type jpg)
+<use ./images/rbtquiz03.jpg>
+Package pdftex.def Info: ./images/rbtquiz03.jpg  used on input line 628.
+(pdftex.def)             Requested size: 345.0pt x 766.66856pt.
+ [33 <./images/rbtquiz02.jpg> <./images/rbtquiz02-2.jpg>]
+Overfull \vbox (248.6171pt too high) has occurred while \output is active []
+
+ [34 <./images/rbtquiz03.jpg>]
+Overfull \hbox (16.53339pt too wide) in paragraph at lines 633--633
+[]\OT1/cmr/bx/n/12 Red-Black Tree Ro-ta-tion, Al-go-rithms for In-ser-tion/Dele-
+ []
+
+[35] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -330,17 +434,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4137 strings out of 474424
- 64488 string characters out of 5751554
+ 4272 strings out of 474424
+ 68925 string characters out of 5751554
  1934496 words of memory out of 5000000
- 26460 multiletter control sequences out of 15000+600000
+ 26595 multiletter control sequences out of 15000+600000
  566100 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,864b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (22 pages, 4712599 bytes).
+Output written on main.pdf (35 pages, 11175451 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 193 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

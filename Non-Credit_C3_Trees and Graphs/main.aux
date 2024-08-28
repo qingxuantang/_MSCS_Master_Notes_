@@ -25,7 +25,7 @@
 \@writefile{toc}{\contentsline {paragraph}{ There are three ways to traverse a binary search tree.\\ In-order traversal, pre-order traversal, and post-order traversal.\\ Inorder traversal visits nodes in a binary tree in the following order:\\ Visit the left subtree.\\ Visit the root node.\\ Visit the right subtree.\\ This traversal method is particularly useful for binary search trees (BSTs) because it visits the nodes in ascending order.\\ }{15}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{ Preorder traversal visits nodes in the following order:\\ Visit the root node.\\ Visit the left subtree.\\ Visit the right subtree.\\ Preorder traversal is useful for creating a copy of the tree or getting a prefix expression of an expression tree.\\ }{17}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{ Postorder traversal visits nodes in the following order:\\ Visit the left subtree.\\ Visit the right subtree.\\ Visit the root node.\\ Postorder traversal is useful for deleting a tree or evaluating postfix expressions of an expression tree.\\ }{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.4}Quiz}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}BST Quiz}{19}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Question 1}}{19}{}\protected@file@percent }
 \newlabel{fig:sidebyside}{{1}{19}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Question 2}}{20}{}\protected@file@percent }
@@ -33,4 +33,21 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Question 3}}{21}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Question 4}}{22}{}\protected@file@percent }
 \newlabel{fig:sidebyside}{{4}{22}{}{}{}}
-\gdef \@abspage@last{22}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Algorithms on Trees}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Red-Black Trees Basics}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Normally the performance of a BST depends on its height or depth.\\ If we have a bad (not well-balanced) binary search tree, the height of the tree will be $O(n)$.\\ In this case, the performance of the tree will be the same as that of a linked list.\\ If it's balanced, the running time will be as good as $O(\log  (n))$. This is not good enough.\\ What we need is self-balancing BSTs.\\ Here are some different types of self-balancing BSTs.\\ }{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Red-black trees are a type of self-balancing binary search tree.\\ They are named after their property of having red and black nodes.\\ The red-black tree has the following properties:\\ 1. Every node is either red or black.\\ 2. The root node is always black.\\ 3. Every leaf node is black.\\ 4. If a red node has children, the children must be black.\\ 5. Every path from a node to its descendant NIL nodes must have the same number of black nodes.\\ The height of a red-black tree is $O(\log  (n))$.\\ The red-black tree is a balanced binary search tree.\\ }{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ When counting the number of black nodes, we do not count the red nodes in between.\\ }{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Here is a question regarding red-black trees.\\ We can come up with two scenarios for it.\\ }{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ As we can see, the tree in the figure is not a red-black tree.\\ On the left corner, the height of the root node is 2, however, the height of the middle subtree is 3.\\ For any red-black tree with $n$ nodes, the height $h$ must obey the following rule: \\ $\log  (n) \leq h \leq 2*\log  (n)$.\\ Here is another example of a unbalanced tree that cannot satisfy the red-black tree properties.\\ }{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Now we can try to figure out how can we find a red-black tree.\\ Suppose we have a $n$ node, $h$ height binary search tree.\\ If it is a red-black tree, any path $l$ in the tree must be $h/2 < l < h$, since on any given path, at least half of the nodes must be black.\\ }{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Let's assume the black height of a specific node is $bh$. The subtree under that node will have a total node count $nc \geq 2^{bh} - 1$.\\ This can be proved by induction, or we can also directly see the logic via such graph:\\ }{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ Since we have the property that any path $l \geq h/2$, we can say that $nc \geq 2^{bh} - 1 \geq 2^{h/2} - 1$.\\ Then we can conclude that $h \leq 2*\log  (n+1)$.\\ }{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}RBT Quiz}{32}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces RBT Question 1}}{32}{}\protected@file@percent }
+\newlabel{fig:sidebyside}{{5}{32}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces RBT Question 2}}{33}{}\protected@file@percent }
+\newlabel{fig:sidebyside}{{6}{33}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces RBT Question 3}}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Red-Black Tree Rotation, Algorithms for Insertion/Deletion}{35}{}\protected@file@percent }
+\gdef \@abspage@last{35}
