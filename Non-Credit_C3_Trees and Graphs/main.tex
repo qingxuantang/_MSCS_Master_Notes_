@@ -607,7 +607,6 @@ N   N N  N 4 nodes --- 2^2
         \includegraphics[width=0.45\textwidth]{rbtquiz01-2.jpg}
     }
     \caption{RBT Question 1}
-    \label{fig:sidebyside}
 \end{figure}
 
 
@@ -620,7 +619,6 @@ N   N N  N 4 nodes --- 2^2
         \includegraphics[width=0.45\textwidth]{rbtquiz02-2.jpg}
     }
     \caption{RBT Question 2}
-    \label{fig:sidebyside}
 \end{figure}
 
 
@@ -632,9 +630,221 @@ N   N N  N 4 nodes --- 2^2
 
 \subsection{Red-Black Tree Rotation, Algorithms for Insertion/Deletion}
 
-TBC from notebook.
+\paragraph{
+    As we know, red-black trees are a type of self-balancing binary search tree.\\
+    In order to perform a $find()$ operation, what we do is exactly the same as those of general BSTs.\\
+    However, when we insert or delete a node, we need to maintain the red-black tree properties.\\
+    To find a particular key in RBT, we will find its height $h$ first.\\
+    Then we will find the black height $bh$ of the node.\\
+    Since $\theta(h) = \theta(\log_2^n)$, therefore the worst case of running there is $\theta(\log_2^n)$.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{rbtinsertingakey.jpg}
+\end{figure}
 
 
+\paragraph{
+    When performing insert function on RBT, sometimes we encounter a situation where the parent node is red,
+    which is called a red-red violation, due to the rule that any inserted nodes will be marked red.\\
+    In this case, we need to perform a rotation operation.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{rbtredredviolation.jpg}
+\end{figure}
+
+
+\paragraph{
+    Suppose we have a red-red violation as below.\\
+    x is the newly inserted node, y is the parent node of x, and z is the parent node of y.\\
+    What we can do is that we  cange the color of y and w to black, and the color of z to red.\\
+    Since root node cannot be red, then we need to add a new root node for the tree in order to make it valid.\\
+}
+
+\begin{verbatim}
+    CASE 1:
+    Red-Red Violation Example:
+       Root=z
+      /   \
+    Red=y  Red=w (Uncle of x)
+    /       \
+  Red=x      Subtree
+   / \
+ NIL NIL
+\end{verbatim}
+
+\begin{verbatim}
+    After Color Switch:
+       Root=z
+      /   \
+    Red Root=z
+      /   \
+ Black=y  Black=w (Uncle of x)
+    /       \
+  Red=x      Subtree
+   / \
+ NIL NIL
+\end{verbatim}
+
+
+\paragraph{
+    In another case, if node w is black, we need to perform a rotation operation.\\
+    There are two types of rotation operations, left rotation and right rotation.\\
+    The left rotation operation is as follows.\\
+}
+
+\begin{verbatim}
+    Left Rotation Example:
+       Root=z
+      /   \
+    Red=y  Black=w
+    /       \
+  Red=x      Subtree
+   / \
+ NIL NIL---> This subtree is under x.
+\end{verbatim}
+
+\begin{verbatim}
+    After Left Rotation:
+       Root=y
+      /   \
+    Red=x  Root=z
+    /       /   \
+  NIL     Red=w  Subtree
+         /   \
+       NIL  NIL---> This subtree is now under w, instead of x.
+\end{verbatim}
+
+
+/paragraph{
+    If we encounter some unique cases, we need to perform a double rotation as follows.\\
+}
+
+\begin{verbatim}
+    Double Rotation Example:
+       Root=z
+      /   \
+    Red=y  Black=w
+    /       \
+  Red=x      Subtree
+   / \
+ NIL NIL---> This subtree is under x.
+\end{verbatim}
+
+\begin{verbatim}
+    After Double Rotation:
+       Root=x
+      /   \
+    NIL  Root=z
+         /   \
+       Red=y  Subtree
+       /   \
+     NIL  Red=w
+         /   \
+       NIL  NIL---> This subtree is now under w, instead of x.
+\end{verbatim}
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{wikipediatreerotation.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{treerotationquestion.jpg}
+    }
+    \caption{Wikipedia Tree Rotation Explanation}
+\end{figure}
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{afterrightrotation.jpg}
+\end{figure}
+
+\paragraph{
+    If we encounter some unique cases, we need to perform a double rotation as follows.\\
+}
+
+\begin{verbatim}
+        Double Rotation Example:
+        Root=z
+        /   \
+     Red=y  Black=w
+       /\
+Subtree Red=x   
+\end{verbatim}
+
+\paragraph{
+    Firstly, we will do a left rotation on the x and y subtree section.\\
+}
+
+\begin{verbatim}
+    After first rotation:
+        Root=z
+        /   \
+     Red=x  Black=w
+       /\
+ Red=y   Subtree
+\end{verbatim}
+
+\paragraph{
+    Then we will do a right rotation on the z and x subtree section.\\
+}
+
+\begin{verbatim}
+    After second rotation:
+        Root=x
+        /   \
+     Red=y  Red=z
+             /  \ 
+         Subtree  w
+\end{verbatim}
+
+\paragraph{
+    Now we can see that the tree is a valid red-black tree.\\
+}
+
+\paragraph{
+    Insertion and deletion both has the complexity of $O(\log_2^n)$.\\
+    This is not too much of the problem, the problem is that we need to maintain the red-black tree properties after each insertion and deletion.\\
+    This is not easy to do, and we need to be careful to ensure that the tree remains balanced and valid after each operation.\\
+}
+
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{rotationquiz1.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{rotationquiz2-1.jpg}
+    }
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{rotationquiz2-2.jpg}
+    }
+    \caption{Tree Rotation Quiz}
+\end{figure}
+
+
+\subsection{Skip Lists}
+
+\paragraph{
+    Skip lists are a data structure that provides an alternative to balanced trees for implementing dictionaries.\\
+    They are similar to balanced trees in that they maintain a sorted list of keys, but they use a different approach to achieve balance.\\
+    In a skip list, each node has a level, and the level of a node is determined by the number of nodes in the list that are above it.\\
+    The higher the level of a node, the more nodes it has above it.\\
+    The levels of the nodes form a staircase pattern, with each level being a power of 2.\\
+    The height of the skip list is the number of levels in the highest node.\\
+}
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{whatisaskiplist.jpg}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{skiplistmapexample.jpg}
+\end{figure}
 
 
 

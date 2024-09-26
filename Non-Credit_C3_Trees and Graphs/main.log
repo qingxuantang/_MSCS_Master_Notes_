@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  28 AUG 2024 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.22)  27 SEP 2024 07:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -124,12 +124,6 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box55
 ) (main.aux
-
-LaTeX Warning: Label `fig:sidebyside' multiply defined.
-
-
-LaTeX Warning: Label `fig:sidebyside' multiply defined.
-
 
 LaTeX Warning: Label `fig:sidebyside' multiply defined.
 
@@ -402,28 +396,86 @@ Package pdftex.def Info: ./images/rbtquiz01-2.jpg  used on input line 608.
 <./images/rbtquiz02.jpg, id=136, 1084.05pt x 2409.0pt>
 File: ./images/rbtquiz02.jpg Graphic file (type jpg)
 <use ./images/rbtquiz02.jpg>
-Package pdftex.def Info: ./images/rbtquiz02.jpg  used on input line 618.
+Package pdftex.def Info: ./images/rbtquiz02.jpg  used on input line 617.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
 <./images/rbtquiz02-2.jpg, id=137, 1084.05pt x 2409.0pt>
 File: ./images/rbtquiz02-2.jpg Graphic file (type jpg)
 <use ./images/rbtquiz02-2.jpg>
-Package pdftex.def Info: ./images/rbtquiz02-2.jpg  used on input line 621.
+Package pdftex.def Info: ./images/rbtquiz02-2.jpg  used on input line 620.
 (pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
  [32 <./images/rbtquiz01.jpg> <./images/rbtquiz01-2.jpg>]
 <./images/rbtquiz03.jpg, id=141, 1084.05pt x 2409.0pt>
 File: ./images/rbtquiz03.jpg Graphic file (type jpg)
 <use ./images/rbtquiz03.jpg>
-Package pdftex.def Info: ./images/rbtquiz03.jpg  used on input line 628.
+Package pdftex.def Info: ./images/rbtquiz03.jpg  used on input line 626.
 (pdftex.def)             Requested size: 345.0pt x 766.66856pt.
  [33 <./images/rbtquiz02.jpg> <./images/rbtquiz02-2.jpg>]
 Overfull \vbox (248.6171pt too high) has occurred while \output is active []
 
  [34 <./images/rbtquiz03.jpg>]
-Overfull \hbox (16.53339pt too wide) in paragraph at lines 633--633
+Overfull \hbox (16.53339pt too wide) in paragraph at lines 631--631
 []\OT1/cmr/bx/n/12 Red-Black Tree Ro-ta-tion, Al-go-rithms for In-ser-tion/Dele-
  []
 
-[35] (main.aux)
+<./images/rbtinsertingakey.jpg, id=148, 2409.0pt x 1084.05pt>
+File: ./images/rbtinsertingakey.jpg Graphic file (type jpg)
+<use ./images/rbtinsertingakey.jpg>
+Package pdftex.def Info: ./images/rbtinsertingakey.jpg  used on input line 643.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+<./images/rbtredredviolation.jpg, id=149, 2409.0pt x 1084.05pt>
+File: ./images/rbtredredviolation.jpg Graphic file (type jpg)
+<use ./images/rbtredredviolation.jpg>
+Package pdftex.def Info: ./images/rbtredredviolation.jpg  used on input line 654.
+(pdftex.def)             Requested size: 345.0pt x 155.23962pt.
+[35 <./images/rbtinsertingakey.jpg>] [36 <./images/rbtredredviolation.jpg>] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 720--723
+
+ []
+
+[38]
+<./images/wikipediatreerotation.jpg, id=163, 1084.05pt x 2409.0pt>
+File: ./images/wikipediatreerotation.jpg Graphic file (type jpg)
+<use ./images/wikipediatreerotation.jpg>
+Package pdftex.def Info: ./images/wikipediatreerotation.jpg  used on input line 752.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+<./images/treerotationquestion.jpg, id=164, 1084.05pt x 2409.0pt>
+File: ./images/treerotationquestion.jpg Graphic file (type jpg)
+<use ./images/treerotationquestion.jpg>
+Package pdftex.def Info: ./images/treerotationquestion.jpg  used on input line 755.
+(pdftex.def)             Requested size: 155.24895pt x 344.97696pt.
+<./images/afterrightrotation.jpg, id=165, 1456.44125pt x 655.44875pt>
+File: ./images/afterrightrotation.jpg Graphic file (type jpg)
+<use ./images/afterrightrotation.jpg>
+Package pdftex.def Info: ./images/afterrightrotation.jpg  used on input line 761.
+(pdftex.def)             Requested size: 345.0pt x 155.26064pt.
+ [39 <./images/wikipediatreerotation.jpg> <./images/treerotationquestion.jpg>] [40 <./images/afterrightrotation.jpg>]
+<./images/rotationquiz1.jpg, id=172, 480.79625pt x 1068.99374pt>
+File: ./images/rotationquiz1.jpg Graphic file (type jpg)
+<use ./images/rotationquiz1.jpg>
+Package pdftex.def Info: ./images/rotationquiz1.jpg  used on input line 818.
+(pdftex.def)             Requested size: 103.50105pt x 230.12277pt.
+<./images/rotationquiz2-1.jpg, id=173, 480.79625pt x 1068.99374pt>
+File: ./images/rotationquiz2-1.jpg Graphic file (type jpg)
+<use ./images/rotationquiz2-1.jpg>
+Package pdftex.def Info: ./images/rotationquiz2-1.jpg  used on input line 821.
+(pdftex.def)             Requested size: 103.50105pt x 230.12277pt.
+<./images/rotationquiz2-2.jpg, id=174, 480.79625pt x 1068.99374pt>
+File: ./images/rotationquiz2-2.jpg Graphic file (type jpg)
+<use ./images/rotationquiz2-2.jpg>
+Package pdftex.def Info: ./images/rotationquiz2-2.jpg  used on input line 824.
+(pdftex.def)             Requested size: 103.50105pt x 230.12277pt.
+ [41 <./images/rotationquiz1.jpg> <./images/rotationquiz2-1.jpg> <./images/rotationquiz2-2.jpg>]
+<./images/whatisaskiplist.jpg, id=178, 1927.2pt x 867.24pt>
+File: ./images/whatisaskiplist.jpg Graphic file (type jpg)
+<use ./images/whatisaskiplist.jpg>
+Package pdftex.def Info: ./images/whatisaskiplist.jpg  used on input line 842.
+(pdftex.def)             Requested size: 345.0pt x 155.24956pt.
+<./images/skiplistmapexample.jpg, id=179, 1927.2pt x 867.24pt>
+File: ./images/skiplistmapexample.jpg Graphic file (type jpg)
+<use ./images/skiplistmapexample.jpg>
+Package pdftex.def Info: ./images/skiplistmapexample.jpg  used on input line 846.
+(pdftex.def)             Requested size: 345.0pt x 155.24956pt.
+ [42 <./images/whatisaskiplist.jpg>] [43 <./images/skiplistmapexample.jpg>] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -434,17 +486,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4272 strings out of 474424
- 68925 string characters out of 5751554
+ 4362 strings out of 474424
+ 72036 string characters out of 5751554
  1934496 words of memory out of 5000000
- 26595 multiletter control sequences out of 15000+600000
+ 26685 multiletter control sequences out of 15000+600000
  566100 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,864b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (35 pages, 11175451 bytes).
+Output written on main.pdf (43 pages, 13206899 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 231 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
