@@ -13,7 +13,7 @@
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{graphicx}
-
+\usepackage{hyperref}
 
 \setlength{\intextsep}{1cm}
 
@@ -845,6 +845,236 @@ Subtree Red=x
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{skiplistmapexample.jpg}
 \end{figure}
+
+
+\paragraph{
+    For any layer in the skip list, the elements are sorted in ascending order from left to right.\\
+    The elements in the lower layer are the elements in the higher layer, plus some extra elements in between.\\
+    The extra elements are the ones that are not in the lower layer. Therefore, all the top layers are just subsets of the bottom layer.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{skiplistdatastructure.jpg}
+\end{figure}
+
+
+\paragraph{
+    How do we use skip lists to implement dictionaries?
+    We can use the following operations:\\
+    1. $find()$: Find the node with the given key in the skip list.\\
+    2. $insert()$: Insert a new node with the given key into the skip list.\\
+    3. $delete()$: Delete the node with the given key from the skip list.\\
+    How does the $find()$ operation work?
+    We start from the topmost layer of the skip list, and we will compare the key with the current node.\\
+    If the key is greater than the current node, we will move to the right to the next node in the same layer.\\
+    If the key is less than the current node, we will go back to the previous node in the same layer, and move down to the next node in the lower layer.\\
+    We will continue this process until we reach the bottommost layer.\\
+    If we reach the bottommost layer and still cannot find the key, we will return NIL.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{skiplistfind22.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{skiplistinsertion.png}
+\end{figure}
+
+\paragraph{
+    What is the average height of a skip list?\\
+    The average height of a skip list is $O(\log_2^n)$.\\
+    This is because the height of a skip list is determined by the number of levels in the highest node, and the number of levels in the highest node is $O(\log_2^n)$.\\
+}
+
+\paragraph{
+    The probability of a node exceeding height $h$ is $(1/2)^h$.\\
+    This is because the probability of a node exceeding height $h$ 
+    is the probability of a node exceeding height $h-1$, and the probability 
+    of a node exceeding height $h-1$ is $1/2^{h-1}$.\\
+    Therefore, the probability of a node exceeding height $h$ is $(1/2)^h$.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{skiplistheightexceedingh.png}
+\end{figure}
+
+\paragraph{
+    This is similar to the Boolie's inequality in probability theory.\\
+    Boolie's inequality is a probability inequality that bounds the probability 
+    of the union of events by the sum of the probabilities of the individual events.\\
+    In this case, the events are the nodes exceeding height $h$, and the probability of 
+    a node exceeding height $h$ is $(1/2)^h$.\\
+    The sum of the probabilities of the events is the expected height of the skip list.\\
+    Therefore, the expected height of the skip list is $O(\log_2^n)$.\\
+    $P(>h) \leq \sum_{i=h}^{\infty} P(i) = \sum_{i=h}^{\infty} (\frac{1}{2})^i = \frac{1}{2^h}$.\\
+}
+
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{skiplistquiz1.png}
+    }
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{skiplistquiz2-1.png}
+    }
+    \subfigure{
+        \includegraphics[width=0.3\textwidth]{skiplistquiz2-2.png}
+    }
+    \caption{Skip List Quiz}
+\end{figure}
+
+
+
+
+\section{Graphs}
+
+\subsection{Graphs and Their Representations}
+
+\paragraph{
+    A graph is a data structure that consists of a set of vertices and a set of edges.\\
+    The vertices are the nodes of the graph, and the edges are the connections between the nodes.\\
+    There are two types of graphs: directed graphs and undirected graphs.\\
+    In a directed graph, the edges have a direction, and in a undirected graph, the edges do not have a direction.\\
+    Normally we don't consider the self-loop in the graph. There should be no multi-edges between vectices.\\
+}
+
+\paragraph{
+    Where do graph come from?\\
+    Graphs are used to model relationships between objects.\\
+    For example, a social network can be represented as a graph, where the vertices are the people in the network and the 
+    edges are the connections between the people.\\
+    Graphs are also used to model networks, such as the internet (computer network), where the vertices are the computers in the network and the
+    edges are the connections between the computers.\\
+    Other networks such as Ecological networks, electrical circuits, and transportation networks can also be represented as graphs.\\
+    How do we represent a graph in a computer?\\
+    There are two common ways to represent a graph in a computer: adjacency matrix and adjacency list.\\
+    The adjacency matrix is a 2D array that stores the connections between the vertices.\\
+    The row and column indices are actually vertices, when there's an edge, the value will be 1, otherwise 0.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{graphquestion1-1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{graphquestion1-2.png}
+\end{figure}
+
+\paragraph{
+    For a graph with $k$ nodes, the adjacency matrix will be a $k*k$ matrix.\\
+    There will be up to $k(k-1)$ edges in the graph.\\
+    Then we come to the adjacency list.\\
+    The adjacency list is a list of lists that stores the connections between the vertices.\\
+    Each vertex has a list of its neighbors.\\
+    The adjacency list is more space-efficient than the adjacency matrix, 
+    especially for sparse graphs.\\
+    The adjacency list is also more time-efficient for some operations, 
+    such as finding the neighbors of a vertex.\\
+    Here is a example as denoted in the figure.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{graphquestion2-1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{graphquestion2-1.png}
+\end{figure}
+
+\subsection{Graph Traversals and Breadth First Traversal}
+
+\paragraph{
+    There are two common ways to traverse a graph: breadth-first traversal and depth-first traversal.\\
+    In a breadth-first traversal, we start at a vertex and visit all of its neighbors before moving on to the next level of neighbors.\\
+    In a depth-first traversal, we start at a vertex and visit one of its neighbors, then visit one of the neighbor's neighbors, and so on, until we reach a dead end.\\
+    Then we backtrack and visit another neighbor of the original vertex.\\
+    Breadth-first traversal/Search is useful for finding the shortest path between two vertices in an unweighted graph.\\
+    Depth-first traversal is useful for finding cycles in a graph.\\
+    Here is an example of a breadth-first traversal of a graph.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{breadthfirsttraversal.png}
+    \caption{Queue: FIFO(First In First Out)}
+\end{figure}
+
+\paragraph{
+    Here is an indepth explanation of BFS (Breadth-first Search/Traversal). 
+    https://blog.csdn.net/g11d111/article/details/76169861.
+    In a simple way, BFS is a traversal algorithm that goes through the graph in a wide range before going deep into the graph further(Neighbors First).\\
+    On the other side, the depth-first traversal goes into the graph deeply from one neighbor of the starting point before going through 
+    another neighbor.\\
+}
+
+
+\subsection{Depth First Search}
+
+\paragraph{
+    Depth-first search is a graph traversal algorithm that starts at a vertex and explores as far as possible along each branch before backtracking.\\
+    It is similar to the way we would explore a maze, where we would go down one path until we reach a dead end, then backtrack and try another path.\\
+    Depth-first search is useful for finding cycles in a graph.\\
+    Here is an example of a depth-first search of a graph.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{depthfirstsearch.png}
+    \caption{Stack: LIFO(Last In First Out)
+        The stack is used to store the nodes that we have visited but have not yet explored all of their neighbors.\\
+        When we visit a node, we push it onto the stack.\\
+        When we finish exploring all of the neighbors of a node, we pop it off the stack.\\    
+    }
+\end{figure}
+
+\paragraph{
+    When we go through DFS, we will visit all the successors from one neighbor of the root node first.\\
+    Then we will go back to the root node.\\
+    While doing this, if any of the visited nodes have other successors that have not been visited, we will visit them first.\\
+    This is the main difference between BFS and DFS.\\
+}
+
+paragraph{Here is a pseudo code in order to loop through a function dfsVisit(), which apparently deals with dfs.\\
+    there is a very subtle technical issue in this pseudo-code: it has to do with setting v.seen = TRUE before dfsVisit(G, v). \\
+    Please read the pseudo code for the main loop as }
+
+
+\begin{verbatim}
+    dfs(G)
+        for each vertex v in G:
+            v.d = Nil #dicovery time
+            v.pi = Nil #parrent
+            v.seen = FALSE
+        time = 0
+        for each vertex v in G:
+            if v.d = Nil:
+                v.d = time
+                time = time + 1
+                dfsVisit(G, v)
+                v.seen = TRUE
+\end{verbatim}
+
+\paragraph{
+    What is a DFS Tree?\\
+    A DFS tree is a tree that is created by a depth-first search of a graph.\\
+    It is a subgraph of the original graph that contains all the vertices and edges that are visited 
+    during the depth-first search.\\
+    It is directed, where each edge points from a parent vertex to a child vertex.\\
+    And what is a back edge?\\
+    A back edge is an edge that connects a vertex to one of its ancestors in the DFS tree. 
+    It may connect back to their grandparent, grand-grandparent and so on.\\
+    It is a cycle in the graph.\\
+    If we encounter a back edge during a depth-first search, we know that the graph contains a cycle.\\
+}
+
+TBD 16:16
+
+
+
+
+
+
+
+
 
 
 

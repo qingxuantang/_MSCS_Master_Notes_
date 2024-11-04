@@ -53,6 +53,63 @@ INPUT C:\Program Files\MiKTeX\tex\latex\subfigure\subfigure.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\subfigure\subfigure.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\subfigure\subfigure.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\subfigure\subfigure.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\auxhook\auxhook.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\auxhook\auxhook.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\atbegshi\atbegshi.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\atbegshi-ltx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\atbegshi-ltx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\atveryend\atveryend.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\main.aux
@@ -67,6 +124,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
+OUTPUT main.pdf
+INPUT .\main.out
+INPUT .\main.out
+OUTPUT main.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
@@ -93,7 +158,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-OUTPUT main.pdf
 INPUT C:\Users\zhoub\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
@@ -345,13 +409,94 @@ INPUT .\images\skiplistmapexample.jpg
 INPUT .\images\skiplistmapexample.jpg
 INPUT .\images\skiplistmapexample.jpg
 INPUT .\images\skiplistmapexample.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistdatastructure.jpg
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistfind22.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistinsertion.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistheightexceedingh.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-1.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\skiplistquiz2-2.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-1.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion1-2.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\graphquestion2-1.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\breadthfirsttraversal.png
+INPUT .\images\depthfirstsearch.png
+INPUT .\images\depthfirstsearch.png
+INPUT .\images\depthfirstsearch.png
+INPUT .\images\depthfirstsearch.png
+INPUT .\images\depthfirstsearch.png
+INPUT .\images\depthfirstsearch.png
 INPUT main.aux
+INPUT .\main.out
+INPUT .\main.out
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
@@ -364,5 +509,7 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
