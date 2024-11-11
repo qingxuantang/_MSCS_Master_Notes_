@@ -1066,7 +1066,84 @@ paragraph{Here is a pseudo code in order to loop through a function dfsVisit(), 
     If we encounter a back edge during a depth-first search, we know that the graph contains a cycle.\\
 }
 
-TBD 16:16
+\paragraph{
+    As we mentioned in above pesudocode, we will then call the dfsVisit function on the vertex.\\
+    For each node In the graph, we will check if the discovery time is Nil.\\
+    If it is Nil, we will set the discovery time to the current time, and then increase the time by 1.\\
+    For the finish time, we will set it to the current time, and then increase the time by 1.\\
+    And the finalized count of finish time for a node A is by the moment when we finish the dfsVisit function, 
+    a.k.a there is no unseen nodes on the current path and we are circling back to node A.\\
+}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{dfstable.png}
+    \caption{Here is a table the instructor drew to explain the discovery and finish time of each node.}
+\end{figure}
+
+
+\subsubsection{DFS Quiz}
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{dfsquiz-1.png}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{dfsquiz-2.png}
+    }
+    \caption{DFS Question 1-2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{dfsquiz-3.png}
+    }
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{dfsquiz-4.png}
+    }
+    \caption{DFS Question 3-4}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{dfsquiz-5.png}
+    \caption{DFS Question 5}
+\end{figure}
+
+
+\subsection{Topological Sorting and Applications}
+
+\paragraph{
+    What is topological sorting?\\
+    Topological sorting is a linear ordering of the vertices of a ``Directed Acyclic Graph (DAG)'' 
+    such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.\\
+    Topological sorting is useful for scheduling tasks that have dependencies, 
+    where some tasks must be completed before others can begin.\\
+    For example, in a software project, some modules must be compiled before others can be linked.\\
+    In a build system, some tasks must be completed before others can begin.\\
+}
+
+\begin{verbatim}
+    Topological Sorting Example:
+    v1 -> v2 -> v5 -> v6
+     |           |   /\
+    \/           \/  /
+    v3  -------->  v4  
+\end{verbatim}
+
+\paragraph{
+    Based on the above graph, the topological sorting is: v1, v2, v3, v5, v4, v6.\\
+    This is because:}
+    
+\begin{itemize}
+    \item v1 has no incoming edges, so it can be the first in the ordering.
+    \item v2 depends on v1, so it must come after v1.
+    \item v3 depends on v1, so it must come after v1.
+    \item v5 depends on v2, so it must come after v2.
+    \item v4 depends on v3 and v5, so it must come after both v3 and v5.
+    \item v6 depends on v4 and v5, so it must come after both v4 and v5.
+\end{itemize}
+
 
 
 
